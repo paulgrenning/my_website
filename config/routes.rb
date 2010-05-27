@@ -3,7 +3,8 @@ ActionController::Routing::Routes.draw do |map|
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.help    '/help',    :controller => 'pages', :action => 'help'
   map.root :controller => 'pages', :action => 'home'
-  # The priority is based upon order of creation: first created -> highest priority.
+  map.signup '/signup',   :controller => 'users', :action => 'new'
+  #The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
