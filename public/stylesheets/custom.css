@@ -1,28 +1,57 @@
 .container {
-  width: 800px;
-}
-
-.containertwo {
-  margin: 20px;
-  background: #fff;
-  width: 1100px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
+  width: 1000px;
 }
 
 body {
-  background: #00688b;
+  border-bottom: 2px solid  #00007B;
+  background: #000033;
+}
+
+#header-image {
+  float: left;
+  width: 300px;
+  padding-top: 2px;
+  text-align: left;
+}
+
+#header-menu {
+  padding-top 20px;
+  text-align: right;
+  border-bottom: 2px solid  #a4d3ee;
+  padding-bottom: 2px;
+}
+
+#header-info {
+  padding: 0 0.9em;
+  float: right;
+  width: 400px;
+  text-align: right;  
+}
+
+#header-block{
+  width: 1000px;
 }
 
 #header {
-  margin-right: 20%;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  height: 180px;
+  position: relative;
+  border: 4px solid #a4d3ee;
   padding-top: 20px;
   padding-bottom: 20px;
+  background: #fff;
+}
+
+#main {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  display: block;
+  position: relative;
+  border: 4px solid #a4d3ee;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #fff;
 }
 
 #bar img {
@@ -30,12 +59,20 @@ body {
 }
 
 #content {
-/*  width: 65%;*/
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  display: block;
+  position: relative;
+  border: 4px solid #a4d3ee;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #fff;
+ /* width: 850px;
   margin-right: 20%;
-/*  float: left;*/
+  float: left;
   font-size: 120%;
   padding: 20px;
-  background: #fff;
+  background: #fff;*/
 }
 
 /* Links */
@@ -55,10 +92,8 @@ a:visited {
 }
 
 .navigation {
-  float: right;
-  background-color: white;
-  padding: 0 0.7em;
- /* white-space: nowrap;*/
+  padding: 0 0.9em;
+  white-space: nowrap;
   margin: 0;
 }
 
@@ -69,7 +104,7 @@ a:visited {
 }
 
 .navigation li a {
-  padding: 0 5px;
+  padding: 0 75px;
   font-weight: bold;
 }
 
@@ -84,25 +119,6 @@ a:visited {
 .round {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
-}
-
-.box {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-}
-
-#sidebar {
- float: right;
- width: 10%;
- margin-right: 20%;
-}
-
-#footer {
-  text-align: center;
-  margin-top: 10px;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #footer .navigation {

@@ -7,13 +7,19 @@ me Help Sign in
     <%= render 'layouts/stylesheets' %>
   </head>
   <body>
-    <div class="container">
       <%= render 'layouts/header' %>
-      <div><p></p></div>
-      <div id='main'>
+    <div class="containertwo">
+      <%= render 'layouts/bar' %>
+    </div>
+    <div>
+      <%= render 'layouts/sidebar' %>
+    </div>
+    <div class="container">
+      <div id="content" class="round">
+      <%= render 'layouts/sidebar' %>
         <%= yield %>
-	<%= render 'layouts/sidebar' %>
       </div>
     </div>
+      <%= render 'layouts/footer' %>
   </body>
 </html>
