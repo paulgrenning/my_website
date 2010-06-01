@@ -26,24 +26,26 @@ background-origin: initial;
 background-clip: initial;
 }
 
-#header-image {
-  float: left;
-  width: 300px;
-  padding-top: 2px;
-  text-align: left;
+#header {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  height: 140px;
+  position: relative;
+  border: 2px solid #a4d3ee;
+  background: #fff;
 }
 
-#header-menu {
-  padding-top 20px;
-  text-align: right;
-  border-bottom: 1px solid  #a4d3ee;
-  padding-bottom: 2px;
+#header-image {
+  float: left;
+  width: 400px;
+  padding-top: 2px;
+  text-align: left;
 }
 
 #header-info {
   padding: 0 0.9em;
   float: right;
-  width: 400px;
+  width: 300px;
   text-align: right;  
 }
 
@@ -51,15 +53,30 @@ background-clip: initial;
   width: 1000px;
 }
 
-#header {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-  height: 180px;
-  position: relative;
-  border: 2px solid #a4d3ee;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: #fff;
+#header-menu {
+  text-align: left;
+  float: left;
+  white-space: nowrap;
+  padding-bottom: 2px;
+}
+
+#header-menu li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+#header-menu li a {
+  padding: 0 55px;
+  font-weight: bold;
+}
+
+#header-menu li a:visited {
+  color: #09c;
+}
+
+#header-menu li a:hover {
+  text-decoration: underline;
 }
 
 #main-content {
@@ -76,6 +93,10 @@ background-clip: initial;
 #page-content {
   width: 1000px;
   position: relative;
+}
+
+.page-info {
+  padding-left: 5px;
 }
 
 #sidebar-title {
@@ -126,36 +147,3 @@ a:visited {
   color: #069;
 }
 
-.navigation {
-  padding: 0 0.9em;
-  white-space: nowrap;
-  margin: 0;
-}
-
-.navigation li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.2em 0;
-}
-
-.navigation li a {
-  padding: 0 75px;
-  font-weight: bold;
-}
-
-.navigation li a:visited {
-  color: #09c;
-}
-
-.navigation li a:hover {
-  text-decoration: underline;
-}
-
-.round {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-}
-
-#footer .navigation {
-  float: none;
-}
