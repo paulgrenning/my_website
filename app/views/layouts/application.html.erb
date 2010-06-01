@@ -10,9 +10,11 @@ me Help Sign in
     <div class="container">
       <%= render 'layouts/header' %>
       <div><p></p></div>
-      <div id='main'>
-        <%= yield %>
-	<%= render 'layouts/sidebar' %>
+      <div id='page-content'>
+        <div id= 'main-content'>
+          <%= yield %>
+        </div>
+        <%= render 'layouts/sidebar' %>
       </div>
     </div>
   </body>

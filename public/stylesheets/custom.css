@@ -2,9 +2,28 @@
   width: 1000px;
 }
 
+h1 {
+  border-bottom: 1px solid #a4d3ee;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+h3 {
+  color: #00007B;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
 body {
-  border-bottom: 2px solid  #00007B;
-  background: #000033;
+background: #0d1450 url('/images/background-gradient.png') repeat-x;
+background-image:url('/images/background-gradient.png');
+background-repeat-x: repeat;
+background-repeat-y: no-repeat;
+background-attachment: initial;
+background-position-x: initial;
+background-position-y: initial;
+background-origin: initial;
+background-clip: initial;
 }
 
 #header-image {
@@ -17,7 +36,7 @@ body {
 #header-menu {
   padding-top 20px;
   text-align: right;
-  border-bottom: 2px solid  #a4d3ee;
+  border-bottom: 1px solid  #a4d3ee;
   padding-bottom: 2px;
 }
 
@@ -37,45 +56,61 @@ body {
   -webkit-border-radius: 10px;
   height: 180px;
   position: relative;
-  border: 4px solid #a4d3ee;
+  border: 2px solid #a4d3ee;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #fff;
 }
 
-#main {
+#main-content {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
-  display: block;
-  position: relative;
-  border: 4px solid #a4d3ee;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: #fff;
-}
-
-#bar img {
-  background: #fff;
-}
-
-#content {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-  display: block;
-  position: relative;
-  border: 4px solid #a4d3ee;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: #fff;
- /* width: 850px;
-  margin-right: 20%;
   float: left;
-  font-size: 120%;
-  padding: 20px;
-  background: #fff;*/
+  width: 800px;
+  position: relative;
+  border: 2px solid #a4d3ee;
+  padding-top: 5px;
+  background: #fff;
 }
 
-/* Links */
+#page-content {
+  width: 1000px;
+  position: relative;
+}
+
+#sidebar-title {
+  height: 35px;
+  border-bottom: 1px solid #a4d3ee;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+
+#sidebar {
+  border: 2px solid #a4d3ee;
+  background: #fff;
+  width: 175px;
+  float: right;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+}
+
+#sidebar ul {
+  padding-left: 30px;
+}
+
+#sidebar li{
+  margin: .5em 0px;
+  text-align: left;
+}
+
+#sidebar li:hover {
+  background: #a4d3ee;
+}
+
+#sidebar ul{
+  font-weight: bold;
+  list-style-type: none;
+}
 
 a {
   color: #09c;
@@ -84,7 +119,7 @@ a {
 
 a:hover {
   color: #069;
-  text-decoration: underline;
+/*  text-decoration: underline;*/
 }
 
 a:visited {

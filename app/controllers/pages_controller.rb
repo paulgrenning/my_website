@@ -19,4 +19,8 @@ class PagesController < ApplicationController
 	  @title = "Videos"
   end
 
+  def artwork	
+	  @title = "Art Work"
+  end
+
 end
