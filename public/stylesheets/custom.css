@@ -3,7 +3,7 @@
 }
 
 h1 {
-  border-bottom: 1px solid #a4d3ee;
+  background-image:url('/images/contentBanner.png');
   padding-bottom: 5px;
   padding-left: 10px;
 }
