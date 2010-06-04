@@ -5,16 +5,18 @@ me Help Sign in
   <head>
     <title><%= title %></title>
     <%= render 'layouts/stylesheets' %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery-ui' %>
+    <%= javascript_include_tag 'jrails' %>
   </head>
   <body>
-    <div class="container">
-      <%= render 'layouts/header' %>
-      <div><p></p></div>
+    <%= render 'layouts/header' %>
+    <div id='page-wrapper'>
       <div id='page-content'>
         <div id= 'main-content'>
           <%= yield %>
         </div>
-        <%= render 'layouts/sidebar' %>
+	<div style="clear:both;"></div>
       </div>
     </div>
   </body>

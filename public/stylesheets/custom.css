@@ -1,6 +1,4 @@
-.container {
-  width: 1000px;
-}
+
 
 h1 {
   background-image:url('/images/contentBanner.png');
@@ -15,8 +13,19 @@ h3 {
 }
 
 body {
-background: #0d1450 url('/images/background-gradient.png') repeat-x;
-background-image:url('/images/background-gradient.png');
+background: #0a3c63 url('/images/backgroundGradient.png') repeat-x;
+background-image:url('/images/backgroundGradient.png');
+background-repeat-x: repeat;
+background-repeat-y: no-repeat;
+background-attachment: initial;
+background-position-x: initial;
+background-position-y: initial;
+background-origin: initial;
+background-clip: initial;
+}
+
+#header-wrap{
+background-image:url('/images/headerGradient.png');
 background-repeat-x: repeat;
 background-repeat-y: no-repeat;
 background-attachment: initial;
@@ -27,63 +36,48 @@ background-clip: initial;
 }
 
 #header {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-  height: 140px;
-  position: relative;
-  border: 2px solid #a4d3ee;
-  background: #fff;
+  margin: auto;
+  width: 960px;
+  height: 256px;
 }
 
-#header-image {
+#header-logo {
+  width: 650px;
   float: left;
-  width: 400px;
-  padding-top: 2px;
-  text-align: left;
 }
 
-#header-info {
-  padding: 0 0.9em;
-  float: right;
-  width: 300px;
-  text-align: right;  
+.logo {
+  float: left;
 }
 
-#header-block{
-  width: 1000px;
+.navhome{
+  margin-top: 8px;
+  margin-bottom: -24px;
+}
+
+.navabout{
+  margin-bottom: -14px;
+}
+
+.navproject{
+  margin-bottom: -24px;
+}
+
+.navcontact{
+  margin-top: -14px;
+  margin-bottom: -14px;
 }
 
 #header-menu {
+  width: 50px;
+  height: 256;
   text-align: left;
   float: left;
-  white-space: nowrap;
-  padding-bottom: 2px;
-}
-
-#header-menu li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.2em 0;
-}
-
-#header-menu li a {
-  padding: 0 55px;
-  font-weight: bold;
-}
-
-#header-menu li a:visited {
-  color: #09c;
-}
-
-#header-menu li a:hover {
-  text-decoration: underline;
 }
 
 #main-content {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
   float: left;
-  width: 800px;
+  width: 960px;
   position: relative;
   border: 2px solid #a4d3ee;
   padding-top: 5px;
@@ -91,7 +85,8 @@ background-clip: initial;
 }
 
 #page-content {
-  width: 1000px;
+  width: 960px;
+  margin: auto;
   position: relative;
 }
 
@@ -111,8 +106,6 @@ background-clip: initial;
   background: #fff;
   width: 175px;
   float: right;
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
 }
 
 #sidebar ul {

@@ -4,19 +4,15 @@ class PagesController < ApplicationController
   end
 
   def contact
-	  @title = "Contact Dark Tide Software"
+	  @title = "Contact"
   end
   
   def about
 	  @title = "About"
   end
   
-  def videos 
-	  @title = "Videos"
-  end
-
-  def artwork	
-	  @title = "Art Work"
+  def projects	
+	  @title = "Projects"
   end
 
 end
