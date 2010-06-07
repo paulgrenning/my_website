@@ -6,6 +6,7 @@ me Help Sign in
     <title><%= title %></title>
     <%= render 'layouts/stylesheets' %>
     <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'jquery-ui' %>
     <%= javascript_include_tag 'jrails' %>
   </head>
@@ -17,7 +18,10 @@ me Help Sign in
           <%= yield %>
         </div>
 	<div style="clear:both;"></div>
+      <div id='footer-image'>
       </div>
+      </div>
+    <div id='white-space'>
     </div>
   </body>
 </html>

@@ -1,9 +1,15 @@
-
-
 h1 {
-  background-image:url('/images/contentBanner.png');
+  background-image:url('/images/contentBanner2.png');
   padding-bottom: 5px;
-  padding-left: 10px;
+  padding-left: 100px;
+  color: #6d8867; 
+  font-weight: bolder;
+  font-size: 46px;
+}
+
+h2 {
+  color: #2d5824; 
+  font-weight: bolder;
 }
 
 h3 {
@@ -36,46 +42,59 @@ background-clip: initial;
 }
 
 #header {
+  z-index: -1;
   margin: auto;
   width: 960px;
   height: 256px;
 }
 
 #header-logo {
+  position: relative;
   width: 650px;
+  height: 256px;
+  float: left;
+}
+
+#header-menu {
+  position: relative;
+  width: 50px;
+  height: 256;
   float: left;
 }
 
 .logo {
-  float: left;
+  position: absolute;
+  left: -100px;  
+  z-index: 3;
+  top: -20px;
 }
 
-.navhome{
-  margin-top: 8px;
-  margin-bottom: -24px;
+#navhome {
+  position: absolute;
+  top: 0px;
+  z-index: 2;
 }
 
-.navabout{
-  margin-bottom: -14px;
+#navabout {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
 }
 
-.navproject{
-  margin-bottom: -24px;
+#navprojects {
+  position: absolute;
+  top: 140px;
+  z-index: 2;
 }
 
-.navcontact{
-  margin-top: -14px;
-  margin-bottom: -14px;
-}
-
-#header-menu {
-  width: 50px;
-  height: 256;
-  text-align: left;
-  float: left;
+#navcontact{
+  position: absolute;
+  top: 210px;
+  z-index: 2;
 }
 
 #main-content {
+  z-index: 1;
   float: left;
   width: 960px;
   position: relative;
@@ -92,43 +111,14 @@ background-clip: initial;
 
 .page-info {
   padding-left: 5px;
-}
-
-#sidebar-title {
-  height: 35px;
-  border-bottom: 1px solid #a4d3ee;
-  font-size: 1.6em;
-  font-weight: normal;
-}
-
-#sidebar {
-  border: 2px solid #a4d3ee;
-  background: #fff;
-  width: 175px;
-  float: right;
-}
-
-#sidebar ul {
-  padding-left: 30px;
-}
-
-#sidebar li{
-  margin: .5em 0px;
-  text-align: left;
-}
-
-#sidebar li:hover {
-  background: #a4d3ee;
-}
-
-#sidebar ul{
-  font-weight: bold;
-  list-style-type: none;
+  font-family:  sans-serif;
+  color: #768d70;
+  font-size: 16px;
 }
 
 a {
   color: #09c;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -140,3 +130,20 @@ a:visited {
   color: #069;
 }
 
+#footer-image {
+        position: fixed;
+        bottom: 0px;
+        center: 0px;
+        margin: auto;
+        background: url('/images/footer.png') no-repeat;
+        width: 1000px;
+        height: 176px;
+        display: block;
+        text-indent: -10000px;
+        margin-bottom: -5px;
+        z-index: 3;
+}
+
+#white-space{
+  height: 100px;
+}

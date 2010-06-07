@@ -4,10 +4,10 @@
 	    <%= image_tag("name-tag.png", :alt => "Sample App", :class => "logo") %>
 	  </div>
 	  <div id="header-menu">
-	      <a id="home"><%= link_to image_tag("home.png", :alt => "home", :class => "navhome"), root_path %></a>
-	      <a id="about"><%= link_to image_tag("about.png", :alt => "about", :class => "navabout"), about_path %></a>
-	      <a id="projects"><%= link_to image_tag("projects.png", :alt => "projects", :class => "navprojects"), projects_path %></a>
-	      <a id="contact"><%= link_to image_tag("contact.png", :alt => "contact", :class => "navcontact"), contact_path %></a>
+	      <%= link_to image_tag("home.png", :id => "navhome", :alt => "home"), root_path %>
+	      <%= link_to image_tag("about.png", :alt => "about", :id=> "navabout"), about_path %>
+	      <%= link_to image_tag("projects.png", :alt => "projects", :id=> "navprojects"), projects_path %>
+	      <%= link_to image_tag("contact.png", :alt => "contact", :id=> "navcontact"), contact_path %>
 	  </div>
 	</div>
 </div>
