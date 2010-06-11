@@ -1,6 +1,6 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
-$(window).load(function() {
+$(document).ready(function() {
   var offset = 15;
   var scale = 70;
   var setOriginalData =function() {

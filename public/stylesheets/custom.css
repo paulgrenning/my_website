@@ -1,12 +1,22 @@
 p {
  text-align: justify;
 }
+/*
+a span#hoverable {
+  backgrond-image: url();
+}
+
+a:hover span#hoverable {
+  background-image: url(something else);
+}*/
 
 h1 {
- /* color: #2d5824; */
   padding-top: 50px;
   color: #e0ffb8;
   font: normal normal normal 4.8em/normal Georgia, Times, serif;
+  background: url('/images/glowing header.png') no-repeat;
+  text-indent: -10000px;
+  margin-left: -10px;
 }
 
 h2 {
@@ -83,7 +93,6 @@ height:256px;
   z-index: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-left: 30px;
 }
 
 #header-name{
