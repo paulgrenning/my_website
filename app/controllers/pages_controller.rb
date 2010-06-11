@@ -15,4 +15,8 @@ class PagesController < ApplicationController
 	  @title = "Projects"
   end
 
+  def downloads
+    send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
+  end
+
 end

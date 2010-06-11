@@ -1,13 +1,11 @@
-<div id="header-wrap">
+<div id="header-wrap" class="span-24">
 	<div id="header"> 
-	  <div id="header-logo">
-	    <%= image_tag("name-tag.png", :alt => "Sample App", :class => "logo") %>
-	  </div>
-	  <div id="header-menu">
-	      <%= link_to image_tag("home.png", :id => "navhome", :alt => "home"), root_path %>
-	      <%= link_to image_tag("about.png", :alt => "about", :id=> "navabout"), about_path %>
-	      <%= link_to image_tag("projects.png", :alt => "projects", :id=> "navprojects"), projects_path %>
-	      <%= link_to image_tag("contact.png", :alt => "contact", :id=> "navcontact"), contact_path %>
-	  </div>
+       <%= image_tag("glowing header.png", :id => 'header-image') %>
+     <div class="span-23 prepend-1">
+       <h1 id="header-name">Paul Grenning</h1>
+     </div>
+     <div class="span-14 last">
+     </div>
+     <%= image_tag("horizontal-divider.png") %>
 	</div>
 </div>

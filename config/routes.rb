@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.root                :controller => 'pages', :action => 'home'
   map.projects'/projects', :controller => 'pages', :action => 'projects'
+  map.downloads'/downloads', :controller => 'pages', :action => 'downloads'
   #The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

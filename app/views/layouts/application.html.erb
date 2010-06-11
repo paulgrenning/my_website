@@ -11,17 +11,19 @@ me Help Sign in
     <%= javascript_include_tag 'jrails' %>
   </head>
   <body>
-    <%= render 'layouts/header' %>
-    <div id='page-wrapper'>
-      <div id='page-content'>
-        <div id= 'main-content'>
-          <%= yield %>
+    <div id='body-border'>
+      <div id='left-border'></div>
+      <div id='right-border'></div>
+      <div class='container'>
+        <div id='body-interior'>
+          <%= render 'layouts/header' %>
+          <div id= 'main-content'>
+            <%= yield %>
+          </div>
+          <div style="clear:both;"></div>
+          <div id='white-space'></div>
         </div>
-	<div style="clear:both;"></div>
-      <div id='footer-image'>
       </div>
-      </div>
-    <div id='white-space'>
     </div>
   </body>
 </html>
