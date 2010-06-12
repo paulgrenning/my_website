@@ -28,6 +28,7 @@ h2 {
 
 body {
   background-color: #000;
+  z-index: 0;
 }
 
 #body-border {
@@ -125,8 +126,25 @@ height:256px;
   color: #fff;
 }
 
+#carousel {
+  margin-left: 40px;
+  height: 210;
+  position: relative;
+  overflow: hidden;
+}
+
+#carousel-images {
+  left: -300px;
+  white-space: nowrap;
+  position: absolute;
+}
+
 .thumb {
-  margin-bottom: 10px;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: -40px;
+  margin-right: 64px;
 }
 
 #portrait {

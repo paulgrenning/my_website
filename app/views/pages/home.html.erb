@@ -5,18 +5,16 @@
         <div class="span-24 prepend-1">
           <h2>Portfolio</h2>
         </div>
-        <div class="span-7 prepend-1">
-          <%= link_to image_tag("darktide-logo-dark.png", :id => "thumb-2", :class => "thumb"), root_path %>
-          <p>Check out my company "DarkTide Software". The company was created for my Video Game Design class at UIC.</p>
-        </div>
-        <div class="span-7" id="spacers">
-          <%= link_to image_tag("bug.png", :id => "thumb-1", :class => "thumb"), root_path %>
-          <p>Bug Splat, the first video game I ever created was written in Processing.</p>
-        </div>
-        <div class="span-7 apend-1 last">
-          <%= link_to image_tag("website-thumb.png", :id => "thumb-3", :class => "thumb"), root_path %>
-          <p>Designing this website is my current project. I am new to CSS, Ruby on Rails, and Javascript, but it
-          has all come together to create this site.</p>
+        <div class="span-21 prepend-1"><p id="slideleft">left</p></div>
+        <div class="span-1 last"><p id="slideright">right</p></div>
+        <div id="carousel" class="span-22 last">
+          <ol id="carousel-images">
+            <%= link_to image_tag("darktide-logo-dark.png", :id => "thumb-1", :class => "thumb"), root_path %>
+            <%= link_to image_tag("bug.png", :id => "thumb-2", :class => "thumb"), root_path %>
+            <%= link_to image_tag("urchin1.png", :id => "thumb-3", :class => "thumb"), root_path %>
+            <%= link_to image_tag("website-thumb.png", :id => "thumb-4", :class => "thumb"), root_path %>
+            <%= link_to image_tag("ninja-defense1.png", :id => "thumb-5", :class => "thumb"), root_path %>
+          </ol>
         </div>
       </div>
     </div>
@@ -47,10 +45,6 @@
           of them was the team leader, which was me. The class taught me how to work with people over
           long distance that I would never meet face to face. We arranged group meetings and pair
           programming sessions using skype.
-        </p>
-        <p>
-          If you would like to know a bit more about my "company" and video game, check out my
-          <%= link_to "Projects page.", projects_path %>
         </p>
         <p>
           Once I started taking the video game design class, I realized what I wanted to do
