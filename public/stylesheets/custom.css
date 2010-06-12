@@ -126,8 +126,16 @@ height:256px;
   color: #fff;
 }
 
+#left-arrow {
+  margin-top: 80px;
+}
+
+#right-arrow {
+  margin-top: 80px;
+  margin-left: -10px;
+}
+
 #carousel {
-  margin-left: 40px;
   height: 210;
   position: relative;
   overflow: hidden;

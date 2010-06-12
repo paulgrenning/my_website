@@ -60,7 +60,41 @@ $(document).ready(function() {
         $(this).attr("src", "images/ninja-defense1.png");
       }
   );
-  $("#slideleft").click(
+  $("#left-arrow").each(setOriginalData).live('mouseover',
+    function() {
+        $(this).attr("src", "images/arrow-left-glow.png");
+      })
+  .each(setOriginalData).live('mouseout',
+    function() {
+        $(this).attr("src", "images/arrow-left.png");
+      }
+  );
+  $("#right-arrow").each(setOriginalData).live('mouseover',
+    function() {
+        $(this).attr("src", "images/arrow-right-glow.png");
+      })
+  .each(setOriginalData).live('mouseout',
+    function() {
+        $(this).attr("src", "images/arrow-right.png");
+      }
+  );
+  $("#left-arrow").mousedown( 
+    function() {
+      $(this).attr("src", "images/arrow-left-pressed.png");
+    });
+    $("#left-arrow").mouseup(
+      function() {
+        $(this).attr("src", "images/arrow-left-glow.png");
+      });
+  $("#right-arrow").mousedown( 
+    function() {
+      $(this).attr("src", "images/arrow-right-pressed.png");
+    });
+    $("#right-arrow").mouseup(
+      function() {
+        $(this).attr("src", "images/arrow-right-glow.png");
+      });
+  $("#left-arrow").click(
     function() {
       var carousel = $("#carousel-images");
       carousel.animate({left: '-=300', queue: true});
@@ -71,7 +105,7 @@ $(document).ready(function() {
       });
     }
   );
-  $("#slideright").click(
+  $("#right-arrow").click(
     function() {
       var carousel = $("#carousel-images");
       carousel.animate({left: '+=300', queue: true});
