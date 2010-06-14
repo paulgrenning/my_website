@@ -1,8 +1,15 @@
 <div id="footer">
-  <ul class="navigation round">
-    <li><%= link_to "About", '#' %></li>
-    <li><%= link_to "Contact", '#' %></li>
-    <li><a href="http://news.railstutorial.org/">News</a></li>
-    <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
-  </ul>
+  <%= image_tag("horizontal-divider.png", :id => 'above-nav') %>
+     <div class="span-23 prepend-1"  id="footer-navigation">
+       <ul id="footer-navigation">
+         <li><%= link_to "Home", root_path %></li>
+         <li><%= link_to "Dark Tide Software", darktide_path %></li>
+         <li><%= link_to "Bug Splat", '#' %></li>
+         <li><%= link_to "Rise O\' The Urchins", '#' %></li>
+       </ul>
+      </div>
+      <%= image_tag("horizontal-divider.png", :id => 'below-nav') %>
+      <div id="copyright">
+        <p>© Paul Grenning</p>
+      </div>
 </div>

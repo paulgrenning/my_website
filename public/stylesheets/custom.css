@@ -9,8 +9,11 @@ a:hover span#hoverable {
 
 h1 {
   padding-top: 50px;
-  color: #e0ffb8;
   font: normal normal normal 4.8em/normal Georgia, Times, serif;
+}
+
+#header-name a{
+  color: #e0ffb8;
 }
 
 h2 {
@@ -103,14 +106,6 @@ height:256px;
 #header-name{
   z-index: 1;
 }
-/*
-#page-wrapper{
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-*/
 
 #spacers {
   padding-left: 20px;
@@ -170,19 +165,48 @@ height:256px;
 }
 
 a {
-  color: #e0ffb8;
+  color: #90ffad;
   text-decoration: none;
 }
 
 a:hover {
-  color: #e0ffb8;
+  color: #90ffad;
 /*  text-decoration: underline;*/
 }
 
 a:visited {
-  color: #e0ffb8;
+  color: #90ffad;
 }
 
 #white-space {
   height: 75px;
+}
+
+#above-nav {
+  padding-bottom: 15px;
+}
+
+#below-nav {
+  margin-top: -10px;
+}
+
+#copyright {
+  margin-top: 10px;
+}
+
+#footer-navigation {
+  white-space: nowrap;  
+  text-align: center;
+}
+
+#footer-navigation li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+#copyright {
+  text-align: center;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  color: #fff;
 }
