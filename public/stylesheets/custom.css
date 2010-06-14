@@ -1,6 +1,3 @@
-p {
- text-align: justify;
-}
 /*
 a span#hoverable {
   backgrond-image: url();
@@ -14,9 +11,6 @@ h1 {
   padding-top: 50px;
   color: #e0ffb8;
   font: normal normal normal 4.8em/normal Georgia, Times, serif;
-  background: url('/images/glowing header.png') no-repeat;
-  text-indent: -10000px;
-  margin-left: -10px;
 }
 
 h2 {
@@ -24,6 +18,16 @@ h2 {
   /*color: #2d5824; */
   font: normal normal normal 2.3em/normal Georgia, Times, serif;
 /*  border-bottom: 1px solid #aaf6aa;*/
+}
+
+#about-team {
+  text-align: center;
+  font: normal normal normal 3.3em/normal Georgia, Times, serif;
+}
+
+#team-member {
+  text-align: center;
+  font: normal normal normal 2.2em/normal Georgia, Times, serif;
 }
 
 body {
@@ -127,12 +131,14 @@ height:256px;
 }
 
 #left-arrow {
-  margin-top: 80px;
+  margin-top: 50px;
+  display: none;
 }
 
 #right-arrow {
-  margin-top: 80px;
-  margin-left: -10px;
+  margin-top: 50px;
+  margin-left: -5px;
+  display: none;
 }
 
 #carousel {
@@ -159,22 +165,22 @@ height:256px;
   border: 1px solid #abfeab;
 }
 
-#italic {
-  font-style: italic;
+#darktide-logo {
+  margin-left: -10px;
 }
 
 a {
-  color: #09c;
-  text-decoration: underline;
+  color: #e0ffb8;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #e0ffb8;
 /*  text-decoration: underline;*/
 }
 
 a:visited {
-  color: #069;
+  color: #e0ffb8;
 }
 
 #white-space {

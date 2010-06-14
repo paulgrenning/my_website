@@ -16,7 +16,7 @@ me Help Sign in
       <div id='right-border'></div>
       <div class='container'>
         <div id='body-interior'>
-          <%= render 'layouts/header' %>
+          <%= render 'layouts/header', :locals => { :page_header => @page_header } %>
           <div id= 'main-content'>
             <%= yield %>
           </div>

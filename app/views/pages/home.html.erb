@@ -6,11 +6,12 @@
           <h2>Portfolio</h2>
         </div>
         <div class="span-1">
-          <%= image_tag("arrow-left.png", :id => "left-arrow") %>
+          <p></p>
+          <%= image_tag("leftArrow.png", :id => "left-arrow") %>
         </div>
         <div id="carousel" class="span-22">
           <ol id="carousel-images">
-            <%= link_to image_tag("darktide-logo-dark.png", :id => "thumb-1", :class => "thumb"), root_path %>
+            <%= link_to image_tag("darktide-logo-dark.png", :id => "thumb-1", :class => "thumb"), darktide_path %>
             <%= link_to image_tag("bug.png", :id => "thumb-2", :class => "thumb"), root_path %>
             <%= link_to image_tag("urchin1.png", :id => "thumb-3", :class => "thumb"), root_path %>
             <%= link_to image_tag("website-thumb.png", :id => "thumb-4", :class => "thumb"), root_path %>
@@ -18,7 +19,8 @@
           </ol>
         </div>
         <div class="span-1 last">
-          <%= image_tag("arrow-right.png", :id => "right-arrow") %>
+          <p></p>
+          <%= image_tag("rightArrow.png", :id => "right-arrow") %>
         </div>
       </div>
     </div>
@@ -27,10 +29,10 @@
       <%= image_tag("horizontal-divider.png") %>
       <div><p></p></div>
       <div class="span-7 prepend-1">
-        <h2>School</h2>
+        <h2>About Me</h2>
       </div>
       <div class="span-7" id="spacers">
-        <h2>Location</h2>
+        <h2>School</h2>
       </div>
       <div class="span-7 apend-1 last">
         <h2>Interests</h2>
@@ -38,6 +40,16 @@
     </div>
     <div class="span-24">
       <div class="span-7 prepend-1">
+        <p>
+          I am from the northern suburbs of chicago and have lived their my entire life. I am
+          <%= image_tag("MyImage.png", :id => "portrait") %>
+          temporarily living in Chicago while I go to UIC and work at Obtiva. My previous
+          job was at Zebra Technologies. I was an intern/coop there on and off over a period of two and a
+          half years. My first internship with Zebra taught me that computer science was the correct field 
+          for me to be in, before them I was unsure where computer science would take me.
+        </p>
+      </div>
+      <div class="span-7" id="spacers">
         <p>
           I am a senior computer science major at University of Illinios at Chicago (UIC).
           I am very interested in developing video games. I have played them all my life and
@@ -61,15 +73,6 @@
           as independent study where I will create a new game using the Unity graphics engine. 
         </p>
       </div>
-      <div class="span-7" id="spacers">
-        <p>
-          I am from the northern suburbs of chicago and have lived their my entire life. I am
-          <%= image_tag("MyImage.png", :id => "portrait") %>
-          temporarily living in Chicago while I go to UIC and work at Obtiva.
-        </p>
-        <h2>My Resume</h2>
-        <p><%= link_to "Care To Download It?", downloads_path%></p>
-      </div>
       <div class="span-7 apend-1 last">
         <p>
           I am interested in video games and video game design. Some of
@@ -87,6 +90,8 @@
           Besides Computers and all their excellence, I do have a few other interests. Those would include, pool, 
           frisbee, soccer, kung fu, skiing, snowboarding, hockey, and swimming.
         </p>
+        <h2>My Resume</h2>
+        <p><%= link_to "Care To Download It?", downloads_path%></p>
       </div>
     </div>
   </div>

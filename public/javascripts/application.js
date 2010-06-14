@@ -4,6 +4,37 @@ $(document).ready(function() {
   var offset = 100;
   var scale = 70;
   var currentIndex = 0;
+  isAnimating = false;
+  scrollInterval = setInterval(slideLeft, 4000);
+  function slideRight() {
+      if(isAnimating == false) {
+        isAnimating = true;
+        var carousel = $("#carousel-images"); carousel.animate({left: '-=300', queue: true});
+        carousel.children("a").first().animate({queue: true}, function() { 
+          $(this).remove();
+          $(this).appendTo(carousel);
+          $(carousel).css({left: "-300px"});
+          $(this).animate({queue: true}, function() {
+            isAnimating = false;
+          });
+        });
+      }
+  }
+  function slideLeft() {
+      if(isAnimating == false) {
+        isAnimating = true;
+        var carousel = $("#carousel-images");
+        carousel.animate({left: '+=300', queue: true});
+        carousel.children("a").last().animate({queue: true}, function() { 
+          $(this).remove();
+          $(this).prependTo(carousel);
+          $(carousel).css({left: "-300px"}) 
+          $(this).animate({queue: true}, function() {
+            isAnimating = false;
+          });
+        });
+      }
+  }
   var setOriginalData =function() {
     var image = $(this); 
     image.data('original_left', image.position().top);
@@ -15,6 +46,19 @@ $(document).ready(function() {
     list.data('original_left', list.position().left);
     list.data('original_right', list.position().right);
   }
+  $("#portfolio").live('mouseover',
+    function() {
+        $("#left-arrow").show();
+        $("#right-arrow").show();
+        clearInterval(scrollInterval);
+      })
+  .each(setOriginalData).live('mouseout',
+    function() {
+        $("#left-arrow").hide();
+        $("#right-arrow").hide();
+        scrollInterval = setInterval(slideLeft, 4000);
+      }
+      );
   $("#thumb-1").each(setOriginalData).live('mouseover',
     function() {
         $(this).attr("src", "images/darktide-logo-light.png");
@@ -62,58 +106,50 @@ $(document).ready(function() {
   );
   $("#left-arrow").each(setOriginalData).live('mouseover',
     function() {
-        $(this).attr("src", "images/arrow-left-glow.png");
       })
   .each(setOriginalData).live('mouseout',
     function() {
-        $(this).attr("src", "images/arrow-left.png");
       }
   );
   $("#right-arrow").each(setOriginalData).live('mouseover',
     function() {
-        $(this).attr("src", "images/arrow-right-glow.png");
       })
   .each(setOriginalData).live('mouseout',
     function() {
-        $(this).attr("src", "images/arrow-right.png");
       }
   );
   $("#left-arrow").mousedown( 
     function() {
-      $(this).attr("src", "images/arrow-left-pressed.png");
+        $(this).attr("src", "images/leftArrowClicked.png");
     });
     $("#left-arrow").mouseup(
       function() {
-        $(this).attr("src", "images/arrow-left-glow.png");
+        $(this).attr("src", "images/leftArrow.png");
       });
   $("#right-arrow").mousedown( 
     function() {
-      $(this).attr("src", "images/arrow-right-pressed.png");
+        $(this).attr("src", "images/rightArrowClicked.png");
     });
     $("#right-arrow").mouseup(
       function() {
-        $(this).attr("src", "images/arrow-right-glow.png");
+        $(this).attr("src", "images/rightArrow.png");
       });
   $("#left-arrow").click(
     function() {
-      var carousel = $("#carousel-images");
-      carousel.animate({left: '-=300', queue: true});
-      carousel.children("a").first().animate({queue: true}, function() { 
-        $(this).remove();
-        $(this).appendTo(carousel);
-        $(carousel).css({left: "-300px"});
-      });
+      if(isAnimating == false) {
+        clearInterval(scrollInterval);
+        scrollInterval = setInterval(slideLeft, 4000);
+      }
+      slideLeft();
     }
   );
   $("#right-arrow").click(
     function() {
-      var carousel = $("#carousel-images");
-      carousel.animate({left: '+=300', queue: true});
-      carousel.children("a").last().animate({queue: true}, function() { 
-        $(this).remove();
-        $(this).prependTo(carousel);
-        $(carousel).css({left: "-300px"});
-      });
+      if(isAnimating == false) {
+        clearInterval(scrollInterval);
+        scrollInterval = setInterval(slideRight, 4000);
+      }
+      slideRight();
     }
   );
 });

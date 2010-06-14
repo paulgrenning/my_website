@@ -1,6 +1,11 @@
 class PagesController < ApplicationController
+
   def home
 	  @title = "Home"
+  end
+
+  def darktide
+    @page_header = { :name => "Paul Grenning\'s Dark Tide Software", :link => root_path}
   end
 
   def contact

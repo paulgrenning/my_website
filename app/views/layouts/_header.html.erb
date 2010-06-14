@@ -1,8 +1,9 @@
 <div id="header-wrap" class="span-24">
 	<div id="header"> 
      <div class="span-23 prepend-1">
-       <h1 id="header-name">Paul Grenning</h1>
-       <%#= image_tag("glowing header.png", :id => 'header-image') %>
+       <h1 id="header-name">
+         <%= link_to @page_header[:name], @page_header[:link] %>
+       </h1>
      </div>
      <div class="span-14 last">
      </div>
