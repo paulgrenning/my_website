@@ -1,0 +1,2 @@
+IMAGES_TO_SHOW = ['darkTideIntro.gif', 'startScreen.gif', 'sinkingBoat.gif', 'sinkingBoat2.gif', 'pufferConceptArt.jpg', 'easterEgg1.gif', 'easterEgg2.gif', 'rowBoat.gif', 'aboutScreen.gif', 'bomber.gif', 'bomberExplosion1.gif', 'Captain.gif', 'bomberExplosion2.gif', 'explosion1.gif', 'ninja.gif', 'pirateShip.gif', 'explosion2.gif', 'puffer.gif', 'explosion3.gif', 'redUrchin.gif', 'turtle.gif', 'heavy.gif', 'bomberConceptArt.jpg', 'ninjaConceptArt.jpg',  'touchDrags1.gif', 'touchDrags2.gif']
+

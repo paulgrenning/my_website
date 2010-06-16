@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.projects'/projects', :controller => 'pages', :action => 'projects'
   map.downloads'/downloads', :controller => 'pages', :action => 'downloads'
   map.darktide'/darktide', :controller => 'pages', :action => 'darktide'
+  map.riseotheurchins'/riseotheurchins', :controller => 'pages', :action => 'riseotheurchins'
   #The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
