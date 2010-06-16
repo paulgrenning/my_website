@@ -32,7 +32,7 @@ $(document).ready(function() {
   }
 
   $(".polaroid").draggable({
-    containment: 'container',
+    containment: 'document',
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});
