@@ -11,11 +11,11 @@ $(document).ready(function() {
   function slideRight() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
-        var carousel = $("#carousel-images"); carousel.animate({left: '-=300', queue: true});
+        var carousel = $("#carousel-images"); carousel.animate({left: '-=292', queue: true});
         carousel.children("a").first().animate({queue: true}, function() { 
           $(this).remove();
           $(this).appendTo(carousel);
-          $(carousel).css({left: "-300px"});
+          $(carousel).css({left: "-292px"});
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
@@ -26,11 +26,11 @@ $(document).ready(function() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
         var carousel = $("#carousel-images");
-        carousel.animate({left: '+=300', queue: true});
+        carousel.animate({left: '+=292', queue: true});
         carousel.children("a").last().animate({queue: true}, function() { 
           $(this).remove();
           $(this).prependTo(carousel);
-          $(carousel).css({left: "-300px"}) 
+          $(carousel).css({left: "-292px"}) 
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
