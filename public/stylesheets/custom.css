@@ -141,15 +141,15 @@ height:256px;
 }
 
 #carousel-images {
-  left: -292px;
+  left: -340px;
   white-space: nowrap;
   position: relative;
-  margin-left: -60px;
 }
 
 .thumb {
   position: relative;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #portrait {
