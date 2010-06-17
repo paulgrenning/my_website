@@ -23,14 +23,13 @@ $(document).ready(function() {
     for(i = 0; i < 26; i++){
       urchinMaxZ = 26;
       $("#polaroid_"+i).animate({queue: true}, function() {
-        $(this).css({left: Math.floor(Math.random()*850)-75 });
-        $(this).css({top: Math.floor(Math.random()*450)});
-        $(this).css({zIndex: Math.floor(Math.random()*26)});
+        $(this).css({"-moz-transform" : "rotate(" + (Math.floor(Math.random()*80) - 40) + "deg)","-webkit-transform" : "rotate(" + (Math.floor(Math.random()*80) - 40) + "deg)", left: Math.floor(Math.random()*850)-75, zIndex: Math.floor(Math.random()*26) ,top: Math.floor(Math.random()*375) });
       });
     }
   }
 
-  $(".polaroid").draggable({
+  $(".the_polaroids").draggable({
+    containment: [$("#polaroid_gallery").position().left, $("#polaroid_gallery").position().top, $("#polaroid_gallery").position().left + 800, $("#polaroid_gallery").position().top + 400],
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});
