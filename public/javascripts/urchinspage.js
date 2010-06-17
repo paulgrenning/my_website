@@ -5,7 +5,6 @@
 $(document).ready(function() {
   urchinMaxZ = 26;
   randomizeImageLocations();
-
   function launchFancyBox() {
     $(".polaroid").fancybox({
       'titleShow'     : false,
@@ -16,8 +15,8 @@ $(document).ready(function() {
     });
   }
 
-  $(".polaroid").mousedown( function() {
-   launchFancyBox();
+  $('.the_polaroids').mousedown( function() {
+    launchFancyBox();
   });
 
   function randomizeImageLocations() {
@@ -32,19 +31,16 @@ $(document).ready(function() {
   }
 
   $(".polaroid").draggable({
-    containment: 'document',
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});
-      preventClick=true;
     },
     stop: function(e, ui) {
-    setTimeout(function(){ preventClick=false; }, 250);
-  }
+      setTimeout(function(){ preventClick=false; }, 250);
+    }
   });
 
   $("#refresh-button").live('click', function() {
-      randomizeImageLocations();
-    }
-  );
+    randomizeImageLocations();
+  });
 });
