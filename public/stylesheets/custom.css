@@ -114,6 +114,10 @@ height:256px;
   margin-top: -60px;
 }
 
+#about-darktide {
+  height: 330;
+}
+
 .page-info {
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   float: left;

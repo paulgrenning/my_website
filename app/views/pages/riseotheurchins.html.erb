@@ -1,12 +1,10 @@
 <div class='page-info span-24'>
-  <div class="span-24">
-    <div class="span-22 append-1 prepend-1">
-      <p id="refresh-button">refresh</p>
-      <div id="polaroid_gallery">
-        <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
-          <%= link_to image_tag(image.split('.').first.to_s+"Thumb"+"."+image.split('.').last.to_s, :class => 'the_polaroids', :id => "polaroid_"+index.to_s), '/images/'+image, :rel => 'polaroids', :class => 'polaroid'%>
-        <% end %>
-      </div>
+  <div class="span-22 append-1 prepend-1">
+    <p id="refresh-button">refresh</p>
+    <div id="polaroid_gallery">
+      <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
+        <%= link_to image_tag(image.split('.').first.to_s+"Thumb"+"."+image.split('.').last.to_s, :class => 'the_polaroids', :id => "polaroid_"+index.to_s), '/images/'+image, :rel => 'polaroids', :class => 'polaroid'%>
+      <% end %>
     </div>
   </div>
   <div class="span-24">
