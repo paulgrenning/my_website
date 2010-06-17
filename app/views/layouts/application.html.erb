@@ -4,28 +4,28 @@ me Help Sign in
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= title %></title>
-    <%= render 'layouts/stylesheets' %>
-    <%= javascript_include_tag 'jquery-1.4.1.min' %>
-    <%= javascript_include_tag 'jquery-ui' %>
-    <%= javascript_include_tag 'jrails' %>
-    <%= javascript_include_tag 'fancybox/jquery.fancybox-1.3.1.pack' %>
-    <%= javascript_include_tag 'fancybox/jquery.easing-1.3.pack' %>
-    <%= javascript_include_tag 'homepage' %>
-    <%= javascript_include_tag 'urchinspage' %>
+    <%= render "layouts/stylesheets" %>
+    <%= javascript_include_tag "jquery-1.4.1.min" %>
+    <%= javascript_include_tag "jquery-ui" %>
+    <%= javascript_include_tag "jrails" %>
+    <%= javascript_include_tag "fancybox/jquery.fancybox-1.3.1.pack" %>
+    <%= javascript_include_tag "fancybox/jquery.easing-1.3.pack" %>
+    <%= javascript_include_tag "homepage" %>
+    <%= javascript_include_tag "urchinspage" %>
   </head>
   <body>
-    <div id='body-border'>
-      <div id='left-border'></div>
-      <div id='right-border'></div>
-      <div class='container'>
-        <div id='body-interior'>
-          <%= render 'layouts/header', :locals => { :page_header => @page_header } %>
-          <div id= 'main-content'>
+    <div id="body-border">
+      <div id="left-border"></div>
+      <div id="right-border"></div>
+      <div class="container">
+        <div id="body-interior">
+          <%= render "layouts/header", :locals => { :page_header => @page_header } %>
+          <div id= "main-content">
             <%= yield %>
           </div>
           <div style="clear:both;"></div>
-          <div id='white-space'></div>
-          <%= render 'layouts/footer' %>
+          <div id="white-space"></div>
+          <%= render "layouts/footer" %>
         </div>
       </div>
     </div>

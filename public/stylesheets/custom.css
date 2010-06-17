@@ -78,6 +78,7 @@ body {
   background-clip: initial;
   margin-left: auto;
   margin-right: auto;
+  min-height: 800;
 }
 
 #header-wrap{
