@@ -108,10 +108,12 @@ height:256px;
   float: left;
   width: 960px;
   margin-top: -60px;
+  min-height: 800px;
 }
 
 #about-darktide {
-  height: 350;
+  height: 310;
+  padding-bottom: 20px;
 }
 
 .page-info {
