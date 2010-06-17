@@ -72,8 +72,6 @@ body {
   background-position-y: initial;
   background-origin: initial;
   background-clip: initial;
-  margin-left: auto;
-  margin-right: auto;
   min-height: 800;
 }
 
@@ -106,7 +104,6 @@ height:256px;
 
 #main-content {
   float: left;
-  width: 960px;
   margin-top: -60px;
   min-height: 800px;
 }
