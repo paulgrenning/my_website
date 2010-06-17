@@ -15,8 +15,12 @@ me Help Sign in
   </head>
   <body>
     <div id="body-border">
-      <div id="left-border"></div>
-      <div id="right-border"></div>
+      <div id="left-border">
+          <%= image_tag("pageborderleft.png") %>
+      </div>
+      <div id="right-border">
+          <%= image_tag("pageborderright.png") %>
+      </div>
       <div class="container">
         <div id="body-interior">
           <%= render "layouts/header", :locals => { :page_header => @page_header } %>
