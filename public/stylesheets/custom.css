@@ -181,6 +181,20 @@ height:256px;
   position:absolute;
 }
 
+.portrait {
+  -webkit-box-shadow: #333 2px 2px 3px;
+  left: 255;
+  top: 0;
+  border-bottom: 25px solid #eee;
+  border-left: 7px solid #eee;
+  border-top: 7px solid #eee;
+  border-right: 7px solid #eee;
+  position:absolute;
+  display: none;
+  width: 275;
+  height: auto;
+  z-index: 0;
+}
 
 #polaroid_0 {
   z-index: 0;
