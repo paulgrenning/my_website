@@ -80,7 +80,6 @@ $(document).ready(function() {
       urchinMaxZ = 26;
       $("#portrait_"+i).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
       $("#portrait_"+i).css("-moz-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
-      $("#portrait_"+i).css("zIndex", Math.floor(Math.random()*26)); 
       $(".portrait").fadeIn();
     }
   }

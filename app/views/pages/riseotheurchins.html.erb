@@ -1,19 +1,21 @@
 <div class='page-info span-24'>
-    <div class="span-22 append-1 prepend-1">
-      <h2>Image Gallery</h2>
-      <p>
-        The images in the gallery were either drawn by Dark Tide
-        Software's artist, Michael Davis, or they are actual screen shots
-        from the game. The images below can be dragged around or clicked on to
-        be viewed at a larger scale.
-      </p>
-      <p>
-        The gallery can be shuffled up and redisplayed by hitting refresh
-        or try the other veiws out by clicking the buttons below.
-      </p>
-      <p><span id="refresh-button" class="span-6 prepend-3">Refresh</span><span id="polaroid-view" class="span-6">Polaroid View</span><span id="portrait-view" class="span-6">Portrait View<span></p>
-    </div>
+  <div class="span-22 append-1 prepend-1">
+    <h2>Image Gallery</h2>
+    <p>
+      The images in the gallery were either drawn by Dark Tide
+      Software's artist, Michael Davis, or they are actual screen shots
+      from the game. The images below can be dragged around or clicked on to
+      be viewed at a larger scale.
+    </p>
+    <p>
+      The gallery can be shuffled up and redisplayed by hitting refresh
+      or try the other veiws out by clicking the buttons below.
+    </p>
+    <p><span id="refresh-button" class="span-6 prepend-3">Refresh</span><span id="polaroid-view" class="span-6">Polaroid View</span><span id="portrait-view" class="span-6">Portrait View<span></p>
+  </div>
+  <div>
     <%= image_tag("horizontal-divider.png") %>
+  </div>
   <div class="span-22 append-1 prepend-1">
     <div id="polaroid_gallery">
       <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
@@ -27,7 +29,5 @@
     <div><p></p></div>
     <%= image_tag("horizontal-divider.png") %>
     <div><p></p></div>
-    <div class="span-22 prepend-1">
-    </div>
   </div>
 </div>
