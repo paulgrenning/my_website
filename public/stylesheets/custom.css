@@ -179,24 +179,6 @@ height:256px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   position:absolute;
-}
-
-.portrait {
-  -webkit-box-shadow: #333 2px 2px 3px;
-  left: 255;
-  top: 0;
-  border-bottom: 25px solid #eee;
-  border-left: 7px solid #eee;
-  border-top: 7px solid #eee;
-  border-right: 7px solid #eee;
-  position:absolute;
-  display: none;
-  width: 275;
-  height: auto;
-  z-index: 0;
-}
-
-#polaroid_0 {
   z-index: 0;
   left: 180;  
   top: 0;
@@ -204,202 +186,18 @@ height:256px;
   -moz-transform: rotate(-9deg);
 }
 
-#polaroid_1 {
-  z-index: 0;
-  left: 10;  
-  top: 40;
-  -webkit-transform: rotate(9deg);
-  -moz-transform: rotate(9deg);
-}
-
-#polaroid_2 {
-  z-index: 0;
-  left: 480;  
-  top: 200;
-  -webkit-transform: rotate(-18deg);
-  -moz-transform: rotate(-18deg);
-}
-
-#polaroid_3 {
-  z-index: 0;
-  left: 680;  
-  top: 300;
-  -webkit-transform: rotate(33deg);
-  -moz-transform: rotate(33deg);
-}
-
-#polaroid_4 {
-  z-index: 0;
-  left: 280;  
-  top: 100;
-  -webkit-transform: rotate(15deg);
-  -moz-transform: rotate(15deg);
-}
-
-#polaroid_5 {
-  z-index: 0;
-  left: 280;  
-  top: 200;
-  -webkit-transform: rotate(-26deg);
-  -moz-transform: rotate(-26deg);
-}
-
-#polaroid_6 {
-  z-index: 0;
-  left: 80;  
-  top: 250;
-  -webkit-transform: rotate(37deg);
-  -moz-transform: rotate(37deg);
-}
-
-#polaroid_7 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(32deg);
-  -moz-transform: rotate(32deg);
-}
-
-#polaroid_8 {
-  z-index: 0;
-  left: 0;  
+.portrait {
+  -webkit-box-shadow: #333 2px 2px 3px;
+  left: 255;
   top: 0;
-  -webkit-transform: rotate(-24deg);
-  -moz-transform: rotate(-24deg);
-}
-
-#polaroid_9 {
+  border-bottom: 5px solid #eee;
+  border-left: 5px solid #eee;
+  border-top: 5px solid #eee;
+  border-right: 5px solid #eee;
+  position:absolute;
+  display: none;
+  width: 275;
   z-index: 0;
-  left: 10;  
-  top: 300;
-  -webkit-transform: rotate(-16deg);
-  -moz-transform: rotate(-16deg);
-}
-
-#polaroid_10 {
-  z-index: 0;
-  left: 100;  
-  top: 340;
-  -webkit-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
-}
-
-#polaroid_11 {
-  z-index: 0;
-  left: 130;  
-  top: 90;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-}
-#polaroid_12 {
-  z-index: 0;
-  left: 110;  
-  top: 130;
-  -webkit-transform: rotate(40deg);
-  -moz-transform: rotate(40deg);
-}
-
-#polaroid_13 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(-49deg);
-  -moz-transform: rotate(-49deg);
-}
-
-#polaroid_14 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(-13deg);
-  -moz-transform: rotate(-13deg);
-}
-#polaroid_15 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(-4deg);
-  -moz-transform: rotate(-4deg);
-}
-
-#polaroid_16 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(-26deg);
-  -moz-transform: rotate(-26deg);
-}
-
-#polaroid_17 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(35deg);
-  -moz-transform: rotate(35deg);
-}
-
-#polaroid_18 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(15deg);
-  -moz-transform: rotate(15deg);
-}
-
-#polaroid_19 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-}
-
-#polaroid_20 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(5deg);
-  -moz-transform: rotate(5deg);
-}
-
-#polaroid_21 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(9deg);
-  -moz-transform: rotate(9deg);
-}
-
-#polaroid_22 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(-10deg);
-  -moz-transform: rotate(-10deg);
-}
-
-#polaroid_23 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(-29deg);
-  -moz-transform: rotate(-29deg);
-}
-
-#polaroid_24 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(49deg);
-  -moz-transform: rotate(49deg);
-}
-
-#polaroid_25 {
-  z-index: 0;
-  left: 180;  
-  top: 300;
-  -webkit-transform: rotate(-49deg);
-  -moz-transform: rotate(-49deg);
 }
 
 #darktide-logo {

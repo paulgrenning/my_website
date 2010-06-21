@@ -6,6 +6,7 @@ $(document).ready(function() {
   urchinMaxZ = 26;
   randomizeImageLocations();
   var isInPortrait = false;
+  var easeOutIndex = 0;
   function launchFancyBox() {
     $(".pop-out").fancybox({
       'titlePosition' : 'inside',
@@ -43,13 +44,22 @@ $(document).ready(function() {
   });
 
   $(".portrait").mousedown(function() {
-    $(this).animate({left: 800, top: -100}, function() {
-      for(i = 0; i < 26; i++){
-        $("#portrait_"+i).css({zIndex: parseInt($("#portrait_"+i).css('zIndex'))+1});
-      }
-      $(this).css({zIndex: 0}); 
-      $(this).animate({left: 255, top: 0});
-    });
+    $(this).css("-webkit-transform", "rotate(0deg)");
+    if($(this).position().left == 255) {
+      $(this).animate({left: 600, width: 145}, 1000, function() {
+        $(this).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30)-15) + "deg)");
+        $(this).css({zIndex: easeOutIndex});
+        $(this).animate({left: 750, width: 100});
+      });
+      easeOutIndex++;
+    } else if($(this).position().left == 750) {
+      $(this).css({zIndex: 100 - easeOutIndex});
+      $(this).animate({left: 500, width: 175}, function() {
+        $(this).animate({left: 255, width: 275}, 1000);
+        $(this).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30)-15) + "deg)");
+      });
+      easeOutIndex--;
+    }
   });
 
   $("#refresh-button").live('click', function() {
