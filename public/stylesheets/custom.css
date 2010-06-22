@@ -153,7 +153,6 @@ height:256px;
 }
 
 #polaroid_gallery {
-  width: 100%;
   height: 460;
   position: relative;
 }
@@ -183,7 +182,7 @@ height:256px;
 
 .portrait {
   width: 275;
-  height: auto;
+  height: 450;
   left: 255;
   top: 0;
   display: none;
