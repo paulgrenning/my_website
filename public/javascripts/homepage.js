@@ -38,17 +38,6 @@ $(document).ready(function() {
         });
       }
   }
-  var setOriginalData =function() {
-    var image = $(this); 
-    image.data('original_left', image.position().top);
-    image.data('original_width', image.width());
-    image.data('original_source', image.attr('src'));
-  }
-  var getOriginalPosition =function() {
-    var list = $(this);
-    list.data('original_left', list.position().left);
-    list.data('original_right', list.position().right);
-  }
   $("#portfolio").live('mouseover',
     function() {
         ProjectsCarousel.isScrollingSet = false;
@@ -57,7 +46,7 @@ $(document).ready(function() {
         $("#left-arrow").show();
         $("#right-arrow").show();
       })
-  .each(setOriginalData).live('mouseout',
+  .live('mouseout',
     function() {
         $("#left-arrow").hide();
         $("#right-arrow").hide();
@@ -71,47 +60,47 @@ $(document).ready(function() {
         }
       }
       );
-  $("#thumb-1").each(setOriginalData).live('mouseover',
+  $("#thumb-1").live('mouseover',
     function() {
         $(this).attr("src", "images/darktide-logo-light.png");
       })
-  .each(setOriginalData).live('mouseout',
+  .live('mouseout',
     function() {
         $(this).attr("src", "images/darktide-logo-dark.png")// $(this).data('original_source'));
       }
   );
-  $("#thumb-2").each(setOriginalData).live('mouseover',
+  $("#thumb-2").live('mouseover',
     function() {
         $(this).attr("src", "images/bug-splat.png");
       })
-  .each(setOriginalData).live('mouseout',
+  .live('mouseout',
     function() {
         $(this).attr("src", "images/bug.png");
       }
   );
-  $("#thumb-3").each(setOriginalData).live('mouseover',
+  $("#thumb-3").live('mouseover',
     function() {
         $(this).attr("src", "images/urchin2.png");
       })
-  .each(setOriginalData).live('mouseout',
+  .live('mouseout',
     function() {
         $(this).attr("src", "images/urchin1.png");
       }
   );
-  $("#thumb-4").each(setOriginalData).live('mouseover',
+  $("#thumb-4").live('mouseover',
     function() {
         $(this).attr("src", "images/website-thumb2.png");
       })
-  .each(setOriginalData).live('mouseout',
+  .live('mouseout',
     function() {
         $(this).attr("src", "images/website-thumb.png");
       }
   );
-  $("#thumb-5").each(setOriginalData).live('mouseover',
+  $("#thumb-5").live('mouseover',
     function() {
         $(this).attr("src", "images/ninja-defense2.png");
       })
-  .each(setOriginalData).live('mouseout',
+  .live('mouseout',
     function() {
         $(this).attr("src", "images/ninja-defense1.png");
       }

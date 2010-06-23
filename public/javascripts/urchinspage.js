@@ -33,7 +33,7 @@ $(document).ready(function() {
   }
 
   $(".the_polaroids").draggable({
-    containment: [$("#polaroid_gallery").position().left, $("#polaroid_gallery").position().top, $("#polaroid_gallery").position().left + 800, $("#polaroid_gallery").position().top + 400],
+    containment: [$("#main-content").position().left, $("#main-content").position().top, $("#main-content").position().left + 800, $("#main-content").position().top + 400],
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});

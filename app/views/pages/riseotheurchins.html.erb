@@ -16,7 +16,7 @@
   <div>
     <%= image_tag("horizontal-divider.png") %>
   </div>
-  <div class="span-22 append-1 prepend-1" id="polaroid_gallery">
+  <div class="span-22 append-1 prepend-1">
     <div id="polaroid_gallery">
       <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
         <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:description]),

@@ -154,6 +154,9 @@ height:256px;
 
 #polaroid_gallery {
   height: 460;
+  left: 1;
+  top: 1;
+  width: auto;
   position: relative;
 }
 
