@@ -153,7 +153,6 @@ height:256px;
 
 #polaroid_gallery {
   float: left;
-  height: 460;
   position: relative;
 }
 
@@ -200,6 +199,17 @@ height:256px;
   background-color: initial;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+#mouseover-text {
+  font: normal normal normal 1.2em/normal Georgia, Times, serif;
+  display: none;
+  width: 150px;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  z-index: 1000;
 }
 
 #darktide-logo {

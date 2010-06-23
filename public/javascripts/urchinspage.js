@@ -64,6 +64,17 @@ $(document).ready(function() {
     }
   });
 
+  $(".portrait").mouseover(function (e) {
+    var currentPortrait = $(this);
+    $("#mouseover-text").show();
+    $("#mouseover-text").text(currentPortrait.attr("alt"));
+    $("#mouseover-text").css({left: currentPortrait.position().left, top: currentPortrait.position().top});
+  });
+
+  $(".portrait").mouseout(function (e) {
+    $("#mouseover-text").hide();
+  });
+
   $("#refresh-button").live('click', function() {
     if(isInPortrait == false) {
       randomizeImageLocations();

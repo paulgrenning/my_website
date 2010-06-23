@@ -11,16 +11,18 @@
       The gallery can be shuffled up and redisplayed by hitting refresh
       or try the other veiws out by clicking the buttons below.
     </p>
+    <p id="portrait-view">portrait</p>
   </div>
   <div class="span-24">
     <%= image_tag("horizontal-divider.png") %>
   </div>
   <div id="polaroid_gallery" class="span-24">
+    <p id="mouseover-text"></p>
     <%= image_tag("transparentLine.png") %>
     <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
       <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:description]),
          '/images/'+image[:name],:rel => 'polaroids', :class => "pop-out"%>
-      <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s) %>
+      <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
   <div class="span-24">
