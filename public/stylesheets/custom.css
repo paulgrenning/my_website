@@ -181,6 +181,8 @@ height:256px;
 }
 
 .portrait {
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
   width: 275;
   height: 450;
   left: 255;
@@ -192,6 +194,12 @@ height:256px;
   border-right: 5px solid #eee;
   position:absolute;
   z-index: 0;
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 #darktide-logo {
