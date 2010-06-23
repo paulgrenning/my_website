@@ -153,6 +153,7 @@ height:256px;
 }
 
 #polaroid_gallery {
+  float: left;
   height: 460;
   position: relative;
 }
