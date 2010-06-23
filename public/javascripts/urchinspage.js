@@ -28,7 +28,7 @@ $(document).ready(function() {
       $("#polaroid_"+i).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*80) -40) + "deg)");
       $("#polaroid_"+i).css("-moz-transform", "rotate(" + (Math.floor(Math.random()*80) -40) + "deg)");
       $("#polaroid_"+i).css("zIndex", Math.floor(Math.random()*26)); 
-      $("#polaroid_"+i).animate({left: Math.floor(Math.random()*850)-75, top: Math.floor(Math.random()*375)});
+      $("#polaroid_"+i).animate({left: Math.floor(Math.random()*850), top: Math.floor(Math.random()*335)});
     }
   }
 
@@ -46,17 +46,19 @@ $(document).ready(function() {
   $(".portrait").mousedown(function() {
     $(this).css("-webkit-transform", "rotate(0deg)");
     if($(this).position().left == 255) {
-      $(this).animate({left: 600, width: 135, height: 200}, 1000, function() {
-        $(this).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30)-15) + "deg)");
+      $(this).animate({left: 600, width: 135}, 1000, function() {
         $(this).css({zIndex: easeOutIndex});
-        $(this).animate({left: 750, width: 80, height: 120});
+        $(this).animate({left: 750, width: 80}, function() {
+          $(this).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30)-15) + "deg)");
+        });
       });
       easeOutIndex++;
     } else if($(this).position().left == 750) {
       $(this).css({zIndex: 100 - easeOutIndex});
-      $(this).animate({left: 500, width: 175, height: 250}, function() {
-        $(this).animate({left: 255, width: 275, height: 450}, 1000);
-        $(this).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30)-15) + "deg)");
+      $(this).animate({left: 500, width: 175}, function() {
+        $(this).animate({left: 255, width: 275}, 400, function() {
+          $(this).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30)-15) + "deg)");
+        });
       });
       easeOutIndex--;
     }

@@ -13,20 +13,17 @@
     </p>
     <p><span id="refresh-button" class="span-6 prepend-3">Refresh</span><span id="polaroid-view" class="span-6">Polaroid View</span><span id="portrait-view" class="span-6">Portrait View<span></p>
   </div>
-  <div>
+  <div class="span-24">
     <%= image_tag("horizontal-divider.png") %>
   </div>
-  <div class="span-22 append-1 prepend-1">
-    <div id="polaroid_gallery">
-      <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
-        <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:description]),
-           '/images/'+image[:name],:rel => 'polaroids', :class => "pop-out"%>
-      <% end %>
-    </div>
+  <div id="polaroid_gallery" class="span-24">
+    <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
+      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:description]),
+         '/images/'+image[:name],:rel => 'polaroids', :class => "pop-out"%>
+      <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s) %>
+    <% end %>
   </div>
   <div class="span-24">
-    <div><p></p></div>
     <%= image_tag("horizontal-divider.png") %>
-    <div><p></p></div>
   </div>
 </div>

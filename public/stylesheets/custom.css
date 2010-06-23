@@ -154,7 +154,6 @@ height:256px;
 
 #polaroid_gallery {
   height: 460;
-  width: auto;
   position: relative;
 }
 
@@ -185,7 +184,7 @@ height:256px;
   -webkit-transform: rotate(-9deg);
   -moz-transform: rotate(-9deg);
   width: 275;
-  height: 450;
+  height: auto;
   left: 255;
   top: 0;
   display: none;
@@ -216,7 +215,7 @@ height:256px;
 }
 
 #below-nav {
-  margin-top: -10px;
+  margin-top: 7px;
 }
 
 #copyright {
