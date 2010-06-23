@@ -28,12 +28,12 @@ $(document).ready(function() {
       $("#polaroid_"+i).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*80) -40) + "deg)");
       $("#polaroid_"+i).css("-moz-transform", "rotate(" + (Math.floor(Math.random()*80) -40) + "deg)");
       $("#polaroid_"+i).css("zIndex", Math.floor(Math.random()*26)); 
-      $("#polaroid_"+i).animate({left: Math.floor(Math.random()*850)-75, top: Math.floor(Math.random()*375)});
+      $("#polaroid_"+i).animate({left: Math.floor(Math.random()*850)-75, top: $("#main-content").position().top + Math.floor(Math.random()*375)-250});
     }
   }
 
   $(".the_polaroids").draggable({
-    containment: [$("#main-content").position().left, $("#main-content").position().top, $("#main-content").position().left + 800, $("#main-content").position().top + 400],
+    containment: [$("#main-content").position().left, $("#main-content").position().top + 100, $("#main-content").position().left + 800, $("#main-content").position().top + 400],
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});
