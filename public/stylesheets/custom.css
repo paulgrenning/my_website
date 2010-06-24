@@ -253,6 +253,10 @@ height:256px;
   height: 75px;
 }
 
+#padding-10px {
+ padding: 10px;
+}
+
 #above-gallery {
   margin-top: 10px;
 }
