@@ -142,8 +142,5 @@ $(document).ready(function() {
     }
   });
 
-  $(".video").mouseover(function() {
-    $(this).css({ left: 500, height: 425});
-  });
   $("a[rel^='prettyPhoto']").prettyPhoto();
 });

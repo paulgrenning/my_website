@@ -35,9 +35,36 @@
       <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
-  <div class="span-24">
+  <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
   </div>
+  <div class="span-22 append-1 prepend-1">
+    <h2>Game Play Videos</h2>
+    <div class="span-7">
+        <%= link_to image_tag("physical-touch.jpg", :class => 'video', :id => "video_1"),
+           'http://www.youtube.com/watch?v=Ys4L3LpYapc', :rel => "prettyPhoto[videos]"%>
+           <p>
+           Early gameplay video demonstrating how to throw sea urchins around
+           with finger gestures.
+           </p>
+    </div>
+    <div class="spacers span-7">
+        <%= link_to image_tag("gameplay1.jpg", :class => 'video', :id => "video_2"),
+           'http://www.youtube.com/watch?v=GgoHnb_SzRk', :rel => "prettyPhoto[videos]"%>
+           <p>
+           Final gameplay video with all the special effects, foleyed sounds, hand written
+           music, and intense gameplay.
+           </p>
+    </div>
+    <div class="span-7">
+        <%= link_to image_tag("olderGameplay.jpg", :class => 'video', :id => "video_3"),
+           'http://www.youtube.com/watch?v=CNFREi_TV0Y', :rel => "prettyPhoto[videos]"%>
+           <p>
+           Midpoint gameplay video, not all of the special effects are fully integrated,
+           but gives a good impression of what a full 6 minute game feels like.
+           </p>
+    </div>
+  </div> 
   <!--  http://www.youtube.com/watch?v=GgoHnb_SzRk
  http://www.youtube.com/watch?v=Ys4L3LpYapc -->
 </div>

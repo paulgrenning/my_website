@@ -240,15 +240,8 @@ height:256px;
   z-index: 1000;
 }
 
-.video:hover {
-  width: 480;
-  height: 385;
-}
-
 .video {
   border: 5px solid #fff;
-  width: 200;
-  height: 150;
   z-index: 0;
 }
 
@@ -262,6 +255,10 @@ height:256px;
 
 #above-gallery {
   margin-top: 10px;
+}
+
+#below-gallery {
+  margin-bottom: 15px;
 }
 
 #above-nav {
