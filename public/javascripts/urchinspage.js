@@ -7,20 +7,6 @@ $(document).ready(function() {
   randomizeImageLocations();
   var isInPortrait = false;
   var easeOutIndex = 0;
-  function launchFancyBox() {
-    $(".pop-out").fancybox({
-      'titlePosition' : 'inside',
-      'titleShow'     : true,
-      'transitionIn'  : 'elastic',
-      'transitionOut' : 'elastic',
-      'easingIn'      : 'easeOutBack',
-      'easingOut'     : 'easeInBack'
-    });
-  }
-
-  $('.the_polaroids').mousedown( function() {
-    launchFancyBox();
-  });
 
   function randomizeImageLocations() {
     for(i = 0; i < 26; i++){
@@ -33,7 +19,7 @@ $(document).ready(function() {
   }
 
   $(".the_polaroids").draggable({
-    containment: [$("#main-content").position().left, $("#main-content").position().top+100, $("#main-content").position().left + 800, $("#main-content").position().top + 400],
+    containment: [$("#main-content").position().left, $("#main-content").position().top+175, $("#main-content").position().left + 800, $("#main-content").position().top + 500],
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});
@@ -64,15 +50,38 @@ $(document).ready(function() {
     }
   });
 
-  $(".portrait").mouseover(function (e) {
+  $(".portrait").hover(function (e) {
     var currentPortrait = $(this);
     $("#mouseover-text").show();
     $("#mouseover-text").text(currentPortrait.attr("alt"));
-    $("#mouseover-text").css({left: currentPortrait.position().left, top: currentPortrait.position().top});
+    $("#mouseover-text").css({left: currentPortrait.position().left + currentPortrait.width() + 20, top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
+    $("#mouseover-top").show();
+    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width(), top: currentPortrait.position().top + currentPortrait.height()/3 +10});
+    $("#mouseover-bottom").show();
+    $("#mouseover-bottom").css({left: currentPortrait.position().left + currentPortrait.width(), top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
+  });
+/*
+  $(".the_polaroids").hover(function (e) {
+    var currentPortrait = $(this);
+    $("#mouseover-text").show();
+    $("#mouseover-text").html(currentPortrait.attr("alt"));
+    $("#mouseover-text").css({left: currentPortrait.position().left + 3*currentPortrait.width()/4 + 20, top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
+    $("#mouseover-top").show();
+    $("#mouseover-top").css({left: currentPortrait.position().left + 3*currentPortrait.width()/4, top: currentPortrait.position().top + currentPortrait.height()/3 +10});
+    $("#mouseover-bottom").show();
+    $("#mouseover-bottom").css({left: currentPortrait.position().left + 3*currentPortrait.width()/4, top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
   });
 
+  $(".the_polaroids").mouseout(function (e) {
+    $("#mouseover-text").hide();
+    $("#mouseover-bottom").hide();
+    $("#mouseover-top").hide();
+  });
+  */
   $(".portrait").mouseout(function (e) {
     $("#mouseover-text").hide();
+    $("#mouseover-bottom").hide();
+    $("#mouseover-top").hide();
   });
 
   $("#refresh-button").live('click', function() {
@@ -82,10 +91,10 @@ $(document).ready(function() {
   });
 
   $("#polaroid-view").live('click', function() {
-      fadeOutPortraits();
-      isInPortrait = false;
-      fadeInPolaroids();
-      randomizeImageLocations();
+    $(this).effect("bounce"); fadeOutPortraits();
+    isInPortrait = false;
+    fadeInPolaroids();
+    randomizeImageLocations();
   });
 
   function fadeOutPortraits() {
@@ -105,7 +114,24 @@ $(document).ready(function() {
     }
   }
 
+  $("#portrait-view").hover( function() {
+    $(this).stop().animate({height: 85});
+  });
+
+  $("#polaroid-view").hover( function() {
+    $(this).stop().animate({height: 85});
+  });
+
+  $("#portrait-view").mouseout( function() {
+    $(this).stop().animate({height: 75});
+  });
+
+  $("#polaroid-view").mouseout( function() {
+    $(this).stop().animate({height: 75});
+  });
+
   $("#portrait-view").live("click", function() {
+    $(this).effect("bounce");
     if(isInPortrait == false){
       isInPortrait = true;
       $(".the_polaroids").animate({left: 375, top: 200, queue: true}, function() {
@@ -115,4 +141,9 @@ $(document).ready(function() {
       });
     }
   });
+
+  $(".video").mouseover(function() {
+    $(this).css({ left: 500, height: 425});
+  });
+  $("a[rel^='prettyPhoto']").prettyPhoto();
 });

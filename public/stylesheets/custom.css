@@ -201,15 +201,55 @@ height:256px;
   background-repeat: no-repeat;
 }
 
+#view-selection {
+  height: 100px;
+}
+
+#portrait-view {
+  position: absolute;
+}
+
+#polaroid-view {
+  position: absolute;
+}
+
+#mouseover-top {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+#mouseover-bottom {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
 #mouseover-text {
   font: normal normal normal 1.2em/normal Georgia, Times, serif;
   display: none;
-  width: 150px;
+  width: 157px;
   padding: 10px;
   background: #000;
   color: #fff;
   position: absolute;
   z-index: 1000;
+}
+
+.video:hover {
+  width: 480;
+  height: 385;
+}
+
+.video {
+  border: 5px solid #fff;
+  width: 200;
+  height: 150;
+  z-index: 0;
 }
 
 #darktide-logo {
@@ -218,6 +258,10 @@ height:256px;
 
 #white-space {
   height: 75px;
+}
+
+#above-gallery {
+  margin-top: 10px;
 }
 
 #above-nav {

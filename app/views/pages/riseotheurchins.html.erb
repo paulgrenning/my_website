@@ -11,21 +11,33 @@
       The gallery can be shuffled up and redisplayed by hitting refresh
       or try the other veiws out by clicking the buttons below.
     </p>
-    <p id="portrait-view">portrait</p>
+    <div id="view-selection" class="span-22 append-1 prepend-1">
+      <div class="span-2 prepend-4">
+        <%= image_tag("portrait-button.png", :id => "portrait-view") %>
+      </div>
+      <div class="span-9"><p></p></div>
+      <div class="span-3">
+        <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
+      </div>
+    </div>
   </div>
-  <div class="span-24">
+  <div class="span-24" id="above-gallery">
     <%= image_tag("horizontal-divider.png") %>
   </div>
   <div id="polaroid_gallery" class="span-24">
+    <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
+    <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
     <p id="mouseover-text"></p>
     <%= image_tag("transparentLine.png") %>
     <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:description]),
-         '/images/'+image[:name],:rel => 'polaroids', :class => "pop-out"%>
+      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:title]),
+         '/images/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[polaroids]"%>
       <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
   <div class="span-24">
     <%= image_tag("horizontal-divider.png") %>
   </div>
+  <!--  http://www.youtube.com/watch?v=GgoHnb_SzRk
+ http://www.youtube.com/watch?v=Ys4L3LpYapc -->
 </div>
