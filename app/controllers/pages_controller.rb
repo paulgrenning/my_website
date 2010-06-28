@@ -12,6 +12,10 @@ class PagesController < ApplicationController
     @page_header = { :name => "Rise O' The Urchins", :link => root_path}
   end
 
+  def bugsplat
+    @page_header = { :name => "Bug Splat", :link => root_path}
+  end
+
   def contact
 	  @title = "Contact"
   end

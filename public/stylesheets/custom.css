@@ -201,6 +201,16 @@ height:256px;
   background-repeat: no-repeat;
 }
 
+.bug_image {
+  display: none;
+  position: absolute;
+}
+
+.bug_portrait {
+  display: none;
+  position: absolute;
+}
+
 #view-selection {
   height: 100px;
 }

@@ -1,7 +1,14 @@
 <div class='page-info span-24'>
   <div class="span-22 append-1 prepend-1">
     <h2>About The Game</h2>
-    <div class="span-10 append-1">
+    <div class="span-11">
+      <p>
+        Rise O' The Urchins was developed by <%= link_to "Dark Tide Software", darktide_path %>
+        and won two out of six awards at the UIC video game design class competition. The first award
+        was for best graphics and animation and the second award was for best music and sound effects.
+        <%= link_to "To read more about the awards and other games participating in the comptetion
+        read this article.", 'http://www1.cs.uic.edu/www/news.php?audience=public&label=&ind=382' %>
+      </p>
       <p>
         Rise O' The Urchins is a multiplayer game created for UIC's or LSU's tactile. The tactile is 
         a multi touch 52-inch LCD tabletop display. The game's objective is to sink pirate ships
@@ -35,6 +42,10 @@
         Check out the photo gallery to view the different upgrades, obstacles, and screen shots.
       </p>
     </div>
+  </div>
+  <div class="span-24" id="above-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+    <p></p>
   </div>
   <div class="span-22 append-1 prepend-1">
     <h2>Gameplay Videos</h2>
@@ -118,7 +129,7 @@
         between different sets of images. Michael Davis, the artist drew over 600 images for this 3 minute game.  
       </p>
       <p>
-        The game has a number of special effects which include custom physics and particle emitters created by Paul Grenning and Mike Baker.
+        The game has a number of special effects which include custom physics and particle emitters created by Paul Grenning and Mike Salata.
         The physics engine is threaded off from the main
         game loop and is capable of being split into numerous threads if there are to many game objects checking for collisions. The physics engine
         uses basic billiard physics and elliptical physics. Additional physics components included in each sprite may include vectors for buoyancy,

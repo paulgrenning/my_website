@@ -1,0 +1,102 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <h2>About The Game</h2>
+     <!--    http://www.youtube.com/watch?v=WZtG__ngTo8  main video
+      11     http://www.youtube.com/watch?v=dAtzlRgd_lI secondary 
+       12     -->
+       
+    <div class="span-11">
+      <p>
+        Bug Splat was the first video game I ever created. It was developed in two weeks as an introduction to the Processing
+        language during video game design class at UIC. It is a single or multiplayer game created for UIC's or LSU's tactile. The tactile is 
+        a multi touch 52-inch LCD tabletop display. All interaction with the game is done with your fingers. The objective of the game is
+        very simple, that is to squish, burn, electricute, or blow up all of the bugs any way you prefer.
+      </p>
+    </div>
+    <div class="span-11 last">
+      <p>
+        There are really no rules to the game except to kill all the bugs. There are some constraints, that is to kill them and obtain a score higher than 0.
+        The longer it takes to kill the bugs the less points you will receive, even negative points. So the objective is to kill them fast! As mentioned, the game 
+        is multiplayer, so the more fingers you have the faster the bugs will die, but you also lose points for every touch on the screen, so don't waste your
+        touches.
+      </p>
+    </div>
+  </div>
+  <div class="span-22 append-1 prepend-1">
+    <h2>Gameplay Videos</h2>
+    <div class="span-11">
+      <%= link_to image_tag("bugsplatvid1.jpg", :class => 'video', :id => "video_1"),
+         'http://www.youtube.com/watch?v=WZtG__ngTo8', :rel => "prettyPhoto[videos]"%>
+       <p id="padding-10px">
+         Gameplay video with a good look into all three weapons, the lighter and oil can, taser sticks, and fire crackers.
+       </p>
+    </div>
+    <div class="span-11 last">
+      <%= link_to image_tag("bugsplatvid2.jpg", :class => 'video', :id => "video_2"),
+         'http://www.youtube.com/watch?v=dAtzlRgd_lI', :rel => "prettyPhoto[videos]"%>
+       <p id="padding-10px">
+         Gameplay video heavily focusing on the fire crackers and lastly the lighter and oil can.
+       </p>
+    </div>
+  </div> 
+  <div class="span-24" id="above-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+    <p></p>
+  </div>
+  <div class="span-22 append-1 prepend-1 last">
+    <h2>Image Gallery</h2>
+    <p>
+      The images in the gallery were either drawn by Dark Tide
+      Software's artist, Michael Davis, or they are actual screen shots
+      from the game. There are two views, polaroid view or poster view,
+      click the appropriate icon below to switch between views.  
+    </p>
+    <p>
+      The polaroids can be dragged around, clicked, or shuffled up by clicking
+      on the polaroid icon.
+      The posters can be clicked and also have mouse over descriptions.
+    <div id="view-selection" class="span-22 append-1 prepend-1">
+      <div class="span-2 prepend-4">
+        <p></p>
+        <%= image_tag("portrait-button.png", :id => "portrait-view") %>
+      </div>
+      <div class="span-7"><p></p></div>
+      <div class="span-3">
+        <p></p>
+        <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
+      </div>
+    </div>
+  </div>
+  <div class="span-24" id="above-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div id="polaroid_gallery" class="span-24">
+    <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
+    <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
+    <p id="mouseover-text"></p>
+    <%= image_tag("transparentLine.png") %>
+    <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
+      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'bug_image', :id => "bug_polaroid_"+index.to_s, :alt => image[:title]),
+         '/images/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[bug_polaroids]"%>
+      <%= image_tag(image[:name], :class => "bug_portrait", :id => "bug_portrait_"+index.to_s, :alt => image[:description]) %>
+    <% end %>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <h2 class="prepend-1">Game Details</h2>
+  <div class="span-10 append-1 prepend-1">
+      <p>
+        Bug Splat is a very simple game when it comes to the engine. Being my first game I was unsure how well processing would handle complete animations
+        so each bug only has 2 images it swaps between. This was also due to my lack of photoshop knowledge at the time. The game does contains my first
+        iteration of a particle emitter(it is much more refined in the Rise O' The Urchins game). The particle emitter allows a set of images, a direction, max distance,
+        and fade time. It was used for the smoke, flames, blood drops, electric arc, and lightning effects.
+      </p>
+    </div>
+    <div class="span-11 last" >
+      <p>
+      The music for Bug Splat was taken from Doom 1. This also inspired me to make Bug Splat just that much more gorey, violent, and explosive. So I made sure each
+      bug death created a splatter and blood or a smoking corpse. All of the images in some way were drawn or edited by me. 
+      </p>
+    </div>
+</div>
