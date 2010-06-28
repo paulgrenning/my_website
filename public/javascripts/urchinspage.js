@@ -19,7 +19,7 @@ $(document).ready(function() {
   }
 
   $(".the_polaroids").draggable({
-    containment: [$("#main-content").position().left, $("#main-content").position().top+175, $("#main-content").position().left + 800, $("#main-content").position().top + 500],
+    containment: [$("#main-content").position().left, $("#main-content").position().top+900, $("#main-content").position().left + 800, $("#main-content").position().top + 1250],
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});

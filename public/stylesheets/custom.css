@@ -240,6 +240,11 @@ height:256px;
   z-index: 1000;
 }
 
+#my-image {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .video {
   border: 5px solid #fff;
   z-index: 0;
@@ -254,7 +259,8 @@ height:256px;
 }
 
 #padding-10px {
- padding: 10px;
+ padding-top: 10px;
+ padding-bottom: 10px;
 }
 
 #above-gallery {
@@ -270,7 +276,7 @@ height:256px;
 }
 
 #below-nav {
-  margin-top: 7px;
+  padding-top: 7px;
 }
 
 #copyright {

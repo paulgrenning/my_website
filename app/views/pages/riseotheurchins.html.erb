@@ -1,42 +1,39 @@
 <div class='page-info span-24'>
-  <div class="span-22 append-1 prepend-1 last">
-    <h2>Image Gallery</h2>
-    <p>
-      The images in the gallery were either drawn by Dark Tide
-      Software's artist, Michael Davis, or they are actual screen shots
-      from the game. The images below can be dragged around or clicked on to
-      be viewed at a larger scale.
-    </p>
-    <p>
-      The gallery can be shuffled up and redisplayed by hitting refresh
-      or try the other veiws out by clicking the buttons below.
-    </p>
-    <div id="view-selection" class="span-22 append-1 prepend-1">
-      <div class="span-2 prepend-4">
-        <%= image_tag("portrait-button.png", :id => "portrait-view") %>
-      </div>
-      <div class="span-9"><p></p></div>
-      <div class="span-3">
-        <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
-      </div>
+  <div class="span-22 append-1 prepend-1">
+    <h2>About The Game</h2>
+    <div class="span-10 append-1">
+      <p>
+        Rise O' The Urchins is a multiplayer game created for UIC's or LSU's tactile. The tactile is 
+        a multi touch 52-inch LCD tabletop display. The game's objective is to sink pirate ships
+        with sea urchins. There are two teams battling to sink as many ships before the time runs out.
+        Everytime a ship sinks, the appropriate team receives a sum of gold based on the size of the
+        sunken ship.
+      </p>
+      <p>
+        To interact with the game, a player must place a finger on top of an urchin and proceed to drag their
+        finger up the screen and lift their finger off the table. This will fling the urchin through the water
+        in the direction of the finger motion. Many urchins can be flung in one motion by placing many fingers
+        on top of urchins and proceeding to drag fingers up the screen and release.
+        <%= link_to "Click here to see a physical demonstration.", 'http://www.youtube.com/watch?v=Ys4L3LpYapc', :id => "video_1",
+            :rel => "prettyPhoto[videos]"%>
+      </p>
     </div>
-  </div>
-  <div class="span-24" id="above-gallery">
-    <%= image_tag("horizontal-divider.png") %>
-  </div>
-  <div id="polaroid_gallery" class="span-24">
-    <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
-    <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
-    <p id="mouseover-text"></p>
-    <%= image_tag("transparentLine.png") %>
-    <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:title]),
-         '/images/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[polaroids]"%>
-      <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
-    <% end %>
-  </div>
-  <div class="span-24" id="below-gallery">
-    <%= image_tag("horizontal-divider.png") %>
+      <div class="span-11 last">
+      <p>
+        The game contains obstacles and upgrades. The obstacles are sharks, turtles, and explosive pirate kegs.
+        Sharks will hunt urchins down if they are struck by an urchin. Turtles are slow lumbering obstacles 
+        that just provide a barrier to the top of the screen. Explosive pirate kegs are exactly what they sound,
+        they will kill urchins that are too close when they explode.
+      </p>
+      <p>
+        There are four upgrades in the game. They include the heavy, bomber, puffer, and ninja urchin. The heavy urchin
+        is twice the weight of any other urchin which allows him to sink boats faster. The bomber urchin is capable
+        of blowing a boat up by himself, he may kill other urchins if they are too close. The puffer fish, not an
+        urchin at all, will float in the water. She will take an extraordinarily long time to sink to the bottom
+        of the ocean. The ninja urchin teleports through the water. This gives him the advantage of being
+        able to dodge obstacles and attaching to the top side of a boat.
+      </p>
+    </div>
   </div>
   <div class="span-22 append-1 prepend-1">
     <h2>Game Play Videos</h2>
@@ -65,6 +62,92 @@
            </p>
     </div>
   </div> 
+  <div class="span-24" id="above-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+    <p></p>
+  </div>
+  <div class="span-22 append-1 prepend-1 last">
+    <h2>Image Gallery</h2>
+    <p>
+      The images in the gallery were either drawn by Dark Tide
+      Software's artist, Michael Davis, or they are actual screen shots
+      from the game. There are two views, polaroid view or poster view,
+      click the appropriate icon below to switch between views.  
+    </p>
+    <p>
+      The polaroids can be dragged around, clicked, or shuffled up by clicking
+      on the polaroid icon.
+      The posters can be clicked and also have mouse over descriptions.
+    <div id="view-selection" class="span-22 append-1 prepend-1">
+      <div class="span-2 prepend-4">
+        <p></p>
+        <%= image_tag("portrait-button.png", :id => "portrait-view") %>
+      </div>
+      <div class="span-7"><p></p></div>
+      <div class="span-3">
+        <p></p>
+        <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
+      </div>
+    </div>
+  </div>
+  <div class="span-24" id="above-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div id="polaroid_gallery" class="span-24">
+    <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
+    <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
+    <p id="mouseover-text"></p>
+    <%= image_tag("transparentLine.png") %>
+    <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
+      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:title]),
+         '/images/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[polaroids]"%>
+      <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
+    <% end %>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <h2 class="prepend-1">Game Engine</h2>
+  <div class="span-10 append-1 prepend-1">
+      <p>
+        The game was built using Processing, an open source langauage for developing animations, images, and interactions.
+        Since the game is in 2D, the game objects are all sprites. The animation for each sprite is done by quickly switching
+        through different images. Depending on the importance of the sprite, the animation may have 6 separate images up to 24 separate images.
+        The animation class was a custom built class allowing animations to pause on specified frames, how fast frames should switch, and switching
+        between different sets of images. Michael Davis, the artist drew over 600 images for this 3 minute game.  
+      </p>
+      <p>
+        The game has a number of special effects which include custom physics and particle emitters created by Paul Grenning and Mike Baker.
+        The physics engine is threaded off from the main
+        game loop and is capable of being split into numerous threads if there are to many game objects checking for collisions. The physics engine
+        uses basic billiard physics and elliptical physics. Additional physics components included in each sprite may include vectors for buoyancy,
+        gravity, drag and force. The particle emitters are very diverse, they allow you to choose the number of particles, initial velocity, gravity,
+        drag, duration, fade time, and max distance. If desired, a special derivation of the particle emitter allows for animations and their duration
+        and speed.
+      </p>
+    </div>
+    <div class="span-11 last" >
+      <p>
+        On top of all of the visual effects, the Dark Tide Team spent a tremendous amount of time on the sound effects and music. Keaton Robinson, a programmer
+        with a background in music wrote the introduction and gameplay music. All of the soundeffects were foleyed or created with our voices with the help
+        of a few extra voice actors. This excludes water splashes since microphones were destroyed trying to create those sound effects. The game contains a 
+        sound manager due to the extensive amount of soundeffects capable of playing at one time. This makes sure sounds fade out, don't play if other sounds
+        are already playing and get cut out if a higher priority sound is to be played. In total, the Dark Tide team created over 200 some sound effects for 
+        this 3 minute game.
+      </p>
+      <h2>Game Rules</h2>
+      <p>
+        The game is played with as many people you can handle on each team. Urchins are flung from anywhere on
+        the screen to be attached to a boat. There is no penalty for flinging enemy urchins back down to the
+        bottom of the screen or into explosive pirate kegs. Once an urchin is attached to a boat, the boat
+        is owned by the color of that urchin. For an opposing teams to obtain that boat, they must launch
+        their urchins into the urchins attached to the boat. This will cause urchins to fall off the boat. Once
+        enough urchins attach to a boat, the boat will sink and the team will be awarded with gold. At the end
+        of the game, the team with the most gold is the victor.
+         To see a demonstration of the final game.
+        <%= link_to "click here", 'http://www.youtube.com/watch?v=GgoHnb_SzRk', :id => "video_2", :rel => "prettyPhoto[videos]"%>
+      </p>
+    </div>
   <!--  http://www.youtube.com/watch?v=GgoHnb_SzRk
  http://www.youtube.com/watch?v=Ys4L3LpYapc -->
 </div>
