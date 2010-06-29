@@ -110,7 +110,7 @@
     <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
     <p id="mouseover-text"></p>
     <%= image_tag("transparentLine.png") %>
-    <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
+    <% URCHIN_IMAGES_TO_SHOW.each_with_index do |image, index| %>
       <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:title]),
          '/images/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[polaroids]"%>
       <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>

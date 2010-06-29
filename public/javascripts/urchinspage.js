@@ -84,12 +84,6 @@ $(document).ready(function() {
     $("#mouseover-top").hide();
   });
 
-  $("#refresh-button").live('click', function() {
-    if(isInPortrait == false) {
-      randomizeImageLocations();
-    }
-  });
-
   $("#polaroid-view").live('click', function() {
     $(this).effect("bounce"); fadeOutPortraits();
     isInPortrait = false;

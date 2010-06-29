@@ -58,12 +58,12 @@
     <div id="view-selection" class="span-22 append-1 prepend-1">
       <div class="span-2 prepend-4">
         <p></p>
-        <%= image_tag("portrait-button.png", :id => "portrait-view") %>
+        <%= image_tag("portrait-button.png", :id => "portrait-grid") %>
       </div>
       <div class="span-7"><p></p></div>
       <div class="span-3">
         <p></p>
-        <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
+        <%= image_tag("polaroid-button.png", :id => "polaroid-grid") %>
       </div>
     </div>
   </div>
@@ -75,10 +75,10 @@
     <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
     <p id="mouseover-text"></p>
     <%= image_tag("transparentLine.png") %>
-    <% IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'bug_image', :id => "bug_polaroid_"+index.to_s, :alt => image[:title]),
-         '/images/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[bug_polaroids]"%>
-      <%= image_tag(image[:name], :class => "bug_portrait", :id => "bug_portrait_"+index.to_s, :alt => image[:description]) %>
+    <% BUGSPLAT_IMAGES_TO_SHOW.each_with_index do |image, index| %>
+      <%= link_to image_tag('/images/bugsplat/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'bug_polaroids', :id => "bug_polaroid_"+index.to_s, :alt => image[:title]),
+         '/images/bugsplat/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[bug_polaroids]"%>
+      <%= image_tag('/images/bugsplat/'+image[:name], :class => "bug_portrait", :id => "bug_portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
   <div class="span-24" id="below-gallery">
