@@ -324,7 +324,7 @@ height:256px;
 }
 
 #below-nav {
-  padding-top: 7px;
+  margin-top: -4px;
 }
 
 #copyright {
@@ -341,18 +341,7 @@ height:256px;
   margin-right: 50px;
   display: inline;
 }
-/*
-#footer-navigation {
-  white-space: nowrap;  
-  text-align: center;
-}
 
-#footer-navigation li {
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 50px;
-}
-*/
 #copyright {
   text-align: center;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
