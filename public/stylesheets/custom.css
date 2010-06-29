@@ -157,13 +157,14 @@ height:256px;
 }
 
 .the_polaroids {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-bottom: 25px solid #eee;
   border-left: 7px solid #eee;
   border-top: 7px solid #eee;
   border-right: 7px solid #eee;
   -webkit-box-shadow: #333 2px 2px 3px;
+  display: none;
 
   background-attachment: initial; 
   background-origin: initial;
@@ -181,10 +182,8 @@ height:256px;
 
 .portrait {
   width: 275;
-  height: auto;
   left: 255;
   top: 0;
-  display: none;
   border-bottom: 5px solid #eee;
   border-left: 5px solid #eee;
   border-top: 5px solid #eee;
