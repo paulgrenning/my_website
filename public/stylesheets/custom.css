@@ -157,8 +157,8 @@ height:256px;
 }
 
 .the_polaroids {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-bottom: 25px solid #eee;
   border-left: 7px solid #eee;
   border-top: 7px solid #eee;
@@ -180,8 +180,6 @@ height:256px;
 }
 
 .portrait {
-  -webkit-transform: rotate(-9deg);
-  -moz-transform: rotate(-9deg);
   width: 275;
   height: auto;
   left: 255;
@@ -199,6 +197,8 @@ height:256px;
   background-color: initial;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
 }
 
 .bug_portrait {
