@@ -72,8 +72,8 @@
     <p id="mouseover-text"></p>
     <%= image_tag("transparentLine.png") %>
     <% BUGSPLAT_IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag('/images/bugsplat/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'bug_polaroids', :id => "bug_polaroid_"+index.to_s, :alt => image[:title]),
-         '/images/bugsplat/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[bug_polaroids]"%>
+      <%= link_to image_tag('/images/bugsplat/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'bug_polaroids', :id => "bug_polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+        '/images/bugsplat/'+image[:name],  :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "pop-out-"+index.to_s, :rel => "prettyPhoto[bug_polaroids]"%>
       <%= image_tag('/images/bugsplat/'+image[:name], :class => "bug_portrait", :id => "bug_portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>

@@ -25,6 +25,36 @@ $(document).ready(function() {
     }
   }
 
+  $(".pop-out").hover(function() {
+    $(this).attr('title','');
+  });
+
+  $(".pop-out").mouseout(function() {
+      $(this).attr('title',$(this).attr('backuptitle'));
+  });
+
+  $(".the_polaroids").click(function() {
+    var indexValue = $(this).attr('id').split('_')[1];
+    $("#urchin-pop-out-"+indexValue).attr('title', $("#urchin-pop-out-"+indexValue).attr('backuptitle'));
+  });
+
+  $(".the_polaroids").hover(function (e) {
+    var currentPortrait = $(this);
+    $("#mouseover-text").show();
+    $("#mouseover-text").text(currentPortrait.attr("description"));
+    $("#mouseover-text").css({left: currentPortrait.position().left + currentPortrait.width() + 30, top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
+    $("#mouseover-top").show();
+    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width() + 10, top: currentPortrait.position().top + currentPortrait.height()/3 +10});
+    $("#mouseover-bottom").show();
+    $("#mouseover-bottom").css({left: currentPortrait.position().left + currentPortrait.width() + 10, top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
+  });
+
+  $(".the_polaroids").mouseout(function (e) {
+    $("#mouseover-text").hide();
+    $("#mouseover-bottom").hide();
+    $("#mouseover-top").hide();
+  });
+
   $(".the_polaroids").draggable({
     containment: [$("#main-content").position().left, $("#main-content").position().top+1025, $("#main-content").position().left + 800, $("#main-content").position().top + 1375],
     start: function(e,ui){

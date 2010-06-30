@@ -26,9 +26,56 @@ $(document).ready(function() {
     }
   }
 
+  $(".pop-out").hover(function() {
+    $(this).attr('title','');
+  });
+
+  $(".pop-out").mouseout(function() {
+      $(this).attr('title',$(this).attr('backuptitle'));
+  });
+
+  $(".bug_polaroids").click(function() {
+    var indexValue = $(this).attr('id').split('_')[2];
+    $("#pop-out-"+indexValue).attr('title', $("#pop-out-"+indexValue).attr('backuptitle'));
+  });
+
   function setImageSize() {
-    $(".bug_portrait").animate({left: 155, top: 50});
+    $(".bug_portrait").animate({left: 135, top: 40});
   }
+
+  $(".bug_polaroids").hover(function (e) {
+    var currentPortrait = $(this);
+    $("#mouseover-text").show();
+    $("#mouseover-text").text(currentPortrait.attr("description"));
+    $("#mouseover-text").css({left: currentPortrait.position().left + currentPortrait.width(), top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
+    $("#mouseover-top").show();
+    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width() -20, top: currentPortrait.position().top + currentPortrait.height()/3 +10});
+    $("#mouseover-bottom").show();
+    $("#mouseover-bottom").css({left: currentPortrait.position().left + currentPortrait.width() - 20, top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
+  });
+
+  $(".bug_polaroids").mouseout(function (e) {
+    $("#mouseover-text").hide();
+    $("#mouseover-bottom").hide();
+    $("#mouseover-top").hide();
+  });
+
+  $(".bug_portrait").hover(function (e) {
+    var currentPortrait = $(this);
+    $("#mouseover-text").show();
+    $("#mouseover-text").text(currentPortrait.attr("alt"));
+    $("#mouseover-text").css({left: currentPortrait.position().left + currentPortrait.width() - 20, top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
+    $("#mouseover-top").show();
+    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width() -40, top: currentPortrait.position().top + currentPortrait.height()/3 +10});
+    $("#mouseover-bottom").show();
+    $("#mouseover-bottom").css({left: currentPortrait.position().left + currentPortrait.width() - 40, top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
+  });
+
+  $(".bug_portrait").mouseout(function (e) {
+    $("#mouseover-text").hide();
+    $("#mouseover-bottom").hide();
+    $("#mouseover-top").hide();
+  });
 
   $("#polaroid-grid").click(function() {
     $(".bug_portrait").fadeOut();

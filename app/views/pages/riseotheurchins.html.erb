@@ -114,8 +114,8 @@
     <p id="mouseover-text"></p>
     <%= image_tag("transparentLine.png") %>
     <% URCHIN_IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :alt => image[:title]),
-         '/images/'+image[:name], :title => image[:description], :class => "pop-out", :rel => "prettyPhoto[polaroids]"%>
+      <%= link_to image_tag(image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+        '/images/'+image[:name], :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "urchin-pop-out-"+index.to_s, :rel => "prettyPhoto[polaroids]"%>
       <%= image_tag(image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
