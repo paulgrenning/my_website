@@ -3,9 +3,13 @@ ActionController::Routing::Routes.draw do |map|
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.projects'/projects', :controller => 'pages', :action => 'projects'
   map.downloads'/downloads', :controller => 'pages', :action => 'downloads'
-  map.darktide'/darktide', :controller => 'pages', :action => 'darktide'
-  map.riseotheurchins'/riseotheurchins', :controller => 'pages', :action => 'riseotheurchins'
-  map.bugsplat'/bugsplat', :controller => 'pages', :action => 'bugsplat'
+  map.darktide'/dark-tide', :controller => 'pages', :action => 'darktide'
+  map.riseotheurchins'/rise-o-the-urchins', :controller => 'pages', :action => 'riseotheurchins'
+  map.bugsplat'/bug-splat', :controller => 'pages', :action => 'bugsplat'
+
+
+
+  map.root                :controller => 'pages', :action => 'home'
   #The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -47,5 +51,4 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
 #  map.connect ':controller/:action/:id'
 #  map.connect ':controller/:action/:id.:format'
-  map.root                :controller => 'pages', :action => 'home'
 end

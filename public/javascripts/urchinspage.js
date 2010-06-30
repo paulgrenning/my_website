@@ -3,17 +3,23 @@
 
 
 $(document).ready(function() {
-  urchinMaxZ = 26;
+  urchinMaxZ = 28;
+  totalImages = 28;
+  setImageSize();
   randomizeImageLocations();
   var isInPortrait = false;
   var easeOutIndex = 0;
 
+  function setImageSize() {
+    $(".portrait").css("width", 275);
+  }
+
   function randomizeImageLocations() {
-    for(i = 0; i < 26; i++){
-      urchinMaxZ = 26;
+    for(i = 0; i < totalImages; i++){
+      urchinMaxZ = 28;
       $("#polaroid_"+i).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*80) -40) + "deg)");
       $("#polaroid_"+i).css("-moz-transform", "rotate(" + (Math.floor(Math.random()*80) -40) + "deg)");
-      $("#polaroid_"+i).css("zIndex", Math.floor(Math.random()*26)); 
+      $("#polaroid_"+i).css("zIndex", Math.floor(Math.random()*28)); 
       $("#polaroid_"+i).animate({left: Math.floor(Math.random()*850), top: Math.floor(Math.random()*335)});
     }
   }
@@ -60,24 +66,7 @@ $(document).ready(function() {
     $("#mouseover-bottom").show();
     $("#mouseover-bottom").css({left: currentPortrait.position().left + currentPortrait.width(), top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
   });
-/*
-  $(".the_polaroids").hover(function (e) {
-    var currentPortrait = $(this);
-    $("#mouseover-text").show();
-    $("#mouseover-text").html(currentPortrait.attr("alt"));
-    $("#mouseover-text").css({left: currentPortrait.position().left + 3*currentPortrait.width()/4 + 20, top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
-    $("#mouseover-top").show();
-    $("#mouseover-top").css({left: currentPortrait.position().left + 3*currentPortrait.width()/4, top: currentPortrait.position().top + currentPortrait.height()/3 +10});
-    $("#mouseover-bottom").show();
-    $("#mouseover-bottom").css({left: currentPortrait.position().left + 3*currentPortrait.width()/4, top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
-  });
 
-  $(".the_polaroids").mouseout(function (e) {
-    $("#mouseover-text").hide();
-    $("#mouseover-bottom").hide();
-    $("#mouseover-top").hide();
-  });
-  */
   $(".portrait").mouseout(function (e) {
     $("#mouseover-text").hide();
     $("#mouseover-bottom").hide();
@@ -100,8 +89,8 @@ $(document).ready(function() {
   }
 
   function displayPortraits() {
-    for(i = 0; i < 26; i++){
-      urchinMaxZ = 26;
+    for(i = 0; i < totalImages; i++){
+      urchinMaxZ = 28;
       $("#portrait_"+i).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
       $("#portrait_"+i).css("-moz-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
       $("#portrait_"+i).fadeIn();
