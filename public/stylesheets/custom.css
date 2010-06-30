@@ -21,6 +21,10 @@ h1 {
   color: #e0ffb8;
 }
 
+#twitter {
+  padding-top: 60px;
+}
+
 h2 {
   color: #e0e0b8;
   /*color: #2d5824; */
@@ -201,10 +205,6 @@ height:256px;
 .bug_portrait {
   -webkit-transform: rotate(-9deg);
   -moz-transform: rotate(-9deg);
-  width: 275;
-  height: auto;
-  left: 255;
-  top: 0;
   display: none;
   border-bottom: 5px solid #eee;
   border-left: 5px solid #eee;
@@ -316,21 +316,14 @@ height:256px;
   margin-bottom: 15px;
 }
 
-#above-nav {
-  padding-bottom: 15px;
-}
-
-#below-nav {
-  margin-top: -4px;
-}
-
 #copyright {
   margin-top: 10px;
 }
 
 #footer-navigation {
-  height: 4%;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #footer-navigation li {
