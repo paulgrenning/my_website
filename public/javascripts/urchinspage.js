@@ -12,6 +12,7 @@ $(document).ready(function() {
 
   function setImageSize() {
     $(".portrait").css("width", 275);
+    $(".portrait").animate({left: 255});
   }
 
   function randomizeImageLocations() {
@@ -73,13 +74,6 @@ $(document).ready(function() {
     $("#mouseover-top").hide();
   });
 
-  $("#polaroid-view").live('click', function() {
-    $(this).effect("bounce"); fadeOutPortraits();
-    isInPortrait = false;
-    fadeInPolaroids();
-    randomizeImageLocations();
-  });
-
   function fadeOutPortraits() {
       $(".portrait").fadeOut();
   }
@@ -97,6 +91,24 @@ $(document).ready(function() {
     }
   }
 
+  $("#polaroid-view").live('click', function() {
+    isInPortrait = false;
+    fadeOutPortraits();
+    fadeInPolaroids();
+    randomizeImageLocations();
+  });
+
+  $("#portrait-view").live("click", function() {
+    if(isInPortrait == false){
+      isInPortrait = true;
+      $(".the_polaroids").animate({left: 375, top: 200, queue: true}, function() {
+        $(this).fadeOut(function() {
+          displayPortraits();
+        });
+      });
+    }
+  });
+
   $("#portrait-view").hover( function() {
     $(this).stop().animate({height: 85});
   });
@@ -111,18 +123,6 @@ $(document).ready(function() {
 
   $("#polaroid-view").mouseout( function() {
     $(this).stop().animate({height: 75});
-  });
-
-  $("#portrait-view").live("click", function() {
-    $(this).effect("bounce");
-    if(isInPortrait == false){
-      isInPortrait = true;
-      $(".the_polaroids").animate({left: 375, top: 200, queue: true}, function() {
-        $(this).fadeOut(function() {
-          displayPortraits();
-        });
-      });
-    }
   });
 
   $("a[rel^='prettyPhoto']").prettyPhoto();
