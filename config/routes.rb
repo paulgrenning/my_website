@@ -6,6 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   map.darktide'/dark-tide', :controller => 'pages', :action => 'darktide'
   map.riseotheurchins'/rise-o-the-urchins', :controller => 'pages', :action => 'riseotheurchins'
   map.bugsplat'/bug-splat', :controller => 'pages', :action => 'bugsplat'
+  map.websitecreation'/website-creation', :controller => 'pages', :action => 'websitecreation'
+  map.ninja'/ninja-defense', :controller => 'pages', :action => 'ninja'
 
 
 

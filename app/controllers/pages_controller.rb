@@ -16,6 +16,14 @@ class PagesController < ApplicationController
     @page_header = { :name => "Bug Splat", :link => root_path}
   end
 
+  def websitecreation
+    @page_header = { :name => "Creation Of My Site", :link => root_path}
+  end
+
+  def ninja
+    @page_header = { :name => "Ninja Defense", :link => root_path}
+  end
+
   def contact
 	  @title = "Contact"
   end

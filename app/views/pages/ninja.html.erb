@@ -1,0 +1,80 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <h2>About The Game</h2>
+    <div class="span-11">
+      <p>
+        Ninja Defense was the second game I made and was developed in Processing. It is not a complete game but it was created in two days to try and sway Dark Tide Software
+        to create this game to its full extent. The game was fun to make for the little time I had, but Dark Tide Software decided
+        to go with Rise O' The Urchins game instead. Future game development may include developing this game and drawing decent animations.
+      </p>
+    </div>
+    <div class="span-11 last">
+      <p>
+        The game concept is to defend the castle at the center of the screen from the incoming zombies. Ninjas are able to 
+        swing their swords slicing zombies in half. The game is a bloody mess and lasts about 4 minutes.
+      </p>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 append-1 prepend-1">
+    <h2>Gameplay Videos</h2>
+    <div class="span-11">
+      <%= link_to image_tag("ninja-game/the-horde.jpg", :class => 'video', :id => "ninja_video"),
+         'http://www.youtube.com/watch?v=yu4T03qaxs8', :rel => "prettyPhoto[videos]"%>
+    </div>
+    <div class="span-11 last">
+      <p>
+        The game is currently played with 4 players. To move your ninja, you touch inside the green circle. To swing your sword you touch outside the green
+        circle but inside the purple circle. In the video there are 3 people playing so one ninja may be sitting still part of the time. 
+        Zombies rush from all sides of the map, when one zombie dies another one is sent in its place until you kill all 150 zombies. The game is easily modifiable
+        to have more or less zombies.
+     </p>
+     <p>
+       All of the artwork and animations in the game were drawn by me. That means in two days I performed all of the programming and artwork to create
+       my Ninja Defense game. 
+     </p>
+     <p>
+       More gameplay videos will appear if the game moves back into development.
+    </div>
+  </div> 
+  <div class="span-24" id="above-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+    <p></p>
+  </div>
+  <div class="span-22 append-1 prepend-1 last">
+    <h2>Image Gallery</h2>
+    <p>
+      All of the images in the gallery are drawn or edited by me in some way. It was my first time using photoshop. The rest are screenshots.
+    </p>
+    <div id="view-selection" class="span-22 append-1 prepend-1">
+      <div class="span-2 prepend-4">
+        <p></p>
+        <%= image_tag("portrait-button.png", :id => "portrait-grid") %>
+      </div>
+      <div class="span-7"><p></p></div>
+      <div class="span-3">
+        <p></p>
+        <%= image_tag("polaroid-button.png", :id => "polaroid-grid") %>
+      </div>
+    </div>
+  </div>
+  <div class="span-24" id="above-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div id="polaroid_gallery" class="span-24">
+    <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
+    <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
+    <p id="mouseover-text"></p>
+    <%= image_tag("transparentLine.png") %>
+    <% NINJA_IMAGES_TO_SHOW.each_with_index do |image, index| %>
+      <%= link_to image_tag('/images/ninja-game/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'ninja_polaroids', :id => "ninja_polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+        '/images/ninja-game/'+image[:name],  :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "pop-out-"+index.to_s, :rel => "prettyPhoto[bug_polaroids]"%>
+      <%= image_tag('/images/ninja-game/'+image[:name], :class => "ninja_portrait", :id => "ninja_portrait_"+index.to_s, :alt => image[:description]) %>
+    <% end %>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+</div>

@@ -246,6 +246,32 @@ height:256px;
   position: absolute;
 }
 
+.ninja_polaroids {
+  width: 150px;
+  height: 150px;
+  border-bottom: 25px solid #eee;
+  border-left: 7px solid #eee;
+  border-top: 7px solid #eee;
+  border-right: 7px solid #eee;
+  -webkit-box-shadow: #333 2px 2px 3px;
+
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position:absolute;
+  z-index: 0;
+  left: 180;  
+  top: 0;
+}
+
+.ninja_portrait {
+  display: none;
+  position: absolute;
+}
+
 #view-selection {
   height: 100px;
 }
@@ -293,6 +319,10 @@ height:256px;
 .video {
   border: 5px solid #fff;
   z-index: 0;
+}
+
+#ninja_video {
+  width: 420;
 }
 
 #darktide-logo {
