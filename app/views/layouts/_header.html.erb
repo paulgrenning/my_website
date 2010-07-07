@@ -1,13 +1,13 @@
 <div id="header-wrap" class="span-24">
 	<div id="header"> 
-  <div class="span-23 prepend-1"  id="header-navigation">
+  <div class="span-20 last prepend-4 last"  id="header-navigation">
     <ul id="header-navigation">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Web Development", websitecreation_path %></li>
-      <li><%= link_to "Dark Tide Software", darktide_path %></li>
-      <li><%= link_to "Bug Splat", bugsplat_path %></li>
-      <li><%= link_to "Rise O\' The Urchins", riseotheurchins_path %></li>
-      <li><%= link_to "Ninja Defense", ninja_path %></li>
+      <li><%= link_to image_tag("home.png", :class => "header-navigation-button"), root_path %></li>
+      <li><%= link_to image_tag("website.png", :class => "header-navigation-button"), websitecreation_path %></li>
+      <li><%= link_to image_tag("darktide.png", :class => "header-navigation-button"), darktide_path %></li>
+      <li><%= link_to image_tag("bugsplat.png", :class => "header-navigation-button"), bugsplat_path %></li>
+      <li><%= link_to image_tag("urchins.png", :class => "header-navigation-button"), riseotheurchins_path %></li>
+      <li><%= link_to image_tag("ninjadefense.png", :class => "header-navigation-button"), ninja_path %></li>
     </ul>
   </div>
      <div class="span-20 prepend-1">
@@ -15,7 +15,7 @@
          <%= link_to @page_header[:name], @page_header[:link] %>
        </h1>
      </div>
-     <div class="span-3 last">
+     <div class="span-2 append-1 last">
        <%= link_to image_tag("twitter.jpg", :id => "twitter"), 'http://twitter.com/paul_grenning' %>
      </div>
      <div class="span-24 last">

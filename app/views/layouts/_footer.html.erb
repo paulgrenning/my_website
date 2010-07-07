@@ -1,19 +1,14 @@
-<div id="footer" class="span-24">
-  <div>
-    <%= image_tag("horizontal-divider.png") %>
-  </div>
-  <div class="span-23 prepend-1"  id="footer-navigation">
+<div id="footer" class="span-23 prepend-1">
+  <div class="span-22"  id="footer-navigation-wrapper">
+    <%= image_tag("glass-overlay.png",  :id => "navigation-glass") %>
     <ul id="footer-navigation">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Web Development", websitecreation_path %></li>
-      <li><%= link_to "Dark Tide Software", darktide_path %></li>
-      <li><%= link_to "Bug Splat", bugsplat_path %></li>
-      <li><%= link_to "Rise O\' The Urchins", riseotheurchins_path %></li>
-      <li><%= link_to "Ninja Defense", ninja_path %></li>
+      <li><%= link_to "Home", root_path%></li>
+      <li><%= link_to "Web Development", websitecreation_path%></li>
+      <li><%= link_to "Dark Tide Software", darktide_path%></li>
+      <li><%= link_to "Bug Splat", bugsplat_path%></li>
+      <li><%= link_to "Rise O\' The Urchins", riseotheurchins_path%></li>
+      <li><%= link_to "Ninja Defense", ninja_path%></li>
     </ul>
-  </div>
-  <div>
-    <%= image_tag("horizontal-divider.png",  :class => "span-24") %>
   </div>
   <div id="copyright" class="span-24">
     <p>© Paul Grenning</p>
