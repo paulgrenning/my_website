@@ -47,21 +47,21 @@ body {
 }
 
 #body-border {
-  width: 960px;
+  width: 956px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #left-border {
-  float: left;
-  width: 5px;
+  float: right;
+  width: 3px;
   position: relative;
   min-height: 1056;
 }
 
 #right-border {
-  float: right;
-  width: 5px;
+  float: left;
+  width: 3px;
   position: relative;
   min-height: 1056;
 }
@@ -88,7 +88,7 @@ background-position-x: initial;
 background-position-y: initial;
 background-origin: initial;
 background-clip: initial;
-height:256px;
+height:238px;
 }
 
 #header {
@@ -123,7 +123,7 @@ height:256px;
 }
 
 #portfolio {
-  height: 280px;
+  height: 270px;
 }
 
 #left-arrow {
@@ -361,13 +361,8 @@ height:256px;
 
 #footer-navigation {
   text-align: center;
-  margin-top: 5px;
-  margin-bottom: 4px;
-}
-
-#footer-navigation-wrapper {
-  border-top: 1px solid #aafdaa;
-  border-bottom: 1px solid #aafdaa;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 #footer-navigation li {
@@ -378,7 +373,7 @@ height:256px;
 
 #navigation-glass {
   position: absolute;
-  margin-top: -2px;
+  margin-top: -3px;
 }
 
 #header-navigation {
