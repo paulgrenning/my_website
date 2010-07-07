@@ -377,13 +377,13 @@ height:238px;
 }
 
 #header-navigation {
-  margin-top: -17px;
   position: absolute;
 }
 
 #header-navigation ul {
   float: right;
   position: relative;
+  margin-top: -34px;
 }
 
 #header-navigation li {

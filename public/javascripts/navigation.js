@@ -20,7 +20,6 @@ $(document).ready(function() {
   $("#footer-navigation a").hover(function () {
     var hoveredLink = $(this);
     $("#navigation-glass").stop().animate({left: hoveredLink.position().left-18, width: hoveredLink.width()+35, height: 32});
-    console.log(hoveredLink.attr("href"));
     $("a.glass-link").attr("href", hoveredLink.attr("href"));
   });
 });
