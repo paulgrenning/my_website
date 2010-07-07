@@ -80,15 +80,15 @@ body {
 }
 
 #header-wrap{
-background-image:url('/images/headerGradient.png');
-background-repeat-x: repeat;
-background-repeat-y: no-repeat;
-background-attachment: initial;
-background-position-x: initial;
-background-position-y: initial;
-background-origin: initial;
-background-clip: initial;
-height:238px;
+  background-image:url('/images/headerGradient.png');
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-origin: initial;
+  background-clip: initial;
+  height:238px;
 }
 
 #header {
@@ -378,20 +378,21 @@ height:238px;
 
 #header-navigation {
   position: absolute;
+  margin: auto;
 }
 
-#header-navigation ul {
+#header-navigation-list {
   float: right;
   position: relative;
-  margin-top: -34px;
 }
 
-#header-navigation li {
+#header-navigation-list li {
   list-style-type: none;
   display: inline;
 }
 
 .header-navigation-button {
+  margin-top: -34px;
   position: relative;
 }
 
