@@ -80,6 +80,7 @@ body {
 }
 
 #header-wrap{
+  /*
   background-image:url('/images/headerGradient.png');
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
@@ -88,12 +89,11 @@ body {
   background-position-y: initial;
   background-origin: initial;
   background-clip: initial;
-  height:238px;
+  */
 }
 
 #header {
   margin: auto;
-  height: 256px;
 }
 
 #header-name{
@@ -107,8 +107,8 @@ body {
 
 #main-content {
   float: left;
-  margin-top: -60px;
   min-height: 800px;
+  margin-top: 15px;
 }
 
 #about-darktide {
