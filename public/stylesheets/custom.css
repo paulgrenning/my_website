@@ -13,7 +13,12 @@ a:visited {
 }
 
 h1 {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=270, 
+  Strength=3);
   padding-top: 50px;
+  text-shadow: #424242 4px 4px 3px;
   font: normal normal normal 4.8em/normal Georgia, Times, serif;
 }
 
@@ -27,6 +32,11 @@ h1 {
 }
 
 h2 {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=270, 
+  Strength=3);
+  text-shadow: #424242 3px 3px 3px;
   color: #e0e0b8;
   /*color: #2d5824; */
   font: normal normal normal 2.3em/normal Georgia, Times, serif;
@@ -79,17 +89,8 @@ body {
   min-height: 800;
 }
 
-#header-wrap{
-  /*
-  background-image:url('/images/headerGradient.png');
-  background-repeat-x: repeat;
-  background-repeat-y: no-repeat;
-  background-attachment: initial;
-  background-position-x: initial;
-  background-position-y: initial;
-  background-origin: initial;
-  background-clip: initial;
-  */
+#header-tab {
+  margin-left: -10px;
 }
 
 #header {
