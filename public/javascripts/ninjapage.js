@@ -49,7 +49,7 @@ $(document).ready(function() {
     $("#mouseover-text").text(currentPortrait.attr("description"));
     $("#mouseover-text").css({left: currentPortrait.position().left + currentPortrait.width(), top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
     $("#mouseover-top").show();
-    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width() -20, top: currentPortrait.position().top + currentPortrait.height()/3 +10});
+    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width() -42, top: currentPortrait.position().top + currentPortrait.height()/3 +8});
     $("#mouseover-bottom").show();
     $("#mouseover-bottom").css({left: currentPortrait.position().left + currentPortrait.width() - 20, top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
   });
@@ -66,7 +66,7 @@ $(document).ready(function() {
     $("#mouseover-text").text(currentPortrait.attr("alt"));
     $("#mouseover-text").css({left: currentPortrait.position().left + currentPortrait.width() - 20, top: currentPortrait.position().top + currentPortrait.height()/3 + 20});
     $("#mouseover-top").show();
-    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width() -40, top: currentPortrait.position().top + currentPortrait.height()/3 +10});
+    $("#mouseover-top").css({left: currentPortrait.position().left + currentPortrait.width() -62, top: currentPortrait.position().top + currentPortrait.height()/3 +8});
     $("#mouseover-bottom").show();
     $("#mouseover-bottom").css({left: currentPortrait.position().left + currentPortrait.width() - 40, top: currentPortrait.position().top + $("#mouseover-text").height()+ currentPortrait.height()/3 + 30});
   });
