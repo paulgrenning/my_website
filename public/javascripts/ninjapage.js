@@ -41,6 +41,7 @@ $(document).ready(function() {
 
   function setImageSize() {
     $(".ninja_portrait").animate({left: 135, top: 40});
+    $("#ninja_video").animate({width: 420});
   }
 
   $(".ninja_polaroids").hover(function (e) {
