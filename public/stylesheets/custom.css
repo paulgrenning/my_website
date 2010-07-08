@@ -15,7 +15,7 @@ a:visited {
 h1 {
   height: 1em;
   filter: Shadow(Color=#424242,   
-  Direction=180, 
+  Direction=160, 
   Strength=3);
   padding-top: 50px;
   text-shadow: #424242 4px 4px 3px;
@@ -34,7 +34,7 @@ h1 {
 h2 {
   height: 1em;
   filter: Shadow(Color=#424242,   
-  Direction=180, 
+  Direction=160, 
   Strength=3);
   text-shadow: #424242 3px 3px 3px;
   color: #e0e0b8;
@@ -162,6 +162,10 @@ body {
 }
 
 .the_polaroids {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=3);
   width: 100px;
   height: 100px;
   border-bottom: 25px solid #eee;
@@ -185,6 +189,10 @@ body {
 }
 
 .portrait {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=3);
   top: 0;
   display: none;
   border-bottom: 5px solid #eee;
@@ -204,6 +212,10 @@ body {
 }
 
 .bug_portrait {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=3);
   -webkit-transform: rotate(-9deg);
   -moz-transform: rotate(-9deg);
   display: none;
@@ -222,6 +234,10 @@ body {
 }
 
 .bug_polaroids {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=3);
   width: 130px;
   height: 130px;
   border-bottom: 25px solid #eee;
@@ -243,6 +259,10 @@ body {
 }
 
 .ninja_portrait {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=3);
   -webkit-transform: rotate(-9deg);
   -moz-transform: rotate(-9deg);
   display: none;
@@ -261,6 +281,10 @@ body {
 }
 
 .ninja_polaroids {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=3);
   width: 150px;
   height: 150px;
   border-bottom: 25px solid #eee;
