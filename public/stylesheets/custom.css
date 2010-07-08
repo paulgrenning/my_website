@@ -66,14 +66,14 @@ body {
   float: right;
   width: 3px;
   position: relative;
-  min-height: 1056;
+  min-height: 956;
 }
 
 #right-border {
   float: left;
   width: 3px;
   position: relative;
-  min-height: 1056;
+  min-height: 956;
 }
 
 #body-interior {
@@ -86,11 +86,23 @@ body {
   background-position-y: initial;
   background-origin: initial;
   background-clip: initial;
-  min-height: 800;
+  min-height: 700;
 }
 
 #header-tab {
-  margin-left: -10px;
+  margin-left: -9px;
+}
+
+#footer-tab {
+  margin-top: -90px;
+  margin-bottom: -40px;
+  z-index: 0;
+  position: relative;
+}
+
+#footer-wrap {
+  position: relative;
+  z-index: 1;
 }
 
 #header {
@@ -118,6 +130,8 @@ body {
 }
 
 .page-info {
+  position: relative;
+  z-index: 1;
   font-family: sans-serif;
   float: left;
   color: #fff;
@@ -340,7 +354,6 @@ body {
 }
 
 #white-space {
-  height: 75px;
 }
 
 #padding-10px {
@@ -367,6 +380,7 @@ body {
 }
 
 #footer-navigation li {
+  text-decoration: none;
   list-style-type: none;
   margin-right: 50px;
   display: inline;
