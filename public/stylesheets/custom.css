@@ -378,8 +378,10 @@ body {
 }
 
 #header-navigation {
-  position: absolute;
-  margin: auto;
+  position: relative;
+  margin-top: -90px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #header-navigation-list {
@@ -393,7 +395,7 @@ body {
 }
 
 .header-navigation-button {
-  margin-top: -34px;
+  top: 56px;
   position: relative;
 }
 

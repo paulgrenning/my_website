@@ -10,11 +10,11 @@ $(document).ready(function() {
   }
 
   $(".header-navigation-button").hover(function() {
-    $(this).stop().animate({top: 33});
+    $(this).stop().animate({top: 89});
   });
 
   $(".header-navigation-button").mouseout(function() {
-    $(this).stop().animate({top: 0});
+    $(this).stop().animate({top: 56});
   });
 
   $("#footer-navigation a").hover(function () {
