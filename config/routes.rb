@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.bugsplat'/bug-splat', :controller => 'pages', :action => 'bugsplat'
   map.websitecreation'/website-creation', :controller => 'pages', :action => 'websitecreation'
   map.ninja'/ninja-defense', :controller => 'pages', :action => 'ninja'
+  map.resume'/resume', :controller => 'pages', :action => 'resume'
 
 
 

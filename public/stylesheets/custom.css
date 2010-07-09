@@ -5,7 +5,6 @@ a {
 
 a:hover {
   color: #90ffad;
-/*  text-decoration: underline;*/
 }
 
 a:visited {
@@ -22,15 +21,6 @@ h1 {
   font: normal normal normal 4.8em/normal Georgia, Times, serif;
 }
 
-#header-name a{
-  color: #e0ffb8;
-}
-
-#twitter {
-  padding-top: 60px;
-  float: right;
-}
-
 h2 {
   height: 1em;
   filter: Shadow(Color=#424242,   
@@ -41,6 +31,29 @@ h2 {
   /*color: #2d5824; */
   font: normal normal normal 2.3em/normal Georgia, Times, serif;
 /*  border-bottom: 1px solid #aaf6aa;*/
+}
+
+h3 {
+  height: 1em;
+  filter: Shadow(Color=#242424,   
+  Direction=160, 
+  Strength=5);
+  text-shadow: #242424 5px 5px 5px;
+  color: #e0e0b8;
+  font: normal normal normal 1.5em/normal Georgia, Times, serif;
+}
+
+div{
+  color: #fdfde4;
+}
+
+#header-name a{
+  color: #e0ffb8;
+}
+
+#twitter {
+  padding-top: 60px;
+  float: right;
 }
 
 #about-team {
@@ -118,6 +131,10 @@ body {
   padding-right: 20px;
 }
 
+#resume-header {
+  text-align: center;
+}
+
 #main-content {
   float: left;
   min-height: 800px;
@@ -127,6 +144,10 @@ body {
 #about-darktide {
   height: 310;
   padding-bottom: 20px;
+}
+
+#obtiva-logo {
+  width: 350;
 }
 
 .page-info {

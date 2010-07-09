@@ -23,17 +23,9 @@ class PagesController < ApplicationController
   def ninja
     @page_header = { :name => "Ninja Defense", :link => root_path}
   end
-
-  def contact
-	  @title = "Contact"
-  end
   
-  def about
-	  @title = "About"
-  end
-  
-  def projects	
-	  @title = "Projects"
+  def resume
+    @page_header = { :name => "My Resume", :link => root_path, :theid => "resume-page"}
   end
 
   def downloads
