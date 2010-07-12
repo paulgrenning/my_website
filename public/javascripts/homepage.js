@@ -16,7 +16,7 @@ $(document).ready(function() {
         carousel.children("a").first().animate({queue: true}, function() { 
           $(this).remove();
           $(this).appendTo(carousel);
-          $(carousel).css({left: "-340"});
+          $(carousel).css({left: "-346"});
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
@@ -31,7 +31,7 @@ $(document).ready(function() {
         carousel.children("a").last().animate({queue: true}, function() { 
           $(this).remove();
           $(this).prependTo(carousel);
-          $(carousel).css({left: "-340"}) 
+          $(carousel).css({left: "-346"}) 
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
