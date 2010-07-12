@@ -21,7 +21,7 @@
   <div class="span-22 append-1 prepend-1">
     <h2>Gameplay Videos</h2>
     <div class="span-11">
-      <%= link_to image_tag("http://paulgrenning.com/the-horde.jpg", :class => 'video', :id => "ninja_video"),
+      <%= link_to image_tag("http://paulgrenning.com/ninja-game/the-horde.jpg", :class => 'video', :id => "ninja_video"),
          'http://www.youtube.com/watch?v=yu4T03qaxs8', :rel => "prettyPhoto[videos]"%>
     </div>
     <div class="span-11 last">
@@ -69,9 +69,9 @@
     <p id="mouseover-text"></p>
     <%= image_tag("http://paulgrenning.com/transparentLine.png") %>
     <% NINJA_IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag('/images/ninja-game/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'ninja_polaroids', :id => "ninja_polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
-        '/images/ninja-game/'+image[:name],  :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "pop-out-"+index.to_s, :rel => "prettyPhoto[bug_polaroids]"%>
-      <%= image_tag('/images/ninja-game/'+image[:name], :class => "ninja_portrait", :id => "ninja_portrait_"+index.to_s, :alt => image[:description]) %>
+      <%= link_to image_tag('http://paulgrenning.com/ninja-game/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'ninja_polaroids', :id => "ninja_polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+        'http://paulgrenning.com/ninja-game/'+image[:name],  :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "pop-out-"+index.to_s, :rel => "prettyPhoto[bug_polaroids]"%>
+      <%= image_tag('http://paulgrenning.com/ninja-game/'+image[:name], :class => "ninja_portrait", :id => "ninja_portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
   <div class="span-24" id="below-gallery">
