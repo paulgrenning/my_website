@@ -256,8 +256,8 @@ body {
 }
 
 .bug_polaroids {
-  width: 130px;
-  height: 130px;
+  width: 125px;
+  height: 125px;
   border-bottom: 25px solid #eee;
   border-left: 7px solid #eee;
   border-top: 7px solid #eee;
@@ -367,9 +367,6 @@ body {
 
 #darktide-logo {
   margin-left: -10px;
-}
-
-#white-space {
 }
 
 #padding-10px {

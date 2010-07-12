@@ -1,9 +1,11 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+  var randIndex = new Array("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14");
 
 $(document).ready(function() {
   var totalImages = 15;
+  var inPolaroidView = true;
   randomizeGrid();
   setImageSize();
 
@@ -11,19 +13,17 @@ $(document).ready(function() {
     var zValue = 4;
     var topValue = 2;
     var leftValue = 40;
-    var randIndex = new Array("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14");
-    randIndex.sort(function() {return 0.5 - Math.random()});
+    var zSpiralIndex = new Array("16","15","14","13","12","11","10","9","8","7","6","5","4","3","2","1");
+    var xSpiralPosition = new Array("370","410","490","560","620","640","610","580","500","420","320","240","180","130","100");
+    var ySpiralPosition = new Array("60","25","0","30","110","210","260","310","330","340","335","300","220","130","30");
+    temp = randIndex.pop();
+    randIndex.unshift(temp);
+    $("#bug_polaroid_"+randIndex[0]).fadeOut();
     for(i = 0; i < totalImages; i++){
-      $("#bug_polaroid_"+randIndex[i]).animate({left: leftValue, top: topValue});
-      $("#bug_polaroid_"+randIndex[i]).css("zIndex", zValue); 
-      if(leftValue == 744){
-        leftValue = 40;
-        topValue += 155;
-        zValue -=1;
-      } else {
-        leftValue += 176;
-      }
+      $("#bug_polaroid_"+randIndex[i]).animate({left: xSpiralPosition[i], top: ySpiralPosition[i]});
+      $("#bug_polaroid_"+randIndex[i]).css("zIndex", zSpiralIndex[i]); 
     }
+    $("#bug_polaroid_"+randIndex[0]).fadeIn();
   }
 
   $(".pop-out").hover(function() {
