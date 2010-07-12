@@ -25,14 +25,14 @@
   <div class="span-22 append-1 prepend-1">
     <h2>Gameplay Videos</h2>
     <div class="span-11">
-      <%= link_to image_tag("http://paulgrenning.com/bugsplatvid1.jpg", :class => 'video', :id => "video_1"),
+      <%= link_to image_tag("http://paulgrenning.com/bugsplat/bugsplatvid1.jpg", :class => 'video', :id => "video_1"),
          'http://www.youtube.com/watch?v=WZtG__ngTo8', :rel => "prettyPhoto[videos]"%>
        <p id="padding-10px">
          Gameplay video with a good look into all three weapons, the lighter and oil can, taser sticks, and fire crackers.
        </p>
     </div>
     <div class="span-11 last">
-      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/bugsplatvid2.jpg", :class => 'video', :id => "video_2"),
+      <%= link_to image_tag("http://paulgrenning.com/bugsplat/bugsplatvid2.jpg", :class => 'video', :id => "video_2"),
          'http://www.youtube.com/watch?v=dAtzlRgd_lI', :rel => "prettyPhoto[videos]"%>
        <p id="padding-10px">
          Gameplay video heavily focusing on the fire crackers and lastly the lighter and oil can.
@@ -69,9 +69,9 @@
     <p id="mouseover-text"></p>
     <%= image_tag("http://paulgrenning.com/transparentLine.png") %>
     <% BUGSPLAT_IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag('/images/bugsplat/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'bug_polaroids', :id => "bug_polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
-        '/images/bugsplat/'+image[:name],  :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "pop-out-"+index.to_s, :rel => "prettyPhoto[bug_polaroids]"%>
-      <%= image_tag('/images/bugsplat/'+image[:name], :class => "bug_portrait", :id => "bug_portrait_"+index.to_s, :alt => image[:description]) %>
+      <%= link_to image_tag('http://paulgrenning.com/bugsplat/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'bug_polaroids', :id => "bug_polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+        'http://paulgrenning.com/bugsplat/'+image[:name],  :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "pop-out-"+index.to_s, :rel => "prettyPhoto[bug_polaroids]"%>
+      <%= image_tag('http://paulgrenning.com/bugsplat/'+image[:name], :class => "bug_portrait", :id => "bug_portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
   <div class="span-24" id="below-gallery">
