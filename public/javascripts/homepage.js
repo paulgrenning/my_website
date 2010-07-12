@@ -7,8 +7,8 @@ $(document).ready(function() {
   ProjectsCarousel.isAnimating = false;
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
-  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
-  function slideRight() {
+//  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
+/*  function slideRight() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
         var carousel = $("#carousel-images");
@@ -38,6 +38,7 @@ $(document).ready(function() {
         });
       }
   }
+  
   $("#portfolio").live('mouseover',
     function() {
         ProjectsCarousel.isScrollingSet = false;
@@ -60,6 +61,7 @@ $(document).ready(function() {
         }
       }
       );
+      */
   $("#thumb-1").live('mouseover',
     function() {
         $(this).attr("src", "http://paulgrenning.com/carouselImages/darkTide2.png");
@@ -105,6 +107,7 @@ $(document).ready(function() {
         $(this).attr("src", "http://paulgrenning.com/carouselImages/ninja2.png");
       }
   );
+  /*
   $("#left-arrow").mousedown( 
     function() {
       clearInterval(ProjectsCarousel.scrollInterval);
@@ -127,4 +130,5 @@ $(document).ready(function() {
       function() {
         $(this).attr("src", "http://paulgrenning.com/rightArrow.png");
     });
+    */
 });

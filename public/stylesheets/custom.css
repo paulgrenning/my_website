@@ -180,15 +180,14 @@ body {
 }
 
 #carousel-images {
-  left: -346px;
   white-space: nowrap;
   position: relative;
+  margin-left: -2px;
 }
 
 .thumb {
   position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 22px;
 }
 
 #polaroid_gallery {
