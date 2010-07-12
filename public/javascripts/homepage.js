@@ -62,47 +62,47 @@ $(document).ready(function() {
       );
   $("#thumb-1").live('mouseover',
     function() {
-        $(this).attr("src", "images/darktide-logo-light.png");
+        $(this).attr("src", "http://paulgrenning.com/darktide-logo-light.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "images/darktide-logo-dark.png")// $(this).data('original_source'));
+        $(this).attr("src", "http://paulgrenning.com/darktide-logo-dark.png")// $(this).data('original_source'));
       }
   );
   $("#thumb-2").live('mouseover',
     function() {
-        $(this).attr("src", "images/bug-splat.png");
+        $(this).attr("src", "http://paulgrenning.com/bug-splat.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "images/bug.png");
+        $(this).attr("src", "http://paulgrenning.com/bug.png");
       }
   );
   $("#thumb-3").live('mouseover',
     function() {
-        $(this).attr("src", "images/urchin2.png");
+        $(this).attr("src", "http://paulgrenning.com/urchin2.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "images/urchin1.png");
+        $(this).attr("src", "http://paulgrenning.com/urchin1.png");
       }
   );
   $("#thumb-4").live('mouseover',
     function() {
-        $(this).attr("src", "images/website-thumb2.png");
+        $(this).attr("src", "http://paulgrenning.com/website-thumb2.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "images/website-thumb.png");
+        $(this).attr("src", "http://paulgrenning.com/website-thumb.png");
       }
   );
   $("#thumb-5").live('mouseover',
     function() {
-        $(this).attr("src", "images/ninja-defense2.png");
+        $(this).attr("src", "http://paulgrenning.com/ninja-defense2.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "images/ninja-defense1.png");
+        $(this).attr("src", "http://paulgrenning.com/ninja-defense1.png");
       }
   );
   $("#left-arrow").mousedown( 
@@ -110,21 +110,21 @@ $(document).ready(function() {
       clearInterval(ProjectsCarousel.scrollInterval);
       ProjectsCarousel.leftClicked = true;
       slideLeft();
-      $(this).attr("src", "images/leftArrowClicked.png");
+      $(this).attr("src", "http://paulgrenning.com/leftArrowClicked.png");
     });
     $("#left-arrow").mouseup(
       function() {
-        $(this).attr("src", "images/leftArrow.png");
+        $(this).attr("src", "http://paulgrenning.com/leftArrow.png");
       });
   $("#right-arrow").mousedown( 
     function() {
       clearInterval(ProjectsCarousel.scrollInterval);
       ProjectsCarousel.leftClicked = false;
       slideRight();
-      $(this).attr("src", "images/rightArrowClicked.png");
+      $(this).attr("src", "http://paulgrenning.com/rightArrowClicked.png");
     });
     $("#right-arrow").mouseup(
       function() {
-        $(this).attr("src", "images/rightArrow.png");
+        $(this).attr("src", "http://paulgrenning.com/rightArrow.png");
     });
 });
