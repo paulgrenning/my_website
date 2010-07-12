@@ -62,47 +62,47 @@ $(document).ready(function() {
       );
   $("#thumb-1").live('mouseover',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/darktide-logo-light.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/darkTide2.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/darktide-logo-dark.png")// $(this).data('original_source'));
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/darkTide1.png")// $(this).data('original_source'));
       }
   );
   $("#thumb-2").live('mouseover',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/bug-splat.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/splat.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/bug.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/bug.png");
       }
   );
   $("#thumb-3").live('mouseover',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/urchin2.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/urchin1.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/urchin1.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/urchin2.png");
       }
   );
   $("#thumb-4").live('mouseover',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/website-thumb2.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/website2.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/website-thumb.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/website1.png");
       }
   );
   $("#thumb-5").live('mouseover',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/ninja-defense2.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/ninja1.png");
       })
   .live('mouseout',
     function() {
-        $(this).attr("src", "http://paulgrenning.com/ninja-defense1.png");
+        $(this).attr("src", "http://paulgrenning.com/carouselImages/ninja2.png");
       }
   );
   $("#left-arrow").mousedown( 
