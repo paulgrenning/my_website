@@ -2,28 +2,33 @@
 // This file is automatically included by javascript_include_tag :defaults
 
   var randIndex = new Array("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14");
+    var zSpiralIndex = new Array("16","15","14","13","12","11","10","9","8","7","6","5","4","3","2","1");
+    var xSpiralPosition = new Array("370","410","490","560","620","640","610","580","500","420","320","240","180","130","100");
+    var ySpiralPosition = new Array("60","25","0","30","110","210","260","310","330","340","335","300","220","130","30");
 
 $(document).ready(function() {
   var totalImages = 15;
   var inPolaroidView = true;
+  var spiralIsRotating = false;
   randomizeGrid();
   setImageSize();
 
   function randomizeGrid() {
-    var zValue = 4;
-    var topValue = 2;
-    var leftValue = 40;
-    var zSpiralIndex = new Array("16","15","14","13","12","11","10","9","8","7","6","5","4","3","2","1");
-    var xSpiralPosition = new Array("370","410","490","560","620","640","610","580","500","420","320","240","180","130","100");
-    var ySpiralPosition = new Array("60","25","0","30","110","210","260","310","330","340","335","300","220","130","30");
-    temp = randIndex.pop();
-    randIndex.unshift(temp);
-    $("#bug_polaroid_"+randIndex[0]).fadeOut();
-    for(i = 0; i < totalImages; i++){
-      $("#bug_polaroid_"+randIndex[i]).animate({left: xSpiralPosition[i], top: ySpiralPosition[i]});
-      $("#bug_polaroid_"+randIndex[i]).css("zIndex", zSpiralIndex[i]); 
-    }
-    $("#bug_polaroid_"+randIndex[0]).fadeIn();
+      temp = randIndex.pop();
+      randIndex.unshift(temp);
+      $("#bug_polaroid_"+randIndex[0]).fadeOut(function() {
+        $("#bug_polaroid_"+randIndex[14]).animate({queue: true}, function () {
+          for(i = 0; i < totalImages; i++){
+            $("#bug_polaroid_"+randIndex[i]).animate({left: xSpiralPosition[i], top: ySpiralPosition[i]});
+            $("#bug_polaroid_"+randIndex[i]).css("zIndex", zSpiralIndex[i]); 
+          }
+        });
+        $("#bug_polaroid_"+randIndex[0]).animate({queue: true}, function() {
+          $(this).fadeIn(function() {
+            spiralIsRotating = false;
+          });
+        });
+      });
   }
 
   $(".pop-out").hover(function() {
@@ -78,20 +83,25 @@ $(document).ready(function() {
   });
 
   $("#polaroid-grid").click(function() {
-    $(".bug_portrait").fadeOut();
-    $(".bug_polaroids").fadeIn();    
-    randomizeGrid();
+    if(spiralIsRotating == false){
+      spiralIsRotating = true;
+      $(".bug_portrait").fadeOut();
+      $(".bug_polaroids").fadeIn();    
+      randomizeGrid();
+    }
   });
 
   $("#portrait-grid").click(function() {
-    $(".bug_polaroids").animate({left: 375, top: 200, queue: true}, function() {
-      $(".bug_polaroids").fadeOut();    
-      $(".bug_portrait").fadeIn();
-      for(i = 0; i < totalImages; i++){
-        $("#bug_portrait_"+i).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
-        $("#bug_portrait_"+i).css("-moz-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
-      }
-    });
+    if(spiralIsRotating == false){
+      $(".bug_polaroids").animate({left: 375, top: 200, queue: true}, function() {
+        $(".bug_polaroids").fadeOut();    
+        $(".bug_portrait").fadeIn();
+        for(i = 0; i < totalImages; i++){
+          $("#bug_portrait_"+i).css("-webkit-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
+          $("#bug_portrait_"+i).css("-moz-transform", "rotate(" + (Math.floor(Math.random()*30) -15) + "deg)");
+        }
+      });
+    }
   });
 
   $(".bug_portrait").click(function () {
