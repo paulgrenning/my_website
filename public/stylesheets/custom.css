@@ -315,6 +315,11 @@ body {
   top: 0;
 }
 
+.pp_description {
+  color: #000;
+  font-size: 1.2em;
+}
+
 #view-selection {
   height: 100px;
 }
