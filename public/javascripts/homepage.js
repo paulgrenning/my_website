@@ -4,9 +4,24 @@
 var ProjectsCarousel = {};
 
 $(document).ready(function() {
+  ProjectsCarousel.originalThumb;
+  $(".thumb").live('mouseover',
+    function() {
+      currentThumbNail = $(this);
+      ProjectsCarousel.originalThumb = currentThumbNail.attr('src'); 
+      currentThumbNail.attr('src', currentThumbNail.attr('src2')); 
+    })
+  .live('mouseout',
+    function() {
+      currentThumbNail = $(this);
+      currentThumbNail.attr('src', ProjectsCarousel.originalThumb); 
+    }
+  );
+  /*
   ProjectsCarousel.isAnimating = false;
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
+  */
 //  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
 /*  function slideRight() {
       if(ProjectsCarousel.isAnimating == false) {
@@ -62,51 +77,6 @@ $(document).ready(function() {
       }
       );
       */
-  $("#thumb-1").live('mouseover',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/darkTide2.png");
-      })
-  .live('mouseout',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/darkTide1.png")// $(this).data('original_source'));
-      }
-  );
-  $("#thumb-2").live('mouseover',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/splat.png");
-      })
-  .live('mouseout',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/bug.png");
-      }
-  );
-  $("#thumb-3").live('mouseover',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/urchin1.png");
-      })
-  .live('mouseout',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/urchin2.png");
-      }
-  );
-  $("#thumb-4").live('mouseover',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/website2.png");
-      })
-  .live('mouseout',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/website1.png");
-      }
-  );
-  $("#thumb-5").live('mouseover',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/ninja1.png");
-      })
-  .live('mouseout',
-    function() {
-        $(this).attr("src", "http://paulgrenning.com/carouselImages/ninja2.png");
-      }
-  );
   /*
   $("#left-arrow").mousedown( 
     function() {
