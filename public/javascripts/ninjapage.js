@@ -26,14 +26,6 @@ $(document).ready(function() {
     }
   }
 
-  $(".pop-out").hover(function() {
-    $(this).attr('title','');
-  });
-
-  $(".pop-out").mouseout(function() {
-      $(this).attr('title',$(this).attr('backuptitle'));
-  });
-
   $(".ninja_polaroids").click(function() {
     var indexValue = $(this).attr('id').split('_')[2];
     $("#pop-out-"+indexValue).attr('title', $("#pop-out-"+indexValue).attr('backuptitle'));

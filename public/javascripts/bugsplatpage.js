@@ -31,14 +31,6 @@ $(document).ready(function() {
       });
   }
 
-  $(".pop-out").hover(function() {
-    $(this).attr('title','');
-  });
-
-  $(".pop-out").mouseout(function() {
-      $(this).attr('title',$(this).attr('backuptitle'));
-  });
-
   $(".bug_polaroids").click(function() {
     var indexValue = $(this).attr('id').split('_')[2];
     $("#pop-out-"+indexValue).attr('title', $("#pop-out-"+indexValue).attr('backuptitle'));
@@ -112,7 +104,6 @@ $(document).ready(function() {
         $("#bug_portrait_"+i).css("zIndex", parseInt($("#bug_portrait_"+i).css('z-index')) + 1);
         $(this).fadeIn();
         $(this).css("zIndex", 0);
-       // $(this).animate({width: currentWidth});
       } 
     });
   });
