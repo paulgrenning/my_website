@@ -82,7 +82,7 @@ $(document).ready(function() {
     $("#mouseover-top").hide();
   });
 
-  $("#polaroid-grid").click(function() {
+  $("#polaroid-view").click(function() {
     if(spiralIsRotating == false){
       spiralIsRotating = true;
       $(".bug_portrait").fadeOut();
@@ -91,7 +91,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#portrait-grid").click(function() {
+  $("#portrait-view").click(function() {
     if(spiralIsRotating == false){
       $(".bug_polaroids").animate({left: 375, top: 200, queue: true}, function() {
         $(".bug_polaroids").fadeOut();    
@@ -115,21 +115,5 @@ $(document).ready(function() {
        // $(this).animate({width: currentWidth});
       } 
     });
-  });
-
-  $("#portrait-grid").hover( function() {
-    $(this).stop().animate({height: 85});
-  });
-
-  $("#polaroid-grid").hover( function() {
-    $(this).stop().animate({height: 85});
-  });
-
-  $("#portrait-grid").mouseout( function() {
-    $(this).stop().animate({height: 75});
-  });
-
-  $("#polaroid-grid").mouseout( function() {
-    $(this).stop().animate({height: 75});
   });
 });

@@ -78,13 +78,13 @@ $(document).ready(function() {
     $("#mouseover-top").hide();
   });
 
-  $("#polaroid-grid").click(function() {
+  $("#polaroid-view").click(function() {
     $(".ninja_portrait").fadeOut();
     $(".ninja_polaroids").fadeIn();    
     randomizeGrid();
   });
 
-  $("#portrait-grid").click(function() {
+  $("#portrait-view").click(function() {
     $(".ninja_polaroids").animate({left: 375, top: 200, queue: true}, function() {
       $(".ninja_polaroids").fadeOut();    
       $(".ninja_portrait").fadeIn();
@@ -105,21 +105,5 @@ $(document).ready(function() {
         $(this).css("zIndex", 0);
       } 
     });
-  });
-
-  $("#portrait-grid").hover( function() {
-    $(this).stop().animate({height: 85});
-  });
-
-  $("#polaroid-grid").hover( function() {
-    $(this).stop().animate({height: 85});
-  });
-
-  $("#portrait-grid").mouseout( function() {
-    $(this).stop().animate({height: 75});
-  });
-
-  $("#polaroid-grid").mouseout( function() {
-    $(this).stop().animate({height: 75});
   });
 });
