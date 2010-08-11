@@ -90,8 +90,8 @@ body {
 }
 
 #body-interior {
-  background: #000 url('http://paulgrenning.com/backgroundGradient.png') repeat-x;
-  background-image:url('http://paulgrenning.com/backgroundGradient.png');
+  background: #000 url('/images/backgroundGradient.png') repeat-x;
+  background-image:url('/images/backgroundGradient.png');
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
   background-attachment: initial;
