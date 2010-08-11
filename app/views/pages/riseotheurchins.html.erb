@@ -47,13 +47,13 @@
     </div>
   </div>
   <div class="span-24" id="above-gallery">
-    <%= image_tag("images/horizontal-divider.png") %>
+    <%= image_tag("horizontal-divider.png") %>
     <p></p>
   </div>
   <div class="span-22 append-1 prepend-1">
     <h2>Gameplay Videos</h2>
     <div class="span-7">
-        <%= link_to image_tag("images/physical-touch.jpg", :class => 'video', :id => "video_1"),
+        <%= link_to image_tag("physical-touch.jpg", :class => 'video', :id => "video_1"),
            'http://www.youtube.com/watch?v=Ys4L3LpYapc', :rel => "prettyPhoto[videos]"%>
            <p id="padding-10px">
            Early gameplay video demonstrating how to throw sea urchins around
@@ -61,7 +61,7 @@
            </p>
     </div>
     <div class="spacers span-7">
-        <%= link_to image_tag("images/gameplay1.jpg", :class => 'video', :id => "video_2"),
+        <%= link_to image_tag("gameplay1.jpg", :class => 'video', :id => "video_2"),
            'http://www.youtube.com/watch?v=GgoHnb_SzRk', :rel => "prettyPhoto[videos]"%>
            <p id="padding-10px">
            Final gameplay video with all the special effects, foleyed sounds, hand written
@@ -69,7 +69,7 @@
            </p>
     </div>
     <div class="span-7">
-        <%= link_to image_tag("images/olderGameplay.jpg", :class => 'video', :id => "video_3"),
+        <%= link_to image_tag("olderGameplay.jpg", :class => 'video', :id => "video_3"),
            'http://www.youtube.com/watch?v=CNFREi_TV0Y', :rel => "prettyPhoto[videos]"%>
            <p id="padding-10px">
            Midpoint gameplay video, not all of the special effects are fully integrated,
@@ -78,7 +78,7 @@
     </div>
   </div> 
   <div class="span-24" id="above-gallery">
-    <%= image_tag("images/horizontal-divider.png") %>
+    <%= image_tag("horizontal-divider.png") %>
     <p></p>
   </div>
   <div class="span-22 append-1 prepend-1 last">
@@ -96,31 +96,31 @@
     <div id="view-selection" class="span-22 append-1 prepend-1">
       <div class="span-2 prepend-4">
         <p></p>
-        <%= image_tag("images/portrait-button.png", :id => "portrait-view") %>
+        <%= image_tag("portrait-button.png", :id => "portrait-view") %>
       </div>
       <div class="span-7"><p></p></div>
       <div class="span-3">
         <p></p>
-        <%= image_tag("images/polaroid-button.png", :id => "polaroid-view") %>
+        <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
       </div>
     </div>
   </div>
   <div class="span-24" id="above-gallery">
-    <%= image_tag("images/horizontal-divider.png") %>
+    <%= image_tag("horizontal-divider.png") %>
   </div>
   <div id="polaroid_gallery" class="span-24">
-    <%= image_tag("images/top-rounded.png", :id => "mouseover-top") %>
-    <%= image_tag("images/bottom-rounded.png", :id => "mouseover-bottom") %>
+    <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
+    <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
     <p id="mouseover-text"></p>
-    <%= image_tag("images/transparentLine.png") %>
+    <%= image_tag("transparentLine.png") %>
     <% URCHIN_IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag("images/urchins/"+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
-        "images/urchins/"+image[:name], :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "urchin-pop-out-"+index.to_s, :rel => "prettyPhoto[polaroids]"%>
-      <%= image_tag("images/urchins/"+image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
+      <%= link_to image_tag("urchins/"+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+        "urchins/"+image[:name], :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "urchin-pop-out-"+index.to_s, :rel => "prettyPhoto[polaroids]"%>
+      <%= image_tag("urchins/"+image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
     <% end %>
   </div>
   <div class="span-24" id="below-gallery">
-    <%= image_tag("images/horizontal-divider.png") %>
+    <%= image_tag("horizontal-divider.png") %>
   </div>
   <h2 class="prepend-1 span-23">Game Engine</h2>
   <div class="span-10 append-1 prepend-1">
