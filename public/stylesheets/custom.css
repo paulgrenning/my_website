@@ -317,8 +317,8 @@ body {
 
 #vtklogo {
   position: absolute;
-  right: 150;
-  top: -50;
+  left: 640px;
+  top: -25px;
 }
 
 .pp_description {
