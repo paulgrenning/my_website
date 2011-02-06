@@ -315,6 +315,12 @@ body {
   top: 0;
 }
 
+#vtklogo {
+  position: absolute;
+  right: 150;
+  top: -50;
+}
+
 .pp_description {
   color: #000;
   font-size: 1em;

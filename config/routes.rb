@@ -9,6 +9,9 @@ ActionController::Routing::Routes.draw do |map|
   map.websitecreation'/website-creation', :controller => 'pages', :action => 'websitecreation'
   map.ninja'/ninja-defense', :controller => 'pages', :action => 'ninja'
   map.resume'/resume', :controller => 'pages', :action => 'resume'
+  map.processingpage'/processing-development', :controller => 'pages', :action => 'processingpage'
+  map.vtkprojects'/VTK-Projects', :controller => 'pages', :action => 'vtkprojects'
+  map.unitydevelopment'/unity-development', :controller => 'pages', :action => 'unitydevelopment'
 
 
 

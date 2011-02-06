@@ -1,0 +1,62 @@
+<div class='page-info span-24'>
+  <div class="span-24" id="portfolio">
+    <div class="span-24 prepend-1">
+      <h2>Games Created With Processing</h2>
+    </div>
+    <div class="span-1">
+      <p></p>
+      <%= image_tag("leftArrow.png", :id => "left-arrow") %>
+    </div>
+    <div id="carousel" class="span-22">
+      <div id="carousel-images">
+        <!--     <%= link_to image_tag("carouselImages/darkTide1.png", :src2 => "carouselImages/darkTide1.png", :id => "thumb-1", :class => "thumb"), darktide_path %> -->
+        <%= link_to image_tag("carouselImages/bug.png", :src2 => "images/carouselImages/splat.png", :id => "thumb-2", :class => "thumb"), bugsplat_path %>
+        <%= link_to image_tag("carouselImages/urchin2.png", :src2 => "images/carouselImages/urchin1.png", :id => "thumb-3", :class => "thumb"), riseotheurchins_path %>
+        <%= link_to image_tag("carouselImages/ninja2.png", :src2 => "images/carouselImages/ninja1.png", :id => "thumb-5", :class => "thumb"), ninja_path %>
+        <!--        <%= link_to image_tag("carouselImages/website1.png", :src2 => "carouselImages/website2.png", :id => "thumb-4", :class => "thumb"), websitecreation_path %> -->
+      </div>
+    </div>
+    <div class="span-1 last">
+      <p></p>
+      <%= image_tag("rightArrow.png", :id => "right-arrow") %>
+    </div>
+  </div>
+  <div class="span-24">
+    <div class="span-7 prepend-1">
+      <h2>Bug Splat</h2>
+      <p>Bug splat was the first game I ever created. Its name gives away its game play. You squish bugs, 
+      except there are a few twists. Melt them with fire, elctricute with them tasers, or incinerate them with
+      fire crackers.</p>
+    </div>
+    <div class="span-7" id="spacers">
+      <h2>Rise O' The Urchins</h2>
+      <p>
+      Rise O' The Urchins was developed by myself and 3 others. Two of us were from UIC and two worked remotely
+      from LSU. We had never met yet we managed to create one of the top games in the class. It recieved
+      best graphics and animation as well as sound effects and music.
+      </p>
+    </div>
+    <div class="span-7 apend-1 last">
+      <h2>Ninja Castle Defense</h2>
+      <p>
+      Ninja Castle Defense was a short game created in 2 days. It is not completely finished, it was meant as
+      a trial game to see how a touch table could handle a castle defense type game.
+      </p>
+    </div>
+    <div><p></p></div>
+    <%= image_tag("horizontal-divider.png") %>
+    <div><p></p></div>
+  </div>
+  <div class="span-24">
+    <div class="span-23 prepend-1">
+      <p>
+      During my final year as an undergraduate, I took a video game design course. The games created in the
+      class were developed for a 52" touch table. The games were written in Processing, which is a high level visualization
+      tool that uses Java for its base framework. Processing is best for sprite type animation versus models and kinematics
+      which is why all 3 of my Processing games are 2D.<br/><br/>
+      Due to my interest in video game design I decided to do independent study the next semester and learn a real 3D
+      game engine. So I chose to learn Unity 3d. <%= link_to "Check out my Unity game development page for more information", unitydevelopment_path %>.
+      </p>
+    </div>
+  </div>
+</div>

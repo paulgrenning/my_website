@@ -16,6 +16,18 @@ class PagesController < ApplicationController
     @page_header = { :name => "Bug Splat", :link => root_path}
   end
 
+  def unitydevelopment
+    @page_header = { :name => "Unity Development", :link => root_path}
+  end
+
+  def processingpage
+    @page_header = { :name => "Processing Development", :link => root_path}
+  end
+
+  def vtkprojects 
+    @page_header = { :name => "VTK Projects", :link => root_path}
+  end
+
   def websitecreation
     @page_header = { :name => "Creation Of My Site", :link => root_path}
   end
