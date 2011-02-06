@@ -1,0 +1,87 @@
+<div class='page-info span-24'>
+  <div class="span-23  prepend-1">
+    <h3>View A Video Of The Earthquake Visualization Tool</h2>
+    <p>The video link is not complete yet</p>
+    <%= image_tag("EarthquakeImages/DifferentColors2.jpg", :id => "below-gallery", :height => "260") %>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-23  prepend-1">
+    <div class="span-11">
+      <h3>
+        How To Use The Earthquake Visualization Tool
+      </h3>
+      <p>
+      First off, if you have windows you should be able to <%= link_to "download the
+      stand alone executable", earthquakeexecutable_path %> and run the program. There is nothing to install, just run it and wait 30 seconds
+      or so for the entire dataset from the years 1973-2011 to load into the program. If
+      you have a Mac and you wish to compile the source code check <%= link_to "this page", earthquakesource_path %> out.
+      <br/> 
+      <br/> 
+      Once it is running you will notice there are three viewing areas. The largest
+      viewing area is the main view. Just about all the tools on the left panel
+      affect all three views except the map location comobo box. This feature was
+      meant to only affect the main view so you could set the two smaller views
+      map location then choose a specific view in the main one and see the earthquake
+      simulations from three different areas at once. To move around in the views,
+      the first mouse button while rotate the view, the second mouse button will zoom in 
+      and out, and if you have a mouse wheel it will zoom when scrolled and pan when clicked.
+      <br/>
+      <br/>
+      <%= link_to image_tag("EarthquakeImages/DepthValues.jpg", :height => "225px", :id => "below-gallery"),
+        'images/EarthquakeImages/DepthValues.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        <%= image_tag("EarthquakeImages/DepthValues.jpg", :class => "earthquake_screen") %>
+      While using the program the most commonly changed values will most likely be
+      the depth and the magnitude. So I created two legends in the program to tell what the current values are. The
+      depth legend is inside all three viewing areas. It is the white line with
+      the labels min and max depth. The second legend is the color bar which
+      shows the magnitude level. Generally the darker the color the lower the
+      magnitude and the brighter or lighter the color the higher the magnitude.
+      There are also text boxes on the left showing the same information the legends
+      show and more.
+      <br/> 
+      <br/>
+      Besides the magnitude and depth, other values can be modified on the dataset such as
+      color, year, and location. The color is changeable for two purposes, color blindness and
+      different colors schemes always makes things more fun! The user can view specific years 
+      of the dataset. This is useful when doing playback. Users can choose a range of years
+      and hit the play button and the program will cycle through one year every second. The
+      user also has the option of changing how fast the cycle is and how many years each cycle
+      covers.
+      </p>
+    </div>
+    <div class="span-11 last">
+      <p>Click on the photos to enlarge them.<br/>Once opened click on the maximize button in the top right to enlarge even further.</p>
+      <%= link_to image_tag("EarthquakeImages/magnitude.jpg", :height => "225px", :id => "below-gallery"),
+        'images/EarthquakeImages/magnitude.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        <%= image_tag("EarthquakeImages/magnitude.jpg", :class => "earthquake_screen") %>
+        <p>Since using visualization tools can be
+      processor intensive, there are two check boxes on the bottom right to
+      toggle the updating of the two smaller views. This way you can
+      watch playbacks in the main view at a faster rate. It can also be to set
+      specific views to one time frame and a different view to a different time frame
+      and view the difference in depth and magnitude between the two.
+      <br/>
+      <br/>
+      While playbacks are running the user can still interact with the program. They can use mouse interactions
+      as well as change depth, magnitude, color, and year values. Finally while its running you can even
+      enable or disable the smaller views.
+      </p>
+      <%= link_to image_tag("EarthquakeImages/DepthScaleTransparency.jpg", :height => "225px", :id => "below-gallery"),
+        'images/EarthquakeImages/DepthScaleTransparency.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        <%= image_tag("EarthquakeImages/DepthScaleTransparency.jpg", :class => "earthquake_screen") %>
+    </div>
+  </div>
+  <div class="span-24">
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+    <div class="span23 prepend-1" style="height:400px">
+      <h3>Entire Image Gallery</h3>
+    </div>
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+  </div>
+</div>

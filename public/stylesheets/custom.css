@@ -276,6 +276,10 @@ body {
   top: 0;
 }
 
+.earthquake_screen {
+ display: none;
+}
+
 .ninja_portrait {
   -webkit-transform: rotate(-9deg);
   -moz-transform: rotate(-9deg);

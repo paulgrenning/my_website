@@ -24,12 +24,24 @@ class PagesController < ApplicationController
     @page_header = { :name => "Processing Development", :link => root_path}
   end
 
+  def earthquakeinfo 
+    @page_header = { :name => "Earthquake Visualization Tool", :link => root_path}
+  end
+
+  def earthquakeanomilies 
+    @page_header = { :name => "Earthquake Dataset", :link => root_path}
+  end
+
+  def vtkforwindows 
+    @page_header = { :name => "Using VTK With Windows", :link => root_path}
+  end
+  
   def vtkprojects 
     @page_header = { :name => "VTK Projects", :link => root_path}
   end
 
   def websitecreation
-    @page_header = { :name => "Creation Of My Site", :link => root_path}
+    @page_header = { :name => "Web Development", :link => root_path}
   end
 
   def ninja
@@ -40,8 +52,18 @@ class PagesController < ApplicationController
     @page_header = { :name => "My Resume", :link => root_path, :theid => "resume-page"}
   end
 
-  def downloads
+  def downloadresume
     send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
+  end
+
+  def earthquakesource
+    send_file 'public/images/EarthquakeImages/Years.jpg'
+   # send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
+  end
+
+  def earthquakeexecutable
+    send_file 'public/images/EarthquakeImages/views.jpg'
+   # send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
   end
 
 end

@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.contact '/contact', :controller => 'pages', :action => 'contact'
   map.about   '/about',   :controller => 'pages', :action => 'about'
   map.projects'/projects', :controller => 'pages', :action => 'projects'
-  map.downloads'/downloads', :controller => 'pages', :action => 'downloads'
+  map.downloadresume'/download-resume', :controller => 'pages', :action => 'downloadresume'
   map.darktide'/dark-tide', :controller => 'pages', :action => 'darktide'
   map.riseotheurchins'/rise-o-the-urchins', :controller => 'pages', :action => 'riseotheurchins'
   map.bugsplat'/bug-splat', :controller => 'pages', :action => 'bugsplat'
@@ -12,6 +12,11 @@ ActionController::Routing::Routes.draw do |map|
   map.processingpage'/processing-development', :controller => 'pages', :action => 'processingpage'
   map.vtkprojects'/VTK-Projects', :controller => 'pages', :action => 'vtkprojects'
   map.unitydevelopment'/unity-development', :controller => 'pages', :action => 'unitydevelopment'
+  map.earthquakeinfo'/earthquake-visualization-tool', :controller => 'pages', :action => 'earthquakeinfo'
+  map.earthquakeanomilies'/earthquake-anomilies', :controller => 'pages', :action => 'earthquakeanomilies'
+  map.vtkforwindows'/install-vtk-for-windows', :controller => 'pages', :action => 'vtkforwindows'
+  map.earthquakesource'/download-earthquake-source', :controller => 'pages', :action => 'earthquakesource'
+  map.earthquakeexecutable'/download-earthquake-executable', :controller => 'pages', :action => 'earthquakeexecutable'
 
 
 
