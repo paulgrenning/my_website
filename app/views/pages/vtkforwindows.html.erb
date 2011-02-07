@@ -71,6 +71,39 @@
     <br/>
     -- Inisde Visual Studio, right click on the Install project file and select Build. This should take 20-30 minutes, continue looking at VTK examples.
     </p>
+    </p>
+    <h3>Building The Earthquake Tool</h3>
+    <p class="prepend-1">
+    -- <%= link_to "Download this zip", earthquakesource_path%> containing the necessary images, sources files, and CMakeList file.
+    <br/>
+    -- Extract to some directory with no spaces. Preferable in the same folder that VTK and VTKBuild are in.
+    <br/>
+    -- Open CMake and choose the source directory to be the folder you just extracted, and the binaries to be the same directory.
+    <br/>
+    -- Click configure, make sure to choose Visual Studio 32 bit.
+    <br/>
+    -- Set the path to something without spaces again.
+    <br/>
+    -- If CMake couldn't find VTKBuild directory set it manually
+    <br/>
+    -- Click configure again, and then click generate.
+    <br/>
+    -- Open the AllBuild Visual Studio Project inside the binary location
+    <br/>
+    -- Inside Visual Studio, right click on AllBuild and select Build.
+    <br/>
+    -- Right click on the RenderWindow Project and select "set as startup project"
+    <br/>
+    -- Build it and run it. If images do not appear you may need to set the debuggin directory.
+    <p class="prepend-2">
+      -- Right click on the RenderWindow Project and select properties.
+      <br/>
+      -- On the left choose Debugging
+      <br/>
+      -- Change from $(ProjectDir) to $(TargetDir)
+    </p>
+    <h3>You should have a working copy of my project</h3>
+    </p>
     </p> 
   </div>
 </div>
