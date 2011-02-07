@@ -1,8 +1,8 @@
 <div class='page-info span-24'>
   <div class="span-23  prepend-1">
     <h3>View A Video Of The Earthquake Visualization Tool</h2>
-    <p>The video link is not complete yet</p>
-    <%= image_tag("EarthquakeImages/DifferentColors2.jpg", :id => "below-gallery", :height => "260") %>
+    <%= link_to image_tag("EarthquakeImages/DifferentColors2.jpg", :height=>"300px", :id=>"below-gallery"),
+         'http://www.youtube.com/watch?v=DDR3KjDZqa0', :rel => "prettyPhoto[videos]"%>
   </div>
   <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
@@ -16,7 +16,7 @@
       First off, if you have windows you should be able to <%= link_to "download the
       stand alone executable", earthquakeexecutable_path %> and run the program. There is nothing to install, just run it and wait 30 seconds
       or so for the entire dataset from the years 1973-2011 to load into the program. If
-      you have a Mac and you wish to compile the source code check <%= link_to "this page", earthquakesource_path %> out.
+      you wish to compile the source code with windows check <%= link_to "this page", earthquakesource_path %> out.
       <br/> 
       <br/> 
       Once it is running you will notice there are three viewing areas. The largest
