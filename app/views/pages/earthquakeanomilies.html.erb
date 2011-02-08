@@ -1,6 +1,29 @@
 <div class='page-info span-24'>
   <div class="span-22 append-1 prepend-1">
+    <h2>About The Dataset</h2>
+    <div class="span-22">
+      <p>
+      All the earthquake data for my project is coming from the 
+      <%= link_to "United States Geological Survey Website", 'http://earthquake.usgs.gov/earthquakes/eqarchives/epic/epic_global.php'%>
+      <br/>
+      <br/>
+      To initially use the dataset I tested it out on the most recent years, 2010-2011. I opened it in Paraview to make sure
+      it would work in my program. Sure enough it did, so I didn't have to parse anything out of the dataset for it to work. From 
+      there I saved it from Paraview into a comma seperated value(CSV) file and was able to read it into my program.
+      <br/>
+      <br/>
+      Unforutnately, the entire dataset from 1973-2011 did have a few holes in it. Paraview was unable to open the large data file.
+      So I ran it through a python script to remove rows in the data that had incorrect values or values of zero. I removed zero values because
+      they did not seem to add much value to the visualization. After running it through the python script, Paraview
+      could parse through the data and plot all 552,774 data points. Each data point comes from one row of comma separated values. Once again I saved the data from Paraview into a CSV file. Then I was able to read it
+      into my program once again. 
+    </div>
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+    <div class="span-24">
     <h2>Haiti Earthquake In 2010</h2>
+  </div>
     <div class="span-11">
       <%= link_to image_tag("EarthquakeImages/Haiti-2009.jpg", :width => 400, :id => "below-gallery"),
       'images/EarthquakeImages/Haiti-2009.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
@@ -25,7 +48,7 @@
       <%= image_tag("horizontal-divider.png") %>
     </div>
     <div class="span-23 prepend-1">
-      <h3>View A Video Of The Entire Earthquake Dataset: Years 1973-2011</h3>
+      <h2>View A Video Of The Entire Earthquake Dataset: Years 1973-2011</h2>
     </div>
     <div class="span-23 prepend-1">
     <%= link_to image_tag("EarthquakeImages/playbackImage.jpg", :class => 'video', :id => "video_1"),
