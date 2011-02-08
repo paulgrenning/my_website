@@ -155,5 +155,5 @@ $(document).ready(function() {
     $(this).stop().animate({height: 75});
   });
 
-  $("a[rel^='prettyPhoto']").prettyPhoto();
+  $("a[rel^='prettyPhoto']").prettyPhoto({theme:'light_rounded', show_title: false, overlay_gallery: false});
 });
