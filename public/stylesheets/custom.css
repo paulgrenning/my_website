@@ -102,6 +102,19 @@ body {
   min-height: 700;
 }
 
+.code {
+  overflow: auto;
+  height: 300px;
+  width: 870px;
+  background-color: white;
+  margin-left: 40px;  
+}
+
+.code p {
+  color: black;
+  margin-left: 20px;
+}
+
 #header-tab {
   margin-left: -9px;
 }

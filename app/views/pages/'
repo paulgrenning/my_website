@@ -1,0 +1,452 @@
+a {
+  color: #90ffad;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #90ffad;
+}
+
+a:visited {
+  color: #90ffad;
+}
+
+h1 {
+  height: 1.3em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=5);
+  padding-top: 50px;
+  text-shadow: #424242 4px 4px 3px;
+  font: normal normal normal 4.8em/normal Georgia, Times, serif;
+}
+
+h2 {
+  height: 1em;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=5);
+  text-shadow: #424242 3px 3px 3px;
+  color: #e0e0b8;
+  /*color: #2d5824; */
+  font: normal normal normal 2.3em/normal Georgia, Times, serif;
+/*  border-bottom: 1px solid #aaf6aa;*/
+}
+
+h3 {
+  height: 1em;
+  filter: Shadow(Color=#242424,   
+  Direction=160, 
+  Strength=5);
+  text-shadow: #242424 5px 5px 5px;
+  color: #e0e0b8;
+  font: normal normal normal 1.5em/normal Georgia, Times, serif;
+}
+
+div{
+  color: #fdfde4;
+}
+
+#header-name a{
+  color: #e0ffb8;
+}
+
+#twitter {
+  padding-top: 60px;
+  float: right;
+}
+
+#about-team {
+  text-align: center;
+  font: normal normal normal 3.3em/normal Georgia, Times, serif;
+}
+
+#team-member {
+  font: normal normal normal 2.0em/normal Georgia, Times, serif;
+}
+
+body {
+  background-color: #000;
+}
+
+#body-border {
+  width: 956px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#left-border {
+  float: right;
+  width: 3px;
+  position: relative;
+  min-height: 956;
+}
+
+#right-border {
+  float: left;
+  width: 3px;
+  position: relative;
+  min-height: 956;
+}
+
+#body-interior {
+  background: #000 url('/images/backgroundGradient.png') repeat-x;
+  background-image:url('/images/backgroundGradient.png');
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-origin: initial;
+  background-clip: initial;
+  min-height: 700;
+}
+
+.code {
+  background-color: white;
+}
+
+#header-tab {
+  margin-left: -9px;
+}
+
+#footer-tab {
+  margin-top: -90px;
+  margin-bottom: -40px;
+  z-index: 0;
+  position: relative;
+}
+
+#footer-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+#header {
+  margin: auto;
+}
+
+#header-name{
+  z-index: 1;
+}
+
+#spacers {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#resume-header {
+  text-align: center;
+}
+
+#main-content {
+  float: left;
+  min-height: 800px;
+  margin-top: 15px;
+}
+
+#about-darktide {
+  height: 310;
+  padding-bottom: 20px;
+}
+
+#obtiva-logo {
+  width: 350;
+}
+
+.page-info {
+  position: relative;
+  z-index: 1;
+  font-family: sans-serif;
+  float: left;
+  color: #fff;
+}
+
+#portfolio {
+  height: 270px;
+}
+
+#left-arrow {
+  margin-top: 50px;
+  display: none;
+}
+
+#right-arrow {
+  margin-top: 50px;
+  margin-left: -5px;
+  display: none;
+}
+
+#carousel {
+  height: 210;
+  position: relative;
+  overflow: hidden;
+}
+
+#carousel-images {
+  white-space: nowrap;
+  position: relative;
+  margin-left: -2px;
+}
+
+.thumb {
+  position: relative;
+  margin-right: 22px;
+}
+
+#polaroid_gallery {
+  float: left;
+  position: relative;
+}
+
+.the_polaroids {
+  width: 100px;
+  height: 100px;
+  border-bottom: 25px solid #eee;
+  border-left: 7px solid #eee;
+  border-top: 7px solid #eee;
+  border-right: 7px solid #eee;
+  -webkit-box-shadow: #333 2px 2px 3px;
+
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position:absolute;
+  z-index: 0;
+  left: 180;  
+  top: 0;
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
+}
+
+.portrait {
+  top: 0;
+  display: none;
+  border-bottom: 5px solid #eee;
+  border-left: 5px solid #eee;
+  border-top: 5px solid #eee;
+  border-right: 5px solid #eee;
+  position:absolute;
+  z-index: 0;
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
+}
+
+.bug_portrait {
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
+  display: none;
+  border-bottom: 5px solid #eee;
+  border-left: 5px solid #eee;
+  border-top: 5px solid #eee;
+  border-right: 5px solid #eee;
+  position:absolute;
+  z-index: 0;
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.bug_polaroids {
+  width: 125px;
+  height: 125px;
+  border-bottom: 25px solid #eee;
+  border-left: 7px solid #eee;
+  border-top: 7px solid #eee;
+  border-right: 7px solid #eee;
+  -webkit-box-shadow: #333 2px 2px 3px;
+
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position:absolute;
+  z-index: 0;
+  left: 180;  
+  top: 0;
+}
+
+.earthquake_screen {
+ display: none;
+}
+
+.ninja_portrait {
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
+  display: none;
+  border-bottom: 5px solid #eee;
+  border-left: 5px solid #eee;
+  border-top: 5px solid #eee;
+  border-right: 5px solid #eee;
+  position:absolute;
+  z-index: 0;
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.ninja_polaroids {
+  width: 150px;
+  height: 150px;
+  border-bottom: 25px solid #eee;
+  border-left: 7px solid #eee;
+  border-top: 7px solid #eee;
+  border-right: 7px solid #eee;
+  -webkit-box-shadow: #333 2px 2px 3px;
+
+  background-attachment: initial; 
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position:absolute;
+  z-index: 0;
+  left: 180;  
+  top: 0;
+}
+
+#vtklogo {
+  position: absolute;
+  left: 640px;
+  top: -25px;
+}
+
+.pp_description {
+  color: #000;
+  font-size: 1em;
+}
+
+#view-selection {
+  height: 100px;
+}
+
+#portrait-view {
+  position: absolute;
+}
+
+#polaroid-view {
+  position: absolute;
+}
+
+#mouseover-top {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+#mouseover-bottom {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+#mouseover-text {
+  font: normal normal normal 1.2em/normal Georgia, Times, serif;
+  display: none;
+  width: 157px;
+  padding: 10px;
+  background: #012918;
+  color: #fff;
+  position: absolute;
+  z-index: 1000;
+}
+
+#my-image {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 3px solid #fff;
+}
+
+.video {
+  border: 5px solid #fff;
+  z-index: 0;
+}
+
+#darktide-logo {
+  margin-left: -10px;
+}
+
+#padding-10px {
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+#above-gallery {
+  margin-top: 10px;
+}
+
+#below-gallery {
+  margin-bottom: 15px;
+}
+
+#copyright {
+  margin-top: 10px;
+}
+
+#footer-navigation {
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#footer-navigation li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-right: 50px;
+  display: inline;
+}
+
+#navigation-glass {
+  position: absolute;
+  margin-top: -3px;
+}
+
+#header-navigation {
+  position: relative;
+  margin-top: -90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header-navigation-list {
+  float: right;
+  position: relative;
+}
+
+#header-navigation-list li {
+  list-style-type: none;
+  display: inline;
+}
+
+.header-navigation-button {
+  top: 56px;
+  position: relative;
+}
+
+#copyright {
+  text-align: center;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  color: #fff;
+}

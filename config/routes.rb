@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.vtkforwindows'/install-vtk-for-windows', :controller => 'pages', :action => 'vtkforwindows'
   map.earthquakesource'/download-earthquake-source', :controller => 'pages', :action => 'earthquakesource'
   map.earthquakeexecutable'/download-earthquake-executable', :controller => 'pages', :action => 'earthquakeexecutable'
+  map.viewearthquakesource'/view-earthquake-source', :controller => 'pages', :action => 'viewearthquakesource'
 
 
 

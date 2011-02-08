@@ -56,14 +56,16 @@ class PagesController < ApplicationController
     send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
   end
 
+  def viewearthquakesource
+    @page_header = { :name => "Earthquake Visualization Source", :link => root_path, :theid => "resume-page"}
+  end
+
   def earthquakesource
-    send_file 'public/EarthquakeVisualizationSource.zip'
-   # send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
+    send_file 'public/downloads/EarthquakeVisualizationSource.zip'
   end
 
   def earthquakeexecutable
-    send_file 'public/EarthquakeVisualizationExecutable.zip'
-   # send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
+    send_file 'public/downloads/EarthquakeVisualizationExecutable.zip'
   end
 
 end
