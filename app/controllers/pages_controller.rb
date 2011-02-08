@@ -33,7 +33,7 @@ class PagesController < ApplicationController
   end
 
   def vtkforwindows 
-    @page_header = { :name => "Using VTK With Windows", :link => root_path}
+    @page_header = { :name => "Compiling VTK For Windows", :link => root_path}
   end
   
   def vtkprojects 
@@ -57,12 +57,12 @@ class PagesController < ApplicationController
   end
 
   def earthquakesource
-    send_file 'public/images/EarthquakeImages/Years.jpg'
+    send_file 'public/EarthquakeVisualizationSource.zip'
    # send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
   end
 
   def earthquakeexecutable
-    send_file 'public/images/EarthquakeImages/views.jpg'
+    send_file 'public/EarthquakeVisualizationExecutable.zip'
    # send_file 'public/downloads/Paul Grenning\'s Resume.pdf'
   end
 

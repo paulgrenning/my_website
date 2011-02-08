@@ -1,0 +1,111 @@
+<div class='page-info span-24'>
+  <div class="span-22  prepend-1">
+    <h2>Steps To Install And Compile VTK</h2> 
+    <p>
+    <h3>Software Needed</h3>
+    1. These steps assume you have Microsoft Visual Studio 2008 or 2010 installed.
+    <br/>
+    2. This project also uses the cross platform UI framework, QT.
+    <br/>
+    3. These instructions work for Windows 7, it has not been tested with Windows Vista or XP.
+    <br/>
+    <br/>
+    <h3>Software To Download</h3>
+    1. Go to the visualization toolkit <%= link_to "website",'http://www.vtk.org/VTK/resources/software.html' %>  and download the latest source version of VTK, currently 5.6.1.
+    <br/>
+    2. At the same <%= link_to "website",'http://www.vtk.org/VTK/resources/software.html' %> download the latest data set, currently vtkdata-5.6.1.zip
+    <br/>
+    3. If you do not have CMake, a cross platform compilation tool, download it from their <%= link_to "website", "http://www.cmake.org/cmake/resources/software.html" %>
+    <br/>
+    4. The final thing to download will be the QT library built for Visual Studio. This can be found <%= link_to "here", "http://qt.nokia.com/downloads/" %>. Once at the QT downloads pages
+    click on the LGPL tab and download the link labeled 
+    "Qt libraries 4.7.1 for Windows (VS 2008, 228 MB)" unless there is a later version.
+    <br/>
+    <%= image_tag("InstructionalImages/QTDownload.jpg") %>
+    <br/>
+    <br/>
+    <h3>Installation and Configuration</h3>
+    1. The first thing to install and configure should be QT.
+    <br/>
+    <p class="prepend-1">--  Once QT is installed you will need to configure it for either Visual Studio 2008 or 2010.
+    <br/>
+    --  We will configure it using the Visual Studio Command Prompt. VS 2010 has 4 different command prompts, you will choose
+    the one labeled "Visual Studio Command Prompt".
+    <br/>
+    --  Go to Start -> All Programs -> Microsoft Visual Studio 2008 or 2010 -> Visual Studio Tools -> Open Visual Studio Command Prompt
+    <br/>
+    -- Once in the command prompt change the directory to the root QT folder and go into the version that was just installed.
+    <br/>
+    -- For me that was at C:/QT/4.7.1. Make sure to choose the correct version because configuring can take anywhere from 1-4.5 hours.
+    <br/>
+    -- Finally type this command to configure QT: "configure.exe -platform win32-msvc2008". Even if you have VS 2010 use msvc2008 command.
+    <br/>
+    -- When that is finished type this command: "nmake". This too will take some time.
+    </p>
+    2. Extract the VTK folder to some directoy where the path and folder have no spaces in them. 
+    <br/>
+    <p class="prepend-1">
+    -- A good directory choice could be C:/Users/YourName/VTK
+    </p>
+    3. Create a similar directory called VTKBuild or something similar with no spaces.
+    <p class="prepend-1">
+    -- A good directoy choice could be C:/Users/YourName/VTKBuild
+    </p>
+    4. Extract the VTKData into a folder in the same directory as VTK, so C:/Users/YourName/VTKData
+    <br/>
+    5. Building VTK
+    <p class="prepend-1">
+    -- In the text box labeled "Where is the source", navitage to your VTK folder.
+    <br/>
+    -- In the text box labeled "Where to build the binaries", navitage to your VTKBuild folder.
+    <br/>
+    -- Now hit the configure button, and choose Visual Studio 2008 or 10 and not Win64. This should only take a minute or two once you hit Ok.
+    <br/>
+    -- There will be many red lines in the upper text box. You can ignore most of them. You may want
+    to select the check box "Build_Examples". Since we built QT for VS you can also check the VTK_Use_QT.
+    Set the VTK_DATA_ROOT to the folder where VTKData is at.
+    Finally there is a folder directory called CMAKE_INSTALL_PREFIX that is probably placed at C:/Program Files/VTK, change that to be C:/VTK or some directory path that has no spaces once again.
+    <br/>
+    <%= image_tag("InstructionalImages/CMakeVTK.jpg") %> 
+    <br/>
+    Before you hit configure again it should look similar to the above picture.
+    <br/>
+    -- Click configure again.
+    <br/>
+    -- Click generate, this should take a few minute as well.
+    <br/>
+    -- Open the VTKBuild directory and double click on AllBuild Visual Studio Project.
+    <br/>
+    -- Inside Visual Studio, right click on the AllBuild project file and select Build. This may take an hour, go look at <%= link_to "VTK examples", "http://www.vtk.org/Wiki/VTK/Examples/Cxx" %> in the mean time.
+    <br/>
+    -- Inisde Visual Studio, right click on the Install project file and select Build. This should take 20-30 minutes, continue looking at <%= link_to "VTK examples" "http://www.vtk.org/Wiki/VTK/Examples/Cxx" %>.
+    </p>
+    </p>
+    <h3>Building The Earthquake Tool</h3>
+    <p class="prepend-1">
+    -- <%= link_to "Download this zip", earthquakesource_path%> containing the necessary images, sources files, and CMakeList file.
+    <br/>
+    -- Extract to some directory with no spaces. Preferably in the same folder that VTK, VTKBuild, and VTKData are in.
+    <br/>
+    -- Open CMake and choose the source directory and binary directory to be the folder you just extracted.
+    <br/>
+    -- Click configure, make sure to choose Visual Studio 10, not Visual Studio 10 Win64.
+    <br/>
+    -- Set the CMAKE_INSTALL_PREFIX path to something without spaces again.
+    <br/>
+    -- If CMake couldn't find VTKBuild directory set it manually
+    <br/>
+    -- Click configure again, and then click generate.
+    <br/>
+    -- Open the AllBuild Visual Studio Project. 
+    <br/>
+    -- Inside Visual Studio, right click on AllBuild and select Build.
+    <br/>
+    -- Right click on the RenderWindowUI Project and select "set as startup project".
+    <br/>
+    -- Build it and run it.
+    <h3>You should have a working copy of my project</h3>
+    </p>
+    </p> 
+  </div>
+</div>
