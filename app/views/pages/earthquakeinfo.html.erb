@@ -30,7 +30,7 @@
       <br/>
       <br/>
       <%= link_to image_tag("EarthquakeImages/DepthValues.jpg", :height => "225px", :id => "below-gallery"),
-        'images/EarthquakeImages/DepthValues.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/DepthValues.jpg', :rel => "prettyPhoto[earthquake_screens_helper]", :title => "The viewable depth, minimum and maximum can be changed"%>
         <%= image_tag("EarthquakeImages/DepthValues.jpg", :class => "earthquake_screen") %>
       While using the program the most commonly changed values will most likely be
       the depth and the magnitude. So I created two legends in the program to tell what the current values are. The
@@ -54,7 +54,7 @@
     <div class="span-11 last">
       <p>Click on the photos to enlarge them.<br/>Once opened click on the maximize button in the top right to enlarge even further.</p>
       <%= link_to image_tag("EarthquakeImages/magnitude.jpg", :height => "225px", :id => "below-gallery"),
-        'images/EarthquakeImages/magnitude.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/magnitude.jpg', :rel => "prettyPhoto[earthquake_screens_helper]", :title => "The viewable minimum and maximum magnitude can be changed"%>
         <%= image_tag("EarthquakeImages/magnitude.jpg", :class => "earthquake_screen") %>
         <p>Since using visualization tools can be
       processor intensive, there are two check boxes on the bottom right to
@@ -69,7 +69,7 @@
       enable or disable the smaller views.
       </p>
       <%= link_to image_tag("EarthquakeImages/DepthScaleTransparency.jpg", :height => "225px", :id => "below-gallery"),
-        'images/EarthquakeImages/DepthScaleTransparency.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/DepthScaleTransparency.jpg', :rel => "prettyPhoto[earthquake_screens_helper]", :title => "The depth scale can be changed to be below the earth surface, when doing that you can also change the flat map's transparency."%>
         <%= image_tag("EarthquakeImages/DepthScaleTransparency.jpg", :class => "earthquake_screen") %>
     </div>
   </div>
@@ -81,34 +81,34 @@
       <h3>Entire Image Gallery</h3>
       <br/>
       <%= link_to image_tag("EarthquakeImages/DifferentColors.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/DifferentColors.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/DifferentColors.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "There are a number of different color schemes, partially for fun, primarily for color blindess."%>
         <%= image_tag("EarthquakeImages/DifferentColors.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/DifferentColors2.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/DifferentColors2.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/DifferentColors2.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "The color schemes can be different in different views"%>
         <%= image_tag("EarthquakeImages/DifferentColors2.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/DifferentLocations.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/DifferentLocations.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/DifferentLocations.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "Each viewport can view different areas of the planet at once. There is also a combo box menu that has 12 predefined locations with interesting earthquake activity over the years."%>
         <%= image_tag("EarthquakeImages/DifferentLocations.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/InitialLoad.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/InitialLoad.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/InitialLoad.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "This is what the program looks like when it first loads."%>
         <%= image_tag("EarthquakeImages/InitialLoad.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/Years.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/Years.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/Years.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "The current year or years being viewed can be changed manually or played back over time."%>
         <%= image_tag("EarthquakeImages/Years.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/magnitude.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/magnitude.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/magnitude.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "The minimum and maximum viewable magnitude can be manually set by the user."%>
         <%= image_tag("EarthquakeImages/magnitude.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/playback.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/playback.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/playback.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "The earthquakes are viewable from the years 1973-2011, the user can playback specific years or a user specified time scale."%>
         <%= image_tag("EarthquakeImages/playback.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/DepthValues.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/DepthValues.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/DepthValues.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "The minimum and maximum viewable depth can be manually set by the user."%>
         <%= image_tag("EarthquakeImages/DepthValues.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/views.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/views.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/views.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "There are three views, all of which can view different areas of the map. The smaller views can be set not to update to freeze time or save CPU cycles."%>
         <%= image_tag("EarthquakeImages/views.jpg", :class => "earthquake_screen") %>
       <%= link_to image_tag("EarthquakeImages/DepthScaleTransparency.jpg", :width => "290px", :id => "below-gallery"),
-        'images/EarthquakeImages/DepthScaleTransparency.jpg', :rel => "prettyPhoto[earthquake_screens]"%>
+        'images/EarthquakeImages/DepthScaleTransparency.jpg', :rel => "prettyPhoto[earthquake_screens]", :title => "The depth scale can be changed to be below the earth surface, when doing that you can also change the flat map's transparency."%>
         <%= image_tag("EarthquakeImages/DepthScaleTransparency.jpg", :class => "earthquake_screen") %>
     </div>
     <div class="span-24" id="below-gallery">
