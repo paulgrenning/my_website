@@ -11,15 +11,17 @@
     <br/>
     <br/>
     <h3>Software To Download</h3>
-    1. Go to the visualization toolkit website and download the latest version of VTK (5.6.1 at the time of creation).
+    1. Go to the visualization toolkit <%= link_to "website",'http://www.vtk.org/VTK/resources/software.html' %>  and download the latest source version of VTK, currently 5.6.1.
     <br/>
-    <%= link_to "http://www.vtk.org/VTK/resources/software.html", 'http://www.vtk.org/VTK/resources/software.html' %>
+    2. At the same <%= link_to "website",'http://www.vtk.org/VTK/resources/software.html' %> download the latest data set, currently vtkdata-5.6.1.zip
     <br/>
-    2. If you do not have CMake, a cross platform compilation tool, download it from their <%= link_to "website", "http://www.cmake.org/cmake/resources/software.html" %>
+    3. If you do not have CMake, a cross platform compilation tool, download it from their <%= link_to "website", "http://www.cmake.org/cmake/resources/software.html" %>
     <br/>
-    3. The final thing to download will be the QT library built for Visual Studio. This can be found <%= link_to "here", "http://qt.nokia.com/downloads/" %>. Once at the QT downloads pages
+    4. The final thing to download will be the QT library built for Visual Studio. This can be found <%= link_to "here", "http://qt.nokia.com/downloads/" %>. Once at the QT downloads pages
     click on the LGPL tab and download the link labeled 
     "Qt libraries 4.7.1 for Windows (VS 2008, 228 MB)" unless there is a later version.
+    <br/>
+    <%= image_tag("InstructionalImages/QTDownload.jpg") %>
     <br/>
     <br/>
     <h3>Installation and Configuration</h3>
@@ -49,17 +51,24 @@
     <p class="prepend-1">
     -- A good directoy choice could be C:/Users/YourName/VTKBuild
     </p>
-    4. Building VTK
+    4. Extract the VTKData into a folder in the same directory as VTK, so C:/Users/YourName/VTKData
+    <br/>
+    5. Building VTK
     <p class="prepend-1">
     -- In the text box labeled "Where is the source", navitage to your VTK folder.
     <br/>
     -- In the text box labeled "Where to build the binaries", navitage to your VTKBuild folder.
     <br/>
-    -- Now hit the configure button, and choose Visual Studio 2008 or 2010, make sure its not the 64 bit version. Build with the normal or 32 bit version of Visual Studio. This should only take a minute or two once you hit 'Ok'.
+    -- Now hit the configure button, and choose Visual Studio 2008 or 10 and not Win64. This should only take a minute or two once you hit Ok.
     <br/>
     -- There will be many red lines in the upper text box. You can ignore most of them. You may want
-    to select the check box build examples. Since we built QT for VS you can also check the QT box.
-    Finally there is a folder directory that is probably placed at C:/Program Files/VTK, change that to be C:/VTK or some directory path that has no spaces once again.
+    to select the check box "Build_Examples". Since we built QT for VS you can also check the VTK_Use_QT.
+    Set the VTK_DATA_ROOT to the folder where VTKData is at.
+    Finally there is a folder directory called CMAKE_INSTALL_PREFIX that is probably placed at C:/Program Files/VTK, change that to be C:/VTK or some directory path that has no spaces once again.
+    <br/>
+    <%= image_tag("InstructionalImages/CMakeVTK.jpg") %> 
+    <br/>
+    Before you hit configure again it should look similar to the above picture.
     <br/>
     -- Click configure again.
     <br/>
@@ -67,41 +76,34 @@
     <br/>
     -- Open the VTKBuild directory and double click on AllBuild Visual Studio Project.
     <br/>
-    -- Inside Visual Studio, right click on the AllBuild project file and select Build. This may take an hour, go look at VTK examples in the mean time.
+    -- Inside Visual Studio, right click on the AllBuild project file and select Build. This may take an hour, go look at <%= link_to "VTK examples", "http://www.vtk.org/Wiki/VTK/Examples/Cxx" %> in the mean time.
     <br/>
-    -- Inisde Visual Studio, right click on the Install project file and select Build. This should take 20-30 minutes, continue looking at VTK examples.
+    -- Inisde Visual Studio, right click on the Install project file and select Build. This should take 20-30 minutes, continue looking at <%= link_to "VTK examples" "http://www.vtk.org/Wiki/VTK/Examples/Cxx" %>.
     </p>
     </p>
     <h3>Building The Earthquake Tool</h3>
     <p class="prepend-1">
     -- <%= link_to "Download this zip", earthquakesource_path%> containing the necessary images, sources files, and CMakeList file.
     <br/>
-    -- Extract to some directory with no spaces. Preferable in the same folder that VTK and VTKBuild are in.
+    -- Extract to some directory with no spaces. Preferably in the same folder that VTK, VTKBuild, and VTKData are in.
     <br/>
-    -- Open CMake and choose the source directory to be the folder you just extracted, and the binaries to be the same directory.
+    -- Open CMake and choose the source directory and binary directory to be the folder you just extracted.
     <br/>
-    -- Click configure, make sure to choose Visual Studio 32 bit.
+    -- Click configure, make sure to choose Visual Studio 10, not Visual Studio 10 Win64.
     <br/>
-    -- Set the path to something without spaces again.
+    -- Set the CMAKE_INSTALL_PREFIX path to something without spaces again.
     <br/>
     -- If CMake couldn't find VTKBuild directory set it manually
     <br/>
     -- Click configure again, and then click generate.
     <br/>
-    -- Open the AllBuild Visual Studio Project inside the binary location
+    -- Open the AllBuild Visual Studio Project. 
     <br/>
     -- Inside Visual Studio, right click on AllBuild and select Build.
     <br/>
-    -- Right click on the RenderWindow Project and select "set as startup project"
+    -- Right click on the RenderWindow Project and select "set as startup project".
     <br/>
-    -- Build it and run it. If images do not appear you may need to set the debuggin directory.
-    <p class="prepend-2">
-      -- Right click on the RenderWindow Project and select properties.
-      <br/>
-      -- On the left choose Debugging
-      <br/>
-      -- Change from $(ProjectDir) to $(TargetDir)
-    </p>
+    -- Build it and run it.
     <h3>You should have a working copy of my project</h3>
     </p>
     </p> 
