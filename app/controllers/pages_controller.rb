@@ -39,6 +39,10 @@ class PagesController < ApplicationController
   def vtkprojects 
     @page_header = { :name => "VTK Projects", :link => root_path}
   end
+  
+  def solarflares
+    @page_header = { :name => "Solar Flares Presentation", :link => root_path}
+  end
 
   def websitecreation
     @page_header = { :name => "Web Development", :link => root_path}
