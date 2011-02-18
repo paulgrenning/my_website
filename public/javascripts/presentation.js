@@ -18,7 +18,7 @@ $(document).ready(function() {
       currentSlideNumber--;
       ProjectsCarousel.isAnimating = true;
       var carousel = $(".presentation");
-      carousel.animate({left: '+=883', queue: true}, 1000, function() {
+      carousel.animate({left: '+=883', queue: true}, 700, function() {
         carousel.animate({left: '-=65', queue: true}, function(){
           carousel.animate({left: '+=10', queue: true}, function() { carousel.animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
@@ -33,7 +33,7 @@ $(document).ready(function() {
       currentSlideNumber++;
       ProjectsCarousel.isAnimating = true;
       var carousel = $(".presentation");
-      carousel.animate({left: '-=883', queue: true}, 800, function() {
+      carousel.animate({left: '-=883', queue: true}, 700, function() {
         carousel.animate({left: '+=65', queue: true}, function(){
           carousel.animate({left: '-=10', queue: true}, function() { carousel.animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
