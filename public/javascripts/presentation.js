@@ -30,7 +30,7 @@ $(document).ready(function() {
       }
   }
 
-  $("body").bind('keydown', function(e){
+  $(document).bind('keydown', function(e){
     if(e.which == 37){
       slideLeft();
     } else if(e.which == 39){
