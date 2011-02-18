@@ -30,8 +30,12 @@ $(document).ready(function() {
       }
   }
 
-  $("#header-name").live('mouseover', function(){
-    slideLeft();
+  $("body").bind('keydown', function(e){
+    if(e.which == 37){
+      slideLeft();
+    } else if(e.which == 39){
+      slideRight();
+    }
   });
 
 });
