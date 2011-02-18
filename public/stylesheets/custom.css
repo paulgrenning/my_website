@@ -65,6 +65,51 @@ div{
   font: normal normal normal 2.0em/normal Georgia, Times, serif;
 }
 
+.presentation{
+  width: 7000px;
+  position: relative;
+}
+
+
+#slide {
+  border: 10px solid #fff;
+  height: 568px;
+  width: 768px;  
+  background-color: #aaa;
+  border-radius: 10px;
+  position: relative;
+  float: left;
+  margin-left: 86px;
+  margin-right: -41px;
+}
+
+.inside-slide{
+  margin: 20px;
+}
+
+.current-slide{
+  position: 50% 50%;
+}
+
+.next-slide{
+}
+
+.far-slide{
+}
+
+.extra-far-slide{
+}
+
+.previous-slide {
+}
+
+.extra-previous-slide {
+}
+
+.off-screen-slide{
+  visible: false;
+}
+
 body {
   background-color: #000;
 }
