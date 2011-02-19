@@ -72,7 +72,7 @@ div{
 
 
 #slide {
-  background: -webkit-gradient(linear, left top, left bottom, from(#5A6351), to(white));
+  background: -webkit-gradient(linear, left top, left bottom, from(#556B2F), to(#62B1F6));
   background: -moz-linear-gradient(top, #5A6351, #FFF);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5A6351', endColorstr='#FFFFFF');
   border: 10px solid #ddffee;
@@ -103,11 +103,11 @@ div{
 }
 
 .slide-number-left p {
-  color: #666;
+  color: #222;
 }
 
 .slide-number-right p {
-  color: #666;
+  color: #222;
 }
 
 .slide-number-right{
