@@ -13,11 +13,16 @@ $(document).ready(function() {
   ProjectsCarousel.leftClicked = true;
   numberOfSlides = $(".presentation").attr("value");
   currentSlideNumber = 1; 
+  for(i = 2; i <= numberOfSlides; i++){
+    $(".slide"+(i)).animate({height: '400', top: '+=84'});;  
+  }
   function slideRight() {
     if(ProjectsCarousel.isAnimating == false) {
-      currentSlideNumber--;
       ProjectsCarousel.isAnimating = true;
+      currentSlideNumber--;
       var carousel = $(".presentation");
+      $(".slide"+(currentSlideNumber)).animate({height: '568', top: '-=84'});;  
+      $(".slide"+(currentSlideNumber+1)).animate({height: '400', top: '+=84'});;  
       carousel.animate({left: '+=883', queue: true}, 700, function() {
         carousel.animate({left: '-=65', queue: true}, function(){
           carousel.animate({left: '+=10', queue: true}, function() { carousel.animate({queue: true}, function() {
@@ -30,9 +35,11 @@ $(document).ready(function() {
 }
   function slideLeft() {
     if(ProjectsCarousel.isAnimating == false) {
-      currentSlideNumber++;
       ProjectsCarousel.isAnimating = true;
+      currentSlideNumber++;
       var carousel = $(".presentation");
+      $(".slide"+(currentSlideNumber-1)).animate({height: '400', top: '+=84'});;  
+      $(".slide"+(currentSlideNumber)).animate({height: '568', top: '-=84'});;  
       carousel.animate({left: '-=883', queue: true}, 700, function() {
         carousel.animate({left: '+=65', queue: true}, function(){
           carousel.animate({left: '-=10', queue: true}, function() { carousel.animate({queue: true}, function() {

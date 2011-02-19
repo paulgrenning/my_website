@@ -120,29 +120,6 @@ div{
   margin: 20px;
 }
 
-.current-slide{
-  position: 50% 50%;
-}
-
-.next-slide{
-}
-
-.far-slide{
-}
-
-.extra-far-slide{
-}
-
-.previous-slide {
-}
-
-.extra-previous-slide {
-}
-
-.off-screen-slide{
-  visible: false;
-}
-
 body {
   background-color: #000;
 }
