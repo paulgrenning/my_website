@@ -73,6 +73,8 @@ div{
 
 #slide {
   background: -webkit-gradient(linear, left top, left bottom, from(#5A6351), to(white));
+  background: -moz-linear-gradient(top, #5A6351, #FFF);
+  background: -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0000FF, endColorstr=#FFFFFFFF)";
   border: 10px solid #ddffee;
   height: 568px;
   width: 768px;  
