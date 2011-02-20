@@ -15,7 +15,7 @@ $(document).ready(function() {
   currentSlideNumber = 1; 
   for(i = 2; i <= numberOfSlides; i++){
     $(".slide"+(i)).animate({height: '400', top: '+=84'});;  
-    $(".content"+(i)).animate({height: '320'});;  
+    $(".content"+(i)).animate({height: '310'});;  
   }
   function slideRight() {
     if(ProjectsCarousel.isAnimating == false) {
@@ -23,9 +23,9 @@ $(document).ready(function() {
       currentSlideNumber--;
       var carousel = $(".presentation");
       $(".slide"+(currentSlideNumber)).animate({height: '568', top: '-=84'});;  
-      $(".content"+(currentSlideNumber)).animate({height: '490'});;  
+      $(".content"+(currentSlideNumber)).animate({height: '480'});;  
       $(".slide"+(currentSlideNumber+1)).animate({height: '400', top: '+=84'});;  
-      $(".content"+(currentSlideNumber+1)).animate({height: '320'});;  
+      $(".content"+(currentSlideNumber+1)).animate({height: '310'});;  
       carousel.animate({left: '+=883', queue: true}, 700, function() {
         carousel.animate({left: '-=65', queue: true}, function(){
           carousel.animate({left: '+=10', queue: true}, function() { carousel.animate({queue: true}, function() {
@@ -42,9 +42,9 @@ $(document).ready(function() {
       currentSlideNumber++;
       var carousel = $(".presentation");
       $(".slide"+(currentSlideNumber-1)).animate({height: '400', top: '+=84'});;  
-      $(".content"+(currentSlideNumber-1)).animate({height: '320'});;  
+      $(".content"+(currentSlideNumber-1)).animate({height: '310'});;  
       $(".slide"+(currentSlideNumber)).animate({height: '568', top: '-=84'});;  
-      $(".content"+(currentSlideNumber)).animate({height: '490'});;  
+      $(".content"+(currentSlideNumber)).animate({height: '480'});;  
       carousel.animate({left: '-=883', queue: true}, 700, function() {
         carousel.animate({left: '+=65', queue: true}, function(){
           carousel.animate({left: '-=10', queue: true}, function() { carousel.animate({queue: true}, function() {

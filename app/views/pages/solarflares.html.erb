@@ -1,124 +1,194 @@
-<div class="span-24" style="overflow:hidden">
-  <div class="presentation" value="8">
+<div class='page-info span-24'>
+  <div class="prepend-2 append-2 span-20">
+    <h3>Use the left and right arrows on your keyboard to move through the slide show. All images can be enlarged by clicking on them. Videos can be played as well</h3>
+    <br/>
+    <br/>
+  </div>
+  <div class="span-24" style="overflow:hidden">
+    <div class="presentation" value="8">
       <div id="slide" class="slide1">      
         <div class="inside-slide">
           <div class="slide-title">
-            <p>Slide 1</p>
+            <p>What is a solar flare</p>
           </div>
           <div class="slide-content content1">
+            <ul>
+              <li>A solar flare is a large explosion in the Sun's atmosphere that can release an amazing amount of energy.</li>
+              <li>The approximate energy release is 6 x 10<sup>25</sup> joules of energy.</li>
+              <li>That is equivalent to millions of 100-megaton hydrogen bombs exploding at the same time or ten million times greater than
+              the energy released by a volcanic erupition.</li> 
+              <li>These energy bursts can be about 1/6 of the total output of the sun's energy each second.</li>
+            </ul>
+            <div class="span-8">
+            <%= link_to image_tag("flare2-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide"),
+              '/images/flare2.jpg', :rel => "prettyPhoto[earthquake_screens_helper]", :title => "Solar flares with the sun blocked out for better visualization."%>
+              <%= image_tag("flare2.jpg", :class => "earthquake_screen") %>
+            </div>
+            <div class="span-10">
+              <p>
+              Click the image to enlarge. The image has the sun's solar disk blocked out so the solar flare can be visualized better.
+              </p>
+            </div>
+            </div>
+            <div class="slide-number-left">
+              <p>1</p>
+            </div>
+            <div class="slide-number-right">
+              <p>1</p>
+            </div>
           </div>
-          <div class="slide-number-left">
-            <p>1</p>
+        </div>
+        <div id="slide" class="slide2">      
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>Solar Flare Footage</p>
+            </div>
+            <div class="slide-content content2">
+              <br/>
+              <div class="span-11">
+                <video src="/videos/media.mp4" controls="controls" style="height: 400px" class="media-in-slide">
+                Your browser does not support video tag. 
+                </video>
+              </div>
+              <div class="span-6">
+                <p>
+                Footage taken from Nasa's Solar Dynamics Observatory. The visual is being shown in ultra violet light.
+                It is the largest solar flare since December 5, 2006.
+                </p>
+              </div>
+            <%= link_to image_tag("flare1-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide"),
+              '/images/flare1.jpg', :rel => "prettyPhoto[earthquake_screens_helper]", :title => "Solar flare image captured in ultraviolet light. The white vertical lines are from the overwhelming flash of light from the solar flare."%>
+              <%= image_tag("flare1.jpg", :class => "earthquake_screen") %>
+            </div>
+            <div class="slide-number-left">
+              <p>2</p>
+            </div>
+            <div class="slide-number-right">
+              <p>2</p>
+            </div>
           </div>
-          <div class="slide-number-right">
-            <p>1</p>
+        </div>
+        <div id="slide" class="slide3">      
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>Why Should We Care About Solar Flares?</p>
+            </div>
+            <div class="slide-content content3">
+              <br/>
+              <h2>Solar flares ...</h2>
+              <br/>
+              <ul> 
+                <li>Have the ability to disrupt short-wave radio communications due to long lasting radiation storms in the Earth's ionosphere.</li>
+                <li>Can create radiation hazards for spaceships and astronauts not protected by the Earth's atmosphere.</li>
+                <li>Create solar winds that increase drag on earth's orbitting satelites.</li>
+                <li>Are responsible for creating the amazing Aurora Borealis and Aurora Australis.</li>
+                <li>Sometimes produce coronal mass ejections</li>
+              </ul>
+              <div style="margin-left: 3px;">
+            <%= link_to image_tag("aurora1-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide aurora-image"),
+              '/images/aurora1.jpg', :rel => "prettyPhoto[aurora]", :title => "Aurora Borealis seen from the international space station."%>
+              <%= image_tag("aurora1.jpg", :class => "earthquake_screen") %>
+            <%= link_to image_tag("aurora3-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide aurora-image"),
+              '/images/aurora3.jpg', :rel => "prettyPhoto[aurora]", :title => "Aurora Borealis in Alaska."%>
+              <%= image_tag("aurora3.jpg", :class => "earthquake_screen") %>
+            <%= link_to image_tag("aurora2-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide aurora-image"),
+              '/images/aurora2.jpg', :rel => "prettyPhoto[aurora]", :title => "Aurora Borealis from Spacelab 3"%>
+              <%= image_tag("aurora2.jpg", :class => "earthquake_screen") %>
+            <%= link_to image_tag("aurora4-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide aurora-image"),
+              '/images/aurora4.jpg', :rel => "prettyPhoto[aurora]", :title => "Aurora Borealis captured by a Nasa satelite."%>
+              <%= image_tag("aurora4.jpg", :class => "earthquake_screen") %>
+            </div>
+            </div>
+            <div class="slide-number-left">
+              <p>3</p>
+            </div>
+            <div class="slide-number-right">
+              <p>3</p>
+            </div>
+          </div>
+        </div>
+        <div id="slide" class="slide4">      
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>Slide 4</p>
+            </div>
+            <div class="slide-content content4">
+            </div>
+            <div class="slide-number-left">
+              <p>4</p>
+            </div>
+            <div class="slide-number-right">
+              <p>4</p>
+            </div>
+          </div>
+        </div>
+        <div id="slide" class="slide5">
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>Slide 5</p>
+            </div>
+            <div class="slide-content content5">
+            </div>
+            <div class="slide-number-left">
+              <p>5</p>
+            </div>
+            <div class="slide-number-right">
+              <p>5</p>
+            </div>
+          </div>
+        </div>
+        <div id="slide" class="slide6">
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>Slide 6</p>
+            </div>
+            <div class="slide-content content6">
+            </div>
+            <div class="slide-number-left">
+              <p>6</p>
+            </div>
+            <div class="slide-number-right">
+              <p>6</p>
+            </div>
+          </div>
+        </div>
+        <div id="slide" class="slide7">
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>Slide 7</p>
+            </div>
+            <div class="slide-content content7">
+            </div>
+            <div class="slide-number-left">
+              <p>7</p>
+            </div>
+            <div class="slide-number-right">
+              <p>7</p>
+            </div>
+          </div>
+        </div>
+        <div id="slide" class="slide8">
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>References</p>
+            </div>
+            <div class="slide-content content8">
+              <p>
+              <%= link_to "Information from Nasa.", "http://www.nasa.gov/mission_pages/sunearth/news/News021411-xclass.html" %>
+              <br/>
+              <%= link_to "Information from Wikipedia.", "http://en.wikipedia.org/wiki/Solar_flare" %>
+              <br/>
+              <%= link_to "Information from The Telegraph in the UK", "http://www.telegraph.cookies.uk/science/space/8012997/Solar-flares-everything-you-need-to-know.html" %>
+              </p>
+            </div>
+            <div class="slide-number-left">
+              <p>8</p>
+            </div>
+            <div class="slide-number-right">
+              <p>8</p>
+            </div>
           </div>
         </div>
       </div>
-    <div id="slide" class="slide2">      
-      <div class="inside-slide">
-          <div class="slide-title">
-            <p>Slide 2</p>
-          </div>
-          <div class="slide-content content2">
-          </div>
-          <div class="slide-number-left">
-            <p>2</p>
-          </div>
-          <div class="slide-number-right">
-            <p>2</p>
-          </div>
-      </div>
-    </div>
-    <div id="slide" class="slide3">      
-      <div class="inside-slide">
-          <div class="slide-title">
-            <p>Slide 3</p>
-          </div>
-          <div class="slide-content content3">
-          </div>
-          <div class="slide-number-left">
-            <p>3</p>
-          </div>
-          <div class="slide-number-right">
-            <p>3</p>
-          </div>
-      </div>
-    </div>
-    <div id="slide" class="slide4">      
-      <div class="inside-slide">
-          <div class="slide-title">
-            <p>Slide 4</p>
-          </div>
-          <div class="slide-content content4">
-          </div>
-          <div class="slide-number-left">
-            <p>4</p>
-          </div>
-          <div class="slide-number-right">
-            <p>4</p>
-          </div>
-      </div>
-    </div>
-    <div id="slide" class="slide5">
-      <div class="inside-slide">
-          <div class="slide-title">
-            <p>Slide 5</p>
-          </div>
-          <div class="slide-content content5">
-          </div>
-          <div class="slide-number-left">
-            <p>5</p>
-          </div>
-          <div class="slide-number-right">
-            <p>5</p>
-          </div>
-      </div>
-    </div>
-    <div id="slide" class="slide6">
-      <div class="inside-slide">
-          <div class="slide-title">
-            <p>Slide 6</p>
-          </div>
-          <div class="slide-content content6">
-          </div>
-          <div class="slide-number-left">
-            <p>6</p>
-          </div>
-          <div class="slide-number-right">
-            <p>6</p>
-          </div>
-      </div>
-    </div>
-    <div id="slide" class="slide7">
-      <div class="inside-slide">
-          <div class="slide-title">
-            <p>Slide 7</p>
-          </div>
-          <div class="slide-content content7">
-          </div>
-          <div class="slide-number-left">
-            <p>7</p>
-          </div>
-          <div class="slide-number-right">
-            <p>7</p>
-          </div>
-      </div>
-    </div>
-    <div id="slide" class="slide8">
-      <div class="inside-slide">
-          <div class="slide-title">
-            <p>Slide 8</p>
-          </div>
-          <div class="slide-content content8">
-          </div>
-          <div class="slide-number-left">
-            <p>8</p>
-          </div>
-          <div class="slide-number-right">
-            <p>8</p>
-          </div>
-      </div>
     </div>
   </div>
-</div>

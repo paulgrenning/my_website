@@ -90,10 +90,34 @@ div{
 .slide-title {
   font-size: 34px;
   height: 36px;
+  filter: Shadow(Color=#424242,   
+  Direction=160, 
+  Strength=5);
+  text-shadow: #424242 4px 4px 3px;
+  margin-bottom: 10px;
+}
+
+.aurora-image{
+  margin-left: 12px;
 }
 
 .slide-content {
-  height: 490px;
+  height: 480px;
+ overflow: hidden;
+}
+
+.media-in-slide {
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  border: 5px solid #426F42;
+}
+
+.slide-content p {
+  font-size: 18px;
+}
+
+.slide-content li {
+ font-size: 18px;
 }
 
 .slide-number-left{
