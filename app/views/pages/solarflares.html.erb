@@ -1,6 +1,6 @@
 <div class='page-info span-24'>
   <div class="prepend-2 append-2 span-20">
-    <h3>Use the left and right arrows on your keyboard to move through the slide show or type the slide number in the text box below the slides. All images can be enlarged by clicking on them. Videos can be played as well.</h3>
+    <h3>Use the left and right arrows on your keyboard to move through the slide show or type the slide number in the text box below the slides. All images can be enlarged by clicking on them and videos can be viewed.</h3>
     <br/>
     <br/>
   </div>
@@ -21,7 +21,7 @@
             </ul>
             <div class="span-8">
             <%= link_to image_tag("flare2-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide"),
-              '/images/flare2.jpg', :rel => "prettyPhoto[earthquake_screens_helper]", :title => "Solar flares with the sun blocked out for better visualization."%>
+              '/images/flare2.jpg', :rel => "prettyPhoto[slide1-image]", :title => "Solar flares with the sun blocked out for better visualization."%>
               <%= image_tag("flare2.jpg", :class => "earthquake_screen") %>
             </div>
             <div class="span-10">
@@ -57,7 +57,7 @@
                 </p>
               </div>
             <%= link_to image_tag("flare1-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide"),
-              '/images/flare1.jpg', :rel => "prettyPhoto[earthquake_screens_helper]", :title => "Solar flare image captured in ultraviolet light. The white vertical lines are from the overwhelming flash of light from the solar flare."%>
+              '/images/flare1.jpg', :rel => "prettyPhoto[slide2-image]", :title => "Solar flare image captured in ultraviolet light. The white vertical lines are from the overwhelming flash of light from the solar flare."%>
               <%= image_tag("flare1.jpg", :class => "earthquake_screen") %>
             </div>
             <div class="slide-number-left">
@@ -167,9 +167,16 @@
         <div id="slide" class="slide6">
           <div class="inside-slide">
             <div class="slide-title">
-              <p>Slide 6</p>
+              <p>Solar Flare Datasets</p>
             </div>
             <div class="slide-content content6">
+              <p>Science On A Sphere Dataset</p>
+                <p>The sun data was collected by the Solar and Heliospheric Observatory. The spacecraft was launched in 1995 by NASA and ESA. The spacecraft has colled two datasets so far.<p>
+                <ul class="span-6">
+                  <li>The first dataset is 6 years of images spliced together to create a full coverage of the sun's surface</li>
+                  <li>The second dataset is from October 2003. The spacecraft observed an X17.2 and X10 magnitude solar flare on October 29<sup>th</sup></li>
+                </ul>
+              <video src="http://www.renaissancesoftware.net/paulgrenning/oct_2003.mp4" controls="controls" class="media-in-slide span-10">Video tag not supported</video> 
             </div>
             <div class="slide-number-left">
               <p>6</p>
@@ -210,7 +217,7 @@
               <br/>
               <%= link_to "Information from Wikipedia.", "http://en.wikipedia.org/wiki/Solar_flare" %>
               <br/>
-              <%= link_to "Information from The Telegraph in the UK", "http://www.telegraph.cookies.uk/science/space/8012997/Solar-flares-everything-you-need-to-know.html" %>
+              <%= link_to "Information from The Telegraph in the UK", "http://www.telegraph.co.uk/science/space/8012997/Solar-flares-everything-you-need-to-know.html" %>
               </p>
             </div>
             <div class="slide-number-left">
