@@ -5,7 +5,7 @@
     <br/>
   </div>
   <div class="span-24" style="overflow:hidden">
-    <div class="presentation" value="8">
+    <div class="presentation" value="9">
       <div id="slide" class="slide1">      
         <div class="inside-slide">
           <div class="slide-title">
@@ -18,9 +18,10 @@
               <li>That is equivalent to millions of 100-megaton hydrogen bombs exploding at the same time or ten million times greater than
               the energy released by a volcanic erupition.</li> 
               <li>These energy bursts can be about 1/6 of the total output of the sun's energy each second.</li>
+              <li>They often appear around sun spots</li>
             </ul>
             <div class="span-8">
-            <%= link_to image_tag("flare2-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide"),
+              <%= link_to image_tag("flare2-thumb.jpg", :id => "below-gallery", :class=>"media-in-slide"),
               '/images/flare2.jpg', :rel => "prettyPhoto[slide1-image]", :title => "Solar flares with the sun blocked out for better visualization."%>
               <%= image_tag("flare2.jpg", :class => "earthquake_screen") %>
             </div>
@@ -29,15 +30,15 @@
               Click the image to enlarge. The image has the sun's solar disk blocked out so the solar flare can be visualized better.
               </p>
             </div>
-            </div>
-            <div class="slide-number-left">
-              <p>1</p>
-            </div>
-            <div class="slide-number-right">
-              <p>1</p>
-            </div>
+          </div>
+          <div class="slide-number-left">
+            <p>1</p>
+          </div>
+          <div class="slide-number-right">
+            <p>1</p>
           </div>
         </div>
+      </div>
         <div id="slide" class="slide2">      
           <div class="inside-slide">
             <div class="slide-title">
@@ -114,7 +115,13 @@
             </div>
             <div class="slide-content content4">
               <br/>
-              <div class="media-in-slide" style="width: 320px;">
+              <div class="span-8">
+                <br/>
+                <br/>
+                <p>Solar flares may cause CMEs (Coronal Mass Ejections) which releases solar winds containing protons, electrons, and some larger elements such as iron, oxygen, and helium.</p>
+                <p>The video to the right is portraying the sun from September 30 to October 1, 2001.</p>
+              </div>
+              <div class="media-in-slide span-8" style="width: 320px;">
                <img alt="animated GIF" src="/videos/coronal-mass-ejection.gif" width="320" height="320" />
              </div>
             </div>
@@ -167,16 +174,28 @@
         <div id="slide" class="slide6">
           <div class="inside-slide">
             <div class="slide-title">
-              <p>Solar Flare Datasets</p>
+              <p>UCI Machine Learning Repository</p>
             </div>
             <div class="slide-content content6">
-              <p>Science On A Sphere Dataset</p>
-                <p>The sun data was collected by the Solar and Heliospheric Observatory. The spacecraft was launched in 1995 by NASA and ESA. The spacecraft has colled two datasets so far.<p>
-                <ul class="span-6">
-                  <li>The first dataset is 6 years of images spliced together to create a full coverage of the sun's surface</li>
-                  <li>The second dataset is from October 2003. The spacecraft observed an X17.2 and X10 magnitude solar flare on October 29<sup>th</sup></li>
-                </ul>
-              <video src="http://www.renaissancesoftware.net/paulgrenning/oct_2003.mp4" controls="controls" class="media-in-slide span-10">Video tag not supported</video> 
+              <p>Contains 2 datasets, one from 1969 and one from 1978.
+              <br/>
+              Each dataset has 13 different attributes. 
+              </p>
+              <ul>
+                <li>Classification Code (slightly different than the previous slide)</li>
+                <li>Code Largest spot size</li>
+                <li>Code for spot distribution</li>
+                <li>Activity level (reduced or unchanged)</li>
+                <li>Evolution (decay, growth, or none)</li>
+                <li>Previous 24 hour flare activity</li>
+                <li>Historically complex</li>
+                <li>When did it become complex</li>
+                <li>Area</li>
+                <li>Largest spot area</li>
+                <li>C-class</li>
+                <li>M-class</li>
+                <li>X-class</li>
+              </ul>
             </div>
             <div class="slide-number-left">
               <p>6</p>
@@ -189,9 +208,33 @@
         <div id="slide" class="slide7">
           <div class="inside-slide">
             <div class="slide-title">
-              <p>Slide 7</p>
+              <p>Burst and Transient Source Experiment</p>
             </div>
             <div class="slide-content content7">
+              <p>
+              This experiment, also known as BATSE, was being conducted with NASA's Compton Gamma Ray Observatory (CGRO) that orbitted Earth from 1991 to 2000. As mentioned, it is used for detecting gamma rays, but solar flares are detected and measured
+               by X-Rays. Luckily CGRO is highly attuned for detecting X-Rays as well.
+              </p>
+              <p>
+              BATSE allows anyone to grab their datasets from 1991 - 2000 assuming you are given permission once you email them.
+              <br/>
+              <br/>
+              The dataset has a number of attributes.
+              <ul class="span-7">
+                <li>BATSE Event Number</li>
+                <li>Date</li>
+                <li>Start Time</li>
+                <li>Peak Time</li>
+                <li>Duration</li>
+              </ul>
+              <ul class="span-7">
+                <br/>
+                <li>Peak Rate</li>
+                <li>Total Counts</li>
+                <li>Burst Trigger</li>
+                <li>Trigger Time</li>
+              </ul>
+              </p>
             </div>
             <div class="slide-number-left">
               <p>7</p>
@@ -204,21 +247,19 @@
         <div id="slide" class="slide8">
           <div class="inside-slide">
             <div class="slide-title">
-              <p>References</p>
+              <p>Science On A Sphere Dataset</p>
             </div>
             <div class="slide-content content8">
-              <p>
               <br/>
-              <%= link_to "Information from Nasa link 1.", "http://www.nasa.gov/mission_pages/sunearth/news/News021411-xclass.html" %>
-              <br/>
-              <%= link_to "Information from Nasa link 2.", "http://www.nasa.gov/mission_pages/sdo/news/briefing-materials-20100421.html" %>
-              <br/>
-              <%= link_to "Information from Science On A Sphere", "http://sos.noaa.gov/datasets/solar_system/soho.html" %>
-              <br/>
-              <%= link_to "Information from Wikipedia.", "http://en.wikipedia.org/wiki/Solar_flare" %>
-              <br/>
-              <%= link_to "Information from The Telegraph in the UK", "http://www.telegraph.co.uk/science/space/8012997/Solar-flares-everything-you-need-to-know.html" %>
-              </p>
+              <p>The sun data was collected by the Solar and Heliospheric Observatory. The spacecraft was launched in 1995 by NASA and ESA. The spacecraft has collected two datasets so far.<p>
+              <ul class="span-6 append-2">
+                <li>The first dataset is 6 years of images spliced together to create a full coverage of the sun's surface</li>
+                <li>The second dataset is from October 2003. The spacecraft observed an X17.2 and X10 magnitude solar flare on October 29<sup>th</sup></li>
+              </ul>
+              <div class="span-9">
+                <video src="http://renaissancesoftware.net/paulgrenning/october_2003.ogg" width="300" height="300" controls="controls" class="media-in-slide">Video tag not supported</video> 
+              </div>
+              <p>The main problem the spacecraft had was visualizing the entire sun at once, which is tough to do with only one spacecraft.</p>
             </div>
             <div class="slide-number-left">
               <p>8</p>
@@ -228,7 +269,30 @@
             </div>
           </div>
         </div>
+        <div id="slide" class="slide9">
+          <div class="inside-slide">
+            <div class="slide-title">
+              <p>References</p>
+            </div>
+            <div class="slide-content content9">
+              <br/>
+              <ul>
+                <li><%= link_to "Information from Nasa link 1.", "http://www.nasa.gov/mission_pages/sunearth/news/News021411-xclass.html" %></li>
+                <li><%= link_to "Information from Nasa link 2.", "http://www.nasa.gov/mission_pages/sdo/news/briefing-materials-20100421.html" %></li>
+                <li><%= link_to "Information from Science On A Sphere", "http://sos.noaa.gov/datasets/solar_system/soho.html" %></li>
+                <li><%= link_to "Information from Wikipedia.", "http://en.wikipedia.org/wiki/Solar_flare" %></li>
+                <li><%= link_to "Information from The Telegraph in the UK", "http://www.telegraph.co.uk/science/space/8012997/Solar-flares-everything-you-need-to-know.html" %></li>
+              <ul>
+            </div>
+            <div class="slide-number-left">
+              <p>9</p>
+            </div>
+            <div class="slide-number-right">
+              <p>9</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="prepend-10"><p><br/>Go To Slide:<input type="text" name="slideNumber" value="1" class="media-in-slide slide-number-textbox" style="margin-left: 10px; width:50px;" /></p></div>
-  </div>
+  <div class="prepend-10"><p><br/>Go To Slide:<input type="text" name="slideNumber" value="1" class="media-in-slide slide-number-textbox" style="margin-left: 10px; width:50px;" /></p></div>
+</div>
