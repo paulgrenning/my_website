@@ -88,7 +88,7 @@ $(document).ready(function() {
       }
   }
 
-  $(document).bind('keydown', function(e){
+  $(document).bind('keyup', function(e){
     if(e.which == 37){
       if(currentSlideNumber == 1){
         easeRight();
@@ -104,159 +104,43 @@ $(document).ready(function() {
     }
   });
 
-});
-
- /* 
-  $("#portfolio").live('mouseover',
-    function() {
-        ProjectsCarousel.isScrollingSet = false;
-        ProjectsCarousel.isAnimating = false;
-        clearInterval(ProjectsCarousel.scrollInterval);
-        $("#left-arrow").show();
-        $("#right-arrow").show();
-      })
-  .live('mouseout',
-    function() {
-        $("#left-arrow").hide();
-        $("#right-arrow").hide();
-        if(ProjectsCarousel.isScrollingSet == false) {
-          if(ProjectsCarousel.leftClicked == true) {
-            ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
-          } else { 
-            ProjectsCarousel.scrollInterval = setInterval(slideRight, 4000);
-          }
-          ProjectsCarousel.isScrollingSet = true;
-        }
-      }
-      );
-      
-  
-  $("#left-arrow").mousedown( 
-    function() {
-      clearInterval(ProjectsCarousel.scrollInterval);
-      ProjectsCarousel.leftClicked = true;
-      slideLeft();
-      $(this).attr("src", "http://paulgrenning.com/leftArrowClicked.png");
-    });
-    $("#left-arrow").mouseup(
-      function() {
-        $(this).attr("src", "http://paulgrenning.com/leftArrow.png");
+  function transitionToSlide(value){
+    $(".slide"+(currentSlideNumber)).animate({height: '400', top: '+=84'});;  
+    $(".content"+(currentSlideNumber)).animate({height: '310'});;  
+    var slider = $(".presentation");
+    var currentLocation = slider.position().left;
+      $(".slide"+(value)).animate({height: '568', top: '-=84'});  
+      $(".content"+(value)).animate({height: '480'});  
+      var slideAmount = (currentSlideNumber - value)*-828 + 55;
+      currentSlideNumber = value;
+      slider.animate({left: '-=' + slideAmount, queue: true}, 700, function() {
+        slider.animate({left: '+=65', queue: true}, function(){
+          slider.animate({left: '-=10', queue: true}, function() {
+            slider.animate({queue: true}, function() {
+            ProjectsCarousel.isAnimating = false;
+          });
+        });
       });
-  $("#right-arrow").mousedown( 
-    function() {
-      clearInterval(ProjectsCarousel.scrollInterval);
-      ProjectsCarousel.leftClicked = false;
-      slideRight();
-      $(this).attr("src", "http://paulgrenning.com/rightArrowClicked.png");
     });
-    $("#right-arrow").mouseup(
-      function() {
-        $(this).attr("src", "http://paulgrenning.com/rightArrow.png");
-    });
-    
-  });*/
-// This file is automatically included by javascript_include_tag :defaults
+  }
 
-/*
-var ProjectsCarousel = {};
-
-$(document).ready(function() {
-  ProjectsCarousel.originalThumb;
-  $(".thumb").live('mouseover',
-    function() {
-      currentThumbNail = $(this);
-      ProjectsCarousel.originalThumb = currentThumbNail.attr('src'); 
-      currentThumbNail.attr('src', currentThumbNail.attr('src2')); 
-    })
-  .live('mouseout',
-    function() {
-      currentThumbNail = $(this);
-      currentThumbNail.attr('src', ProjectsCarousel.originalThumb); 
+  $(".slide-number-textbox").bind('keyup', function(e){
+    if(e.which == 13){
+      var textBoxValue = $(".slide-number-textbox").val();
+      var intValue = currentSlideNumber;
+      try {
+        intValue = parseInt(textBoxValue);
+        if(intValue > 0 && intValue <= numberOfSlides){
+          if(intValue != currentSlideNumber){
+            if(ProjectsCarousel.isAnimating == false) {
+              ProjectsCarousel.isAnimating = true;
+              transitionToSlide(intValue);
+            }
+          }
+        }
+      } catch (err){}
     }
-  );
-  
-  ProjectsCarousel.isAnimating = false;
-  ProjectsCarousel.isScrollingSet = true;
-  ProjectsCarousel.leftClicked = true;
-  
-//  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
-  function slideRight() {
-      if(ProjectsCarousel.isAnimating == false) {
-        ProjectsCarousel.isAnimating = true;
-        var carousel = $("#carousel-images");
-        carousel.animate({left: '-=294', queue: true});
-        carousel.children("a").first().animate({queue: true}, function() { 
-          $(this).remove();
-          $(this).appendTo(carousel);
-          $(carousel).css({left: "-346"});
-          $(this).animate({queue: true}, function() {
-            ProjectsCarousel.isAnimating = false;
-          });
-        });
-      }
-  }
-  function slideLeft() {
-      if(ProjectsCarousel.isAnimating == false) {
-        ProjectsCarousel.isAnimating = true;
-        var carousel = $("#carousel-images");
-        carousel.animate({left: '+=294', queue: true});
-        carousel.children("a").last().animate({queue: true}, function() { 
-          $(this).remove();
-          $(this).prependTo(carousel);
-          $(carousel).css({left: "-346"}) 
-          $(this).animate({queue: true}, function() {
-            ProjectsCarousel.isAnimating = false;
-          });
-        });
-      }
-  }
-  
-  $("#portfolio").live('mouseover',
-    function() {
-        ProjectsCarousel.isScrollingSet = false;
-        ProjectsCarousel.isAnimating = false;
-        clearInterval(ProjectsCarousel.scrollInterval);
-        $("#left-arrow").show();
-        $("#right-arrow").show();
-      })
-  .live('mouseout',
-    function() {
-        $("#left-arrow").hide();
-        $("#right-arrow").hide();
-        if(ProjectsCarousel.isScrollingSet == false) {
-          if(ProjectsCarousel.leftClicked == true) {
-            ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
-          } else { 
-            ProjectsCarousel.scrollInterval = setInterval(slideRight, 4000);
-          }
-          ProjectsCarousel.isScrollingSet = true;
-        }
-      }
-      );
-      
-  
-  $("#left-arrow").mousedown( 
-    function() {
-      clearInterval(ProjectsCarousel.scrollInterval);
-      ProjectsCarousel.leftClicked = true;
-      slideLeft();
-      $(this).attr("src", "http://paulgrenning.com/leftArrowClicked.png");
-    });
-    $("#left-arrow").mouseup(
-      function() {
-        $(this).attr("src", "http://paulgrenning.com/leftArrow.png");
-      });
-  $("#right-arrow").mousedown( 
-    function() {
-      clearInterval(ProjectsCarousel.scrollInterval);
-      ProjectsCarousel.leftClicked = false;
-      slideRight();
-      $(this).attr("src", "http://paulgrenning.com/rightArrowClicked.png");
-    });
-    $("#right-arrow").mouseup(
-      function() {
-        $(this).attr("src", "http://paulgrenning.com/rightArrow.png");
-    });
-    
+  });
+
 });
-*/
+

@@ -1,6 +1,6 @@
 <div class='page-info span-24'>
   <div class="prepend-2 append-2 span-20">
-    <h3>Use the left and right arrows on your keyboard to move through the slide show. All images can be enlarged by clicking on them. Videos can be played as well</h3>
+    <h3>Use the left and right arrows on your keyboard to move through the slide show or type the slide number in the text box below the slides. All images can be enlarged by clicking on them. Videos can be played as well.</h3>
     <br/>
     <br/>
   </div>
@@ -46,9 +46,9 @@
             <div class="slide-content content2">
               <br/>
               <div class="span-11">
-                <video src="/videos/media.mp4" controls="controls" loop="loop" width="400px" height="400px" class="media-in-slide">
-                Your browser does not support video tag. 
-                </video>
+                <div class="media-in-slide" style="width: 400px">
+                  <script type="text/javascript" src="http://cdn-akm.vmixcore.com/vmixcore/js?auto_play=0&cc_default_off=1&player_name=uvp&width=400&height=400&player_id=1aa0b90d7d31305a75d7fa03bc403f5a&t=c2c5ba1bd1405638772509926ce0062d"></script>
+                </div>
               </div>
               <div class="span-6">
                 <p>
@@ -110,9 +110,13 @@
         <div id="slide" class="slide4">      
           <div class="inside-slide">
             <div class="slide-title">
-              <p>Slide 4</p>
+              <p>Coronal Mass Ejection Video</p>
             </div>
             <div class="slide-content content4">
+              <br/>
+              <div class="media-in-slide" style="width: 320px;">
+               <img alt="animated GIF" src="/videos/coronal-mass-ejection.gif" width="320" height="320" />
+             </div>
             </div>
             <div class="slide-number-left">
               <p>4</p>
@@ -125,9 +129,32 @@
         <div id="slide" class="slide5">
           <div class="inside-slide">
             <div class="slide-title">
-              <p>Slide 5</p>
+              <p>Solar Flare Classification</p>
             </div>
             <div class="slide-content content5">
+              <br/>
+              <p>Solar flares are classified based on the output of X-Rays. The burst is classified at the peak intensity of X-Rays from .1 to .8 nm wavelength.</p>
+              <p>The classification values are B, C, M, or X. Each classification is 10 times higher than the previous, so it is a logarithmic growth. Classifications can also have a multplier (A) to compute the level within each class.</p>
+              <p class="span-6 prepend-3">
+              <br/><span style="text-decoration: underline">Class</span>
+              <br/>B
+              <br/>C
+              <br/>M
+              <br/>X
+              </p>
+              <p class="span-6 append-3">
+              <span  style="text-decoration: underline">Peak .1 - .8 nm band</span>
+              <br/>(Watts/meter<sup>2</sup>)
+              <br/>I < 10<sup>-6</sup>
+              <br/>10<sup>-6</sup> I < 10<sup>-5</sup>
+              <br/>10<sup>-5</sup> I < 10<sup>-4</sup>
+              <br/>I > 10<sup>-4</sup>
+              <br/>
+              </p>
+              <p class="prepend-3">
+              For example A could = 6.
+              <br/>M6 = 6 x 10<sup>-5</sup> Watts/meter<sup>2</sup>
+              </p>
             </div>
             <div class="slide-number-left">
               <p>5</p>
@@ -174,7 +201,12 @@
             </div>
             <div class="slide-content content8">
               <p>
-              <%= link_to "Information from Nasa.", "http://www.nasa.gov/mission_pages/sunearth/news/News021411-xclass.html" %>
+              <br/>
+              <%= link_to "Information from Nasa link 1.", "http://www.nasa.gov/mission_pages/sunearth/news/News021411-xclass.html" %>
+              <br/>
+              <%= link_to "Information from Nasa link 2.", "http://www.nasa.gov/mission_pages/sdo/news/briefing-materials-20100421.html" %>
+              <br/>
+              <%= link_to "Information from Science On A Sphere", "http://sos.noaa.gov/datasets/solar_system/soho.html" %>
               <br/>
               <%= link_to "Information from Wikipedia.", "http://en.wikipedia.org/wiki/Solar_flare" %>
               <br/>
@@ -191,4 +223,5 @@
         </div>
       </div>
     </div>
+    <div class="prepend-10"><p><br/>Go To Slide:<input type="text" name="slideNumber" value="1" class="media-in-slide slide-number-textbox" style="margin-left: 10px; width:50px;" /></p></div>
   </div>
