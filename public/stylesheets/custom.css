@@ -70,6 +70,10 @@ div{
   position: relative;
 }
 
+.vtkprojectimages{
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
 
 #slide {
   background: -webkit-gradient(linear, left top, left bottom, from(#556B2F), to(#62B1F6));
