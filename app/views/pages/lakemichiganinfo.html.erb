@@ -25,9 +25,11 @@
         "http://renaissancesoftware.net/paulgrenning/InitialLoad.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Once first loaded it should look like this."%>
         <%= image_tag("http://renaissancesoftware.net/paulgrenning/InitialLoad.jpg", :class => "earthquake_screen") %>
       <br/>
+        <br/>
       Both views are fully interactive. You can scroll in and out, pan, and rotate each view. The buttons
       will only affect the scenes that are enabled. To enable and disable click the check boxes in the bottom
       right of the screen. The program performs best when only one of them is enabled.
+      One important feature is the ability to hit the reset view button incase the view becomes disoriented.
       <br/>
       The color scale can be changed by clicking on the buttons at the bottom labeled starting color and ending color.
       <br/>
@@ -36,19 +38,101 @@
         "http://renaissancesoftware.net/paulgrenning/ColorDialog.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Once first loaded it should look like this."%>
         <%= image_tag("http://renaissancesoftware.net/paulgrenning/ColorDialog.jpg", :class => "earthquake_screen") %>
         <br/>
+        <br/>
       Using the different sliders along the bottom labeled clipping planes, you can view specific sections of data.
+      There are north, south, east, west, top, and bottom clipping planes to give as much control as possible.
       <br/>
       <br/>
       <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :height => "325px", :id => "below-gallery"),
         "http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Once first loaded it should look like this."%>
         <%= image_tag("http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :class => "earthquake_screen") %>
       <br/>
+        <br/>
       </p>
     </div>
     <div class="span-11 last">
       <p>
+        There are a number of sliders and buttons we can play with to change datasets. One main thing you will notice is
+        the three radio buttons labeled 2006, 2010, and January 18, 2010. Selecting those will cause the program to pause
+        while it swaps out the large datasets. The necessity of swapping the data out is to keep the memory usage under
+        1 gigabyte. Yes, it does take a fair amount of memory to run but it does run pretty fast. The major change 
+        from the earthquake project and this project is how data is filtered. This project pre filters each month into
+        the 19 layers and places them in their own object called an Actor in vtk. Actors can be added and removed from scenes
+        very quickly. At one point in time the maximum amount of actors is approximately 250.
+        <br/>
+        <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/Layers.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/Layers.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Different layers can be viewed at one point. The left view is showing depth layer 19 from June 18, and the right shows depth layer 17 from June 18."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/Layers.jpg", :class => "earthquake_screen") %>
+        <br/>
+        <br/>
+        Different depth layers can be viewed, different months can be viewed, and different data layers can be turned on and off.
+        The bathymetry, temperature cells, water velocity cones, and points of interest can be toggled on and off with the check boxes at the top.
+        <br/>
+        <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/RemoveBathymetry.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/RemoveBathymetry.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Data Layers such as the bathymetry can be toggled on and off."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/RemoveBathymetry.jpg", :class => "earthquake_screen") %>
 
+        The final thing that should be mentioned is that you can control the size of the temperate and cones. As you zoom in you may want to increase the size of the
+        cells to see what the isosurface of the current depth layer looks like. There also maybe far to many cones so you can use the Points To Cones ratio slider to limit the number. Maybe they cones
+        are to small, you can increase the length, radius, and number of facets on the cones. If the number of facets is 0, a line will be shown instead, if it is 1, a plane will be shown, if it is 2 then two crossed planes
+        will be shown. Anything greater will result in a 3d cone.
       </p>
+    </div>
+  </div>
+  <div class="span-24">
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+    <div class="span23 prepend-1" style="height:770px">
+      <h3>Entire Image Gallery</h3>
+      <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/InitialLoadThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/InitialLoad.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/InitialLoad.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/WaterVelocity1Thumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/WaterVelocity1.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/WaterVelocity1.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/BathymetryThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/Bathymetry.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/Bathymetry.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ClippingPlanesThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ColorDialogThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/ColorDialog.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ColorDialog.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/DifferentMonthsThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/DifferentMonths.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/DifferentMonths.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/June18DifLayersThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/June18DifLayers.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/June18DifLayers.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/June18Hours6And3Thumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/June18Hours6And3.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/June18Hours6And3.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/June18Layer1Thumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/June18Layer1.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/June18Layer1.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LayersThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/Layers.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/Layers.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/PointsOfInterestThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/PointsOfInterest.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/PointsOfInterest.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/RemoveBathymetryThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/RemoveBathymetry.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/RemoveBathymetry.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/RipCurrentsThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/RipCurrents.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/RipCurrents.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/StateBoundaryThumb.jpg", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/StateBoundary.jpg", :rel => "prettyPhoto[lakemichigan_screens]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/StateBoundary.jpg", :class => "earthquake_screen") %>
+    </div>
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
     </div>
   </div>
 </div>
