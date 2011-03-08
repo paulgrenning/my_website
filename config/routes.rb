@@ -19,6 +19,8 @@ ActionController::Routing::Routes.draw do |map|
   map.earthquakeexecutable'/download-earthquake-executable', :controller => 'pages', :action => 'earthquakeexecutable'
   map.viewearthquakesource'/view-earthquake-source', :controller => 'pages', :action => 'viewearthquakesource'
   map.solarflares'/solar-flares-presentation', :controller => 'pages', :action => 'solarflares'
+  map.lakemichiganinfo'/lakemichigan-visualization-tool', :controller => 'pages', :action => 'lakemichiganinfo'
+  map.lakemichigandata'/lakemichigan-data', :controller => 'pages', :action => 'lakemichigandata'
 
 
 

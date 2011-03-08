@@ -64,6 +64,14 @@ class PagesController < ApplicationController
     @page_header = { :name => "Earthquake Visualization Source", :link => root_path, :theid => "resume-page"}
   end
 
+  def lakemichiganinfo
+    @page_header = { :name => "Lake Michigan Vis Tool", :link => root_path}
+  end
+
+  def lakemichigandata
+    @page_header = { :name => "Lake Michigan Dataset", :link => root_path}
+  end
+
   def earthquakesource
     send_file 'public/downloads/EarthquakeVisualizationSource.zip'
   end

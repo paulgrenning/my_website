@@ -1,0 +1,54 @@
+<div class='page-info span-24'>
+  <div class="span-23  prepend-1">
+    <h3>View A Video Of The Earthquake Visualization Tool</h3>
+    <p>Video To Be Uploaded Soon</p>
+    <p><br/></p>
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+  </div>
+  <div class="span-23  prepend-1">
+    <div class="span-11">
+      <h3>
+        How To Use The Lake Michigan Visualization Tool
+      </h3>
+      <p>
+      The tool can be downloaded a <%= link_to "and run from the windows executable.", "http://renaissancesoftware.net/paulgrenning/LakeMichiganSourceCode.zip"%>
+      Make sure to <%= link_to "grab the data from here.", "http://renaissancesoftware.net/paulgrenning/LakeMichiganData.zip"%>
+      The data will need to be placed in the same directory as the executable for it to run correctly.
+      <br/>
+      <br/>
+      Once downloaded and started it will look like this when it is started.
+      <br/>
+      <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/InitialLoad.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/InitialLoad.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Once first loaded it should look like this."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/InitialLoad.jpg", :class => "earthquake_screen") %>
+      <br/>
+      Both views are fully interactive. You can scroll in and out, pan, and rotate each view. The buttons
+      will only affect the scenes that are enabled. To enable and disable click the check boxes in the bottom
+      right of the screen. The program performs best when only one of them is enabled.
+      <br/>
+      The color scale can be changed by clicking on the buttons at the bottom labeled starting color and ending color.
+      <br/>
+      <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ColorDialog.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/ColorDialog.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Once first loaded it should look like this."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ColorDialog.jpg", :class => "earthquake_screen") %>
+        <br/>
+      Using the different sliders along the bottom labeled clipping planes, you can view specific sections of data.
+      <br/>
+      <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Once first loaded it should look like this."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ClippingPlanes.jpg", :class => "earthquake_screen") %>
+      <br/>
+      </p>
+    </div>
+    <div class="span-11 last">
+      <p>
+
+      </p>
+    </div>
+  </div>
+</div>
