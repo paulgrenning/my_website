@@ -1,6 +1,75 @@
 <div class='page-info span-24'>
   <div class="span-22 append-1 prepend-1">
     <h2>About The Dataset</h2>
-
+    <p>
+      All the Lake Michigan data for the project is coming from the <%= link_to ("Great Lakes Observing System", "http://www.glos.us/thredds/catalog.html") %>. 
+      <br/>
+      The datasets we had to obtain were the 15<sup>th</sup> of every month in 2006 and 2010. One entire day of our choosing and an entire month of our choosing.
+      <br/>
+      <br/>
+      To obtain data usable datasets took a bit of time. I originally went to the website, then proceeded to copy and paste the data from the web browser
+      to a text document. This becamse far to tedious and time consuming so I wrote a java application to automatically download the data. Once I had 
+      all of the data, I wrote a second java program to parse the data into a comma separated values with latitude, longitude, depth, temperature, east velocity, and north velocity.
+      <br/>
+      <br/>
+      This data worked for a while until I had to load 12 csv files at one time. It took 15 minutes for the program to load everything so I decided something
+      had to change. I then proceeded to load the data into Paraview and save the files in a binary .vtk format. The load times went down to about 30 seconds from 
+      15 minutes.     
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-11 prepend-1">
+    <h2>June 18, 2010</h2>
+    <p>
+    The dataset containing an entire day is from June 18, 2010. I chose this day because I remember the weather vividly. I was 
+    working in the loop at Obtiva. I remember hearing the wind howling outside and going to the window and seeing trees 
+    bent sideways, rain flying horizontally, and the windows shaking. So I figured the water velocity on that day must have been
+    incredibly fast.
+    <br/>
+    <br/>
+    The image below shows the water velocity across Lake Michigan. The size of the cones is overwhelming and you can barely see the 
+    surface of the water. The max velocity is peaking at .423791 meters per second.
+    <br/>
+    <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/June18Layer1.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/June18Layer1.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "3 AM water velocity in Lake Michigan. The velocity is peaking at .4239 meters per second."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/June18Layer1.jpg", :class => "earthquake_screen") %>
+    <br/>
+    <br/>
+    We can also look at the velocity of the water below the surface.
+        <br/>
+        <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/June18Hours6And3.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/June18Hours6And3.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "3 AM water velocity in Lake Michigan. The velocity is peaking at .4239 meters per second."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/June18Hours6And3.jpg", :class => "earthquake_screen") %>
+        <br/>
+        <br/>
+    </p>
+  </div>
+  <div class="span-11 last">
+    <h2>Points Of Interest</h2>
+    <p>
+    There are a number of points of interest on the map that appear if the points of interest check box is selected.
+    <br/>
+    <br/>
+    A number of those are rivers which include the Chicago River, Menominee River, Grand River, Wolf River, and the Kalamazoo River. Other points include
+    Milwaukee, Muskegon, Sleeping Bear Dunes, and the Beaver Island Airport which is actually in the middle of Lake Michigan. Prior to doing
+    this project I had no clue there were such large islands in the middle of Lake Michigan, let alone an entire airpot.
+    <br/>
+    <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/PointsOfInterest.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/PointsOfInterest.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "On the right is the Beaver Island Airport."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/PointsOfInterest.jpg", :class => "earthquake_screen") %>
+    <br/>
+    <br/>
+    The final features included with the points of interest are the state borders that run through Lake Michigan.   
+    <br/>
+    <br/>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/StateBoundary.jpg", :height => "325px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/StateBoundary.jpg", :rel => "prettyPhoto[lakemichigan_screens_helper]", :title => "Lake Michigan is divided among Illinois, Michigan, Indiana, and Wisconsin. The red lines are the state borders."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/StateBoundary.jpg", :class => "earthquake_screen") %>
+    </p>
   </div>
 </div>

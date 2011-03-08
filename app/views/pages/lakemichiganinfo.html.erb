@@ -55,7 +55,10 @@
         There are a number of sliders and buttons we can play with to change datasets. One main thing you will notice is
         the three radio buttons labeled 2006, 2010, and January 18, 2010. Selecting those will cause the program to pause
         while it swaps out the large datasets. The necessity of swapping the data out is to keep the memory usage under
-        1 gigabyte. Yes, it does take a fair amount of memory to run but it does run pretty fast. The major change 
+        1 gigabyte. Yes, it does take a fair amount of memory to run but it does run pretty fast.
+        <br/>
+        <br/>
+        The major change 
         from the earthquake project and this project is how data is filtered. This project pre filters each month into
         the 19 layers and places them in their own object called an Actor in vtk. Actors can be added and removed from scenes
         very quickly. At one point in time the maximum amount of actors is approximately 250.
@@ -78,6 +81,12 @@
         cells to see what the isosurface of the current depth layer looks like. There also maybe far to many cones so you can use the Points To Cones ratio slider to limit the number. Maybe they cones
         are to small, you can increase the length, radius, and number of facets on the cones. If the number of facets is 0, a line will be shown instead, if it is 1, a plane will be shown, if it is 2 then two crossed planes
         will be shown. Anything greater will result in a 3d cone.
+        <br/>
+        <br/>
+        Be sure to check out the image gallery below. Some images are pretty cool looking plus they give some tips on other features that can be used.
+        <br/>
+        <br/>
+        To view more images or understand more about the <%= link_to "dataset or view interesting data points, click here", lakemichigandata_path %>.
       </p>
     </div>
   </div>
