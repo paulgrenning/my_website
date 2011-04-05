@@ -11,6 +11,10 @@ a:visited {
   color: #90ffad;
 }
 
+.italicFont {
+  font-style: italic;
+}
+
 h1 {
   height: 1.3em;
   filter: Shadow(Color=#424242,   

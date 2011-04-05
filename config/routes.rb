@@ -21,6 +21,7 @@ ActionController::Routing::Routes.draw do |map|
   map.solarflares'/solar-flares-presentation', :controller => 'pages', :action => 'solarflares'
   map.lakemichiganinfo'/lakemichigan-visualization-tool', :controller => 'pages', :action => 'lakemichiganinfo'
   map.lakemichigandata'/lakemichigan-data', :controller => 'pages', :action => 'lakemichigandata'
+  map.supernovaepresentation'/supernovaepresentation', :controller => 'pages', :action => 'supernovaepresentation'
 
 
 

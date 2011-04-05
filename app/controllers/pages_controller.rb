@@ -68,6 +68,10 @@ class PagesController < ApplicationController
     @page_header = { :name => "Lake Michigan Vis Tool", :link => root_path}
   end
 
+  def supernovaepresentation
+    @page_header = { :name => "Supernovae Presentation", :link => root_path}
+  end
+
   def lakemichigandata
     @page_header = { :name => "Lake Michigan Dataset", :link => root_path}
   end
