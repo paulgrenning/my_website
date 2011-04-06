@@ -546,6 +546,14 @@ body {
   position: relative;
 }
 
+.supernovae-area h2{
+  height: 60px;
+}
+
+.supernovae-area p{
+  font-size: 14px;
+}
+
 #copyright {
   text-align: center;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
