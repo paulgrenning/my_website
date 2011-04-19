@@ -1,0 +1,82 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <h3>View A Video Of The Tornado Visualization Tool</h3>
+    <iframe title="YouTube video player" width="870" height="530" src="http://www.youtube.com/embed/O5l-MF-FfBY" frameborder="0" allowfullscreen></iframe>
+    <p><br/></p>
+  </div>
+  <div class="span-22 append-1 prepend-1">
+    <div class="span-11">
+      <h3>Getting Started</h3>
+      <p>
+        To get started, you should <%= link_to "download Google Earth and Install it.", "http://www.google.com/earth/download/ge/" %>
+        <br/>
+        <br/>
+        Once that is complete download the <%= link_to "executable ", "http://renaissancesoftware.net/paulgrenning/TornadoVisualizationExecutable.zip"%>and you should be able to run the program labeled RenderWindowUI.
+        <br/>
+        <br/>
+        If you want to compile from source code check out <%= link_to "this page", vtkforwindows_path %>, and download the source files.
+        <br/>
+        <br/>
+      </p>
+      <h3>Using The Tornado Visualization Tool</h3>
+      <p>
+        When you first start the application it will look like this. If you installed Google Earth it should have opened and popped up as well.
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/TornadoStart.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/TornadoStart.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => ""%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/TornadoStart.jpg", :class => "earthquake_screen") %>
+        Features that you will notice right away are the numbers on the map inside the view, the colored lines on the map, and the color scale.
+        All those features can be modified in some way. The numbers are the Fujita value for the Tornado. The Fujita value 
+        is basically the wind strength of the tornado. The number labels can be toggled on and off with the check box 
+        labeled "Show Tornado Labels". The lines are the tornadoes start and endpoints which are colored by the Fujita 
+        value as well. The start of the tornado is the side with the number. The width of the tornado lines can be 
+        modified with the "Line Width" slider. 
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/TornadoToolBox.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/TornadoToolBox.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "The tool box on the left controls color scheme, color definition, map transparency, line width, and label visibility."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/TornadoToolBox.jpg", :class => "earthquake_screen") %>
+        Finally you can change the actual starting and ending colors. This will update all the lines on the map as well as the color scale bar in the main view.
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ColorChooser.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/ColorChooser.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Change the color scheme using the color chooser provided."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ColorChooser.jpg", :class => "earthquake_screen") %>
+      </p>
+    </div>
+    <div class="span-11 last">
+    </div>
+    <p>
+      <br/>
+      <br/>
+        The program shows data from the years 1950-2010. It allows the user to shuffle through all of the years 
+        and any month they wish. 
+      <br/>
+      <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/TornadoDateSelection.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/TornadoDateSelection.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Change the current dataset to any year and month between 1950-2010."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/TornadoDateSelection.jpg", :class => "earthquake_screen") %>
+        The user also has the ability to view playbacks of a current year. The playback ability of this application versus the Earthquake visualization application has increased dramatically.
+        The user can do playback as fast as .01 seconds per update, not that you would want to. The Earthquake visualization had a max update speed was around .8 depending on your CPU speed.
+        That being said you choose a year and hit the play button and watch the twelve months switch in the main view.
+        <br/>
+        <br/>
+        The final tool that is available in this program is the ability to add the current data set to Google Earth. The application uses the Google Earth COM API to control Google Earth. Google Earth should have started when you started the application, if it didn't you need to download it.
+        To add data to Google earth simply click on the "Add Current Data To GE" button shown in the picure below.
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/AddToGEHelper.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/AddToGEHelper.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Add the current data set to Google Earth."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/AddToGEHelper.jpg", :class => "earthquake_screen") %>
+        You will see something that looks similar to this depending on the data that you added. The different colored pins represent the Tornadoes Fujita values. Blue = 0, Green = 1, Yellow = 2, Light Orange = 3, Dark Orange = 4, Red = 5, and Black = Unknown. Each pin placed
+         on google earth can be clicked on to view a more detailed description of each Tornado.
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/DataInGE.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/DataInGE.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Data In Google Earth."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/DataInGE.jpg", :class => "earthquake_screen") %>
+        To view more images and videos of the dataset go to <%= link_to "this page.", tornadovisdata_path %>
+    </p>
+    <div class="span-11">
+    </div>
+  </div>
+</div>

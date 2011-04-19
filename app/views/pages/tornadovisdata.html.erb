@@ -1,0 +1,139 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <h2>About The Dataset</h2>
+    <p>
+    The data set comes <%= link_to "The Tornado History Project Website", "http://www.tornadohistoryproject.com/" %>.
+    <br/>
+    <br/>
+    The data covers the years 1950-2010. After downloading everything, the data was fairly easy to work with since it came in a comma separate value format. There were a number
+    of values that were not necessary so I ran them through a simple java program to parse them out. 
+    <br/>
+    <br/>
+    The only other hiccup came when I noticed the data after 1997 looked slightly odd. As it turns out they have a notice on the website saying the format changed. So I had to 
+    change the columns that had a different format to the correct format with a java program as well. Once that was commplete all the data was ready to be used.
+    <br/>
+    <br/>
+    The final thing to acquire was a high resolution map of the United States that fit the latitude longitde coordinates of my data. Google was very helpful there.
+    <br/>
+    <br/>
+    As I was creating this application, I though it would be very useful to see this in Google Earth. Each tornado would be represented as a colored pin. Then each pin would be clickable and 
+    give specific details about each Tornado such as distance traveled in miles, total property damage, fujita value, injuries, fatalities, and width of the Tornado in Yards.
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-11 prepend-1">
+    <h2>April 1974</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/AprilPlaybackImage.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=UbYYwc5eDyA', :rel => "prettyPhoto[videos]", :title => "Playback of the year 1974"%>
+    <p>
+      <br/>
+      <br/>
+      The video below shows the year 1974. It is important for tornadoes because in 
+      April of 1974 the most tornadoes touched down in a 2 day period ever recorded for a total of 147 tornadoes.
+      The tornadoes killed 310 people, 5477 injuries, and at least 23 of them were rated F4 tornadoes.
+      <br/>
+      <br/>
+      In the vidoe you will notice the small amounts of tornadoes in every month but April.
+    </p>
+  </div>
+  <div class="span-11 append-1 last">
+    <h2>Playback of 2010</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/2010PlaybackImage.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=Ic0tv3QqR4A', :rel => "prettyPhoto[videos]", :title => "Playback of the year 2010"%>
+      <p>
+      <br/>
+      <br/>
+      This is shown because of the large amount of tornadoes in 2010 and it is the most recent full set of data 
+      that could be shown.
+      </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 last">
+    <h2>Other facts to be seen</h2>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornadoThumb.jpg"), 
+      "http://renaissancesoftware.net/paulgrenning/WidestTornado.jpg", :rel => "prettyPhoto[tornado_data]", :title => "Widest tornado on record, May 2004."%>
+      <%= image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornado.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornadoGEThumb.jpg"), 
+      "http://renaissancesoftware.net/paulgrenning/WidestTornadoGE.jpg", :rel => "prettyPhoto[tornado_data]", :title => "Google Earth View: Widest tornado on record, May 2004."%>
+      <%= image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornadoGE.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LongTornadoThumb.jpg"), 
+      "http://renaissancesoftware.net/paulgrenning/LongTornado.jpg", :rel => "prettyPhoto[tornado_data]", :title => "This tornado travled 148.97 miles before stopping."%>
+      <%= image_tag("http://renaissancesoftware.net/paulgrenning/LongTornado.jpg", :class => "earthquake_screen") %>
+      <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LongTornadoGEThumb.jpg"), 
+      "http://renaissancesoftware.net/paulgrenning/LongTornadoGE.jpg", :rel => "prettyPhoto[tornado_data]", :title => "Google Earth View: This tornado travled 148.97 miles before stopping."%>
+      <%= image_tag("http://renaissancesoftware.net/paulgrenning/LongTornadoGE.jpg", :class => "earthquake_screen") %>
+    <p>
+    <br/>
+    Click on the above images.
+    <br/>
+    <br/>
+    Looking through the data using the tool we can see most tornadoes are rather short and don't last so long.
+    Some do though. They have the ability to be over 2 miles wide with windspeeds up to 300 some miles per hour and travel for many miles.
+    In the two images above and left we can see the widest tornado which was in May of 2004, apparently over 2 miles wide yet the dataset shows it to be about 1.5 miles wide.  
+    In the two images above and right we can see one of the farthest traveling tornadoes at least viewed in the tool.
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+  </div>
+  <div class="span-24">
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+    <div class="span23 prepend-1" >
+      <h2>Entire Image Gallery</h2>
+      <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/TornadoStartThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/TornadoStart.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "First started."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/TornadoStart.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ZoomedInThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/ZoomedIn.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Zoom in to view the data in better detail."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ZoomedIn.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ColorByTornadoWidthThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/ColorByTornadoWidth.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "The dataset can be colored by different scalar values. In this case it is colored by the tornado's width."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ColorByTornadoWidth.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ColoredByPropertyDamageThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/ColoredByPropertyDamage.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "The dataset can be colored by different scalar values. In this case it is colored by the amount of property damage the tornado inflicted."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ColoredByPropertyDamage.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LoadDataIntoGEThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/LoadDataIntoGE.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "The current dataset can be loaded into Google Earth."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/LoadDataIntoGE.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/DataInGEThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/DataInGE.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "The current dataset can be loaded into Google Earth."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/DataInGE.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/EvenHawaiiThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/EvenHawaii.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Even Hawaii has tornadoes."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/EvenHawaii.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LargestAmountOfTornadoesThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/LargestAmountOfTornadoes.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "147 Tornadoes touched down on Apirl 3 and 4, 1974. The most to touch down in such a short period of time."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/LargestAmountOfTornadoes.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LargestAmountOfTornadoesGEThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/LargestAmountOfTornadoesGE.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Google Earth View: 147 Tornadoes touched down on Apirl 3 and 4, 1974. The most to touch down in such a short period of time."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/LargestAmountOfTornadoesGE.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LongTornadoThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/LongTornado.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "This tornado travled 148.97 miles before stopping."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/LongTornado.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LongTornadoGEThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/LongTornadoGE.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Google Earth View: This tornado travled 148.97 miles before stopping."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/LongTornadoGE.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LotsOfTornadoesThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/LotsOfTornadoes.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Entire 2007 year's worth of tornadoes visible."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/LotsOfTornadoes.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/MonthSelectionThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/MonthSelection.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Choose a specific month and year to view."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/MonthSelection.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornadoThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/WidestTornado.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Widest tornado on record."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornado.jpg", :class => "earthquake_screen") %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornadoGEThumb.jpg"), 
+        "http://renaissancesoftware.net/paulgrenning/WidestTornadoGE.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Google Earth View: Widest tornado on record."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/WidestTornadoGE.jpg", :class => "earthquake_screen") %>
+    </div>
+    <div class="span-24" id="below-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+  </div>
+</div>

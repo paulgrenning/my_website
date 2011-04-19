@@ -84,4 +84,11 @@ class PagesController < ApplicationController
     send_file 'public/downloads/EarthquakeVisualizationExecutable.zip'
   end
 
+  def tornadovistool
+    @page_header = { :name => "Tornado Visualization Tool", :link => root_path}
+  end
+
+  def tornadovisdata
+    @page_header = { :name => "Tornado Visualization Data", :link => root_path}
+  end
 end

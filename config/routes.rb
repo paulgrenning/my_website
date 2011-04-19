@@ -22,6 +22,8 @@ ActionController::Routing::Routes.draw do |map|
   map.lakemichiganinfo'VTK-projects/lakemichigan-visualization-tool', :controller => 'pages', :action => 'lakemichiganinfo'
   map.lakemichigandata'VTK-projects/lakemichigan-data', :controller => 'pages', :action => 'lakemichigandata'
   map.supernovaepresentation'VTK-projects/supernovaepresentation', :controller => 'pages', :action => 'supernovaepresentation'
+  map.tornadovistool'VTK-projects/tornado-visualization-tool', :controller => 'pages', :action => 'tornadovistool'
+  map.tornadovisdata'VTK-projects/tornado-visualization-data', :controller => 'pages', :action => 'tornadovisdata'
 
 
 

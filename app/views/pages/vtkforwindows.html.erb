@@ -142,5 +142,36 @@
     <h3>You should have a working copy of the Lake Michigan project</h3>
     </p>
     </p> 
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+    <h3>Building The Tornado Visualization Tool</h3>
+    <p class="prepend-1">
+    -- To get started, you should <%= link_to "download Google Earth and Install it.", "http://www.google.com/earth/download/ge/" %>
+    <br/>
+    -- To download the source code and all the data <%= link_to "click here.", "http://renaissancesoftware.net/paulgrenning/TornadoVisualizationSource.zip"%>
+    <br/>
+    -- Extract the source code to some directory with no spaces. Preferably in the same folder that VTK, VTKBuild, and VTKData are in.
+    <br/>
+    -- Open CMake and choose the source directory and binary directory to be the folder you just extracted.
+    <br/>
+    -- Click configure, make sure to choose Visual Studio 10, not Visual Studio 10 Win64.
+    <br/>
+    -- Set the CMAKE_INSTALL_PREFIX path to something without spaces again.
+    <br/>
+    -- If CMake couldn't find VTKBuild directory set it manually
+    <br/>
+    -- Click configure again, and then click generate.
+    <br/>
+    -- Open the AllBuild Visual Studio Project. 
+    <br/>
+    -- Inside Visual Studio, right click on AllBuild and select Build.
+    <br/>
+    -- Right click on the RenderWindowUI Project and select "set as startup project".
+    <br/>
+    -- Build it and run it.
+    <h3>You should have a working copy of the Tornado Visualization project</h3>
+    </p>
+    </p> 
   </div>
 </div>
