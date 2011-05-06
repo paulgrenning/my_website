@@ -1,0 +1,82 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <h3>View A Video Of The Crazy Train Application</h3>
+    <iframe width="870" height="530" src="http://www.youtube.com/embed/maRbojHbcIU" frameborder="0" allowfullscreen></iframe>
+    <p><br/></p>
+  </div>
+  <div class="span-22 append-1 prepend-1">
+    <div class="span-11">
+      <h3>Getting Started</h3>
+      <p>
+        To get started, you should <%= link_to "download Google Earth and Install it.", "http://www.google.com/earth/download/ge/" %>
+        <br/>
+        Once that is complete download the <%= link_to "executable ", "http://renaissancesoftware.net/paulgrenning/CrazyTrainExecutable.zip"%>and you should be able to run the program labeled RenderWindowUI.
+        <br/>
+        If you want to compile from source code check out <%= link_to "this page", vtkforwindows_path %>, and download the source files.
+        <br/>
+      </p>
+      <h3>Using The CTA Visualization Tool</h3>
+      <p>
+        When you first start the application it will look like this. The ride we
+        took was on April 28, 2011 from approximately 12:01 to 12:22.
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/InitialLoadCrazyTrain.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/InitialLoadCrazyTrain.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Initial load of the program."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/InitialLoadCrazyTrain.jpg", :class => "earthquake_screen") %>
+        The primary focus of this application was the ability to do playback of the cta ride. 
+        Before we get to playback and all of its features, we shall take a look at some other tools 
+        in the application. First off we can reset the view or reset all of the 
+        data points in the application by clicking one of the reset buttons shown below.
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/Reset.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/Reset.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Reset the view or all the data."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/Reset.jpg", :class => "earthquake_screen") %>
+        <br/>
+        The user can also click on any time step to view the recorded time.
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/ClickPlacemark.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/ClickPlacemark.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Click on a timestep to view the recorded time."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/ClickPlacemark.jpg", :class => "earthquake_screen") %>
+      </p>
+    </div>
+    <div class="span-11 last">
+    </div>
+    <p>
+      <br/>
+        Since it is google earth inside of the application we can also use
+        the built in mouse controls for google earth. Mouse 1 is for panning 
+        the camera around, mouse 2 is used for zooming and rolling the camera, and
+        mouse 3 is used for the angle of the camera.
+      <br/>
+      <br/>
+         Other tools include the ability to color by velocity or acceleration. We can hide or show
+         the blue line path or the arrows.
+      <br/>
+      <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/DrawingTools.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/DrawingTools.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "Change the color scheme and what is being drawn in Google Earth."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/DrawingTools.jpg", :class => "earthquake_screen") %>
+        <br/>
+        As mentioned, the primary focus was playback. The use has many options shown in the picture below.
+        <br/>
+        <br/>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/PlaybackRide.jpg", :width => "421px", :id => "below-gallery"),
+        "http://renaissancesoftware.net/paulgrenning/PlaybackRide.jpg", :rel => "prettyPhoto[tornado_helpers]", :title => "While doing playback there are a number of features built in."%>
+        <%= image_tag("http://renaissancesoftware.net/paulgrenning/PlaybackRide.jpg", :class => "earthquake_screen") %>
+        <br/>
+         The playback is showing everything in 2 seconds intervals.
+         <br/>
+         The user can choose the speed of the playback. The user has the ability to show previous time steps during the playback or just the current time step. 
+         The use can hide the arrows during playback and view just the path or vice versa. Or the path can be left on instead of animated.
+         If needed the playback can be paused, rewinded, fast forwarded, or stopped.
+        <br/>
+        <br/>
+        To view more images and videos of the dataset go to <%= link_to "this page.", ctavisdata_path %>
+    </p>
+    <div class="span-11">
+    </div>
+  </div>
+</div>

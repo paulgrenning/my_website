@@ -1,0 +1,85 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <h2>About The Dataset</h2>
+    <p>The dataset was collected by our class on April 28, 2011. We had to ride the CTA Blue line in Chicago 
+    from UIC-Halsted to Forest Park and back a number of times. We took a trial run plus a 
+    few more to get valid data. To collect the data we used our iPhones, iPods, and Android 
+    phones. With the devices we collected, accelerometer data, velocity data, and GPS data. All together we had 
+    3 decent datasets. I chose to use the dataset from the Android which had over 700 GPS readings and more
+    than 2000 accelerometer readings.
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-11 prepend-1">
+    <h2>Playback from 600 meters</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/CTA600m.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=QBWFQNAgEGI', :rel => "prettyPhoto[videos]", :title => "Playback from elevation of 600 meters."%>
+    <p>
+      <br/>
+      <br/>
+      This is a playback of our ride at an elevation of 600m. This is the default playback elevation 
+      for playback of the program. The elevation can be changed within the range of 100-15000 meters.
+    </p>
+  </div>
+  <div class="span-11 append-1 last">
+    <h2>Playback from 5000 meters</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/CTA5000m.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=c0uDMIBow08', :rel => "prettyPhoto[videos]", :title => "Playback from elevation of 5000 meters."%>
+      <p>
+      <br/>
+      <br/>
+      This is a playback of our ride at an elevation of 5000m. Viewing it at this distance shows the transparency of the arrows blending
+      together showing the change in accelerations very nicely. The more blue/purple the color the greater the acceleration. The 
+      greener the lower the acceleration.
+      </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-11 prepend-1">
+    <h2>Line Acceleration Playback</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LinePlayback.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=UCgolyvrsvY', :rel => "prettyPhoto[videos]", :title => "Line Playback"%>
+    <p>
+      <br/>
+      <br/>
+      Only the current 2 second interval is shown each update during the playback.
+      It gives a good idea of the speed and acceleration of the train.
+    </p>
+  </div>
+  <div class="span-11 append-1 last">
+    <h2>Elevation Fluctuation</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/arrowPlayback.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=fwMxqWR4sqg', :rel => "prettyPhoto[videos]", :title => "Elevation Playback"%>
+      <p>
+      <br/>
+      <br/>
+      The playback in this video only shows the current time step using the arrow. In this video the ability to change
+      elevation is being shown. Many features can still be used while playback is going.
+      </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-11 prepend-1">
+    <h2>22 minutes in 7 seconds</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/fastestPlayback.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=3IAJ3pfWMM8', :rel => "prettyPhoto[videos]", :title => "Fastest Playback"%>
+    <p>
+      <br/>
+      <br/>
+      This video shows the maximum speed of the playback. 22 minutes of cta ride time in 7 seconds.
+    </p>
+  </div>
+  <div class="span-11 append-1 last">
+    <h2>Path Animation</h2>
+    <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/pathAnimation.jpg", :class => 'video', :id => "video_1"),
+      'http://www.youtube.com/watch?v=TO64N2hcA8k', :rel => "prettyPhoto[videos]", :title => "Path Animation"%>
+      <p>
+      <br/>
+      <br/>
+      This video shows the animation of the path. Elevation changes to view the entire path during playback.
+      </p>
+  </div>

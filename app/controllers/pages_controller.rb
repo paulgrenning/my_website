@@ -76,6 +76,14 @@ class PagesController < ApplicationController
     @page_header = { :name => "Lake Michigan Dataset", :link => root_path}
   end
 
+  def ctavisinfo
+    @page_header = { :name => "Crazy Train Info", :link => root_path}
+  end
+
+  def ctavisdata
+    @page_header = { :name => "CTA Data Collection", :link => root_path}
+  end
+
   def earthquakesource
     send_file 'public/downloads/EarthquakeVisualizationSource.zip'
   end
