@@ -264,22 +264,21 @@ body {
 }
 
 #portfolio {
-  height: 270px;
+  height: 500px;
 }
 
 #left-arrow {
-  margin-top: 50px;
+  margin-top: 150px;
   display: none;
 }
 
 #right-arrow {
-  margin-top: 50px;
+  margin-top: 150px;
   margin-left: -5px;
   display: none;
 }
 
 #carousel {
-  height: 210;
   position: relative;
   overflow: hidden;
 }
@@ -287,7 +286,17 @@ body {
 #carousel-images {
   white-space: nowrap;
   position: relative;
-  margin-left: -2px;
+}
+
+.carousel-image {
+  height: 425px;
+  width: 850px;
+  border: 10px solid #fff;
+}
+
+.makeInline {
+  float: left;
+  margin-right: 20px;
 }
 
 .thumb {

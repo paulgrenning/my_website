@@ -1,5 +1,5 @@
 <div class='page-info span-24'>
-  <div class="span-24" id="portfolio">
+  <div  id="portfolio" class="span-24">
     <div class="span-24 prepend-1">
       <h2>Portfolio</h2>
     </div>
@@ -9,11 +9,15 @@
     </div>
     <div id="carousel" class="span-22">
       <div id="carousel-images">
-        <!--     <%= link_to image_tag("carouselImages/darkTide1.png", :src2 => "carouselImages/darkTide1.png", :id => "thumb-1", :class => "thumb"), darktide_path %> -->
-        <%= link_to image_tag("home-images/Unity1.png", :src2 => "images/home-images/Unity2.png", :id => "thumb-2", :class => "thumb"), unitydevelopment_path %>
-        <%= link_to image_tag("home-images/vtk2.png", :src2 => "images/home-images/vtk1.png", :id => "thumb-3", :class => "thumb"), vtkprojects_path%>
-        <%= link_to image_tag("home-images/Processing2.png", :src2 => "images/home-images/Processing1.png", :id => "thumb-5", :class => "thumb"), processingpage_path %>
-        <!--        <%= link_to image_tag("carouselImages/website1.png", :src2 => "carouselImages/website2.png", :id => "thumb-4", :class => "thumb"), websitecreation_path %> -->
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/UrchinsMainPage.jpg", :class => "carousel-image"), unitydevelopment_path %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/CTAMainPage.jpg", :class => "carousel-image"), vtkprojects_path%>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/SpaceBarrage2MainPage.jpg", :class => "carousel-image"), processingpage_path %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/EarthquakeMainPage.jpg", :class => "carousel-image"), processingpage_path %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/BugSplatMainPage.jpg", :class => "carousel-image"), processingpage_path %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/TornadoMainPage.jpg", :class => "carousel-image"), processingpage_path %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/BlobMainPage.jpg", :class => "carousel-image"), processingpage_path %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/LakeMichiganMainPage.jpg", :class => "carousel-image"), processingpage_path %>
+        <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/NinjaGameMainPage.jpg", :class => "carousel-image"), processingpage_path %>
       </div>
     </div>
     <div class="span-1 last">
@@ -21,81 +25,5 @@
       <%= image_tag("rightArrow.png", :id => "right-arrow") %>
     </div>
   </div>
-  <div class="span-24">
-    <div><p></p></div>
-    <%= image_tag("horizontal-divider.png") %>
-    <div><p></p></div>
-    <div class="span-7 prepend-1">
-      <h2>About Me</h2>
-    </div>
-    <div class="span-7" id="spacers">
-      <h2>School</h2>
-    </div>
-    <div class="span-7 apend-1 last">
-      <h2>Interests</h2>
-    </div>
-  </div>
-  <div class="span-24">
-    <div class="span-7 prepend-1">
-      <p>
-      <%= image_tag("MyImage.jpg", :id => "my-image") %>
-      I am originally from the north west suburbs of Chicago. I currently reside in Chicago,
-      where I attend UIC. My previous job was at Obitva where
-      I had the privelege to be taught Ruby and Ruby On Rails for a summer. I also worked 
-      as an intern/coop at Zebra Technologies over a period of two and a
-      half years. Previously in doubt about my future in the field, my internship with 
-      Zebra taught me that computer science was the correct career for me.
-      </p>
-    </div>
-    <div class="span-7 column-middle" id="spacers">
-      <p>
-      I am a graduate student working for my masters in Computer Science at UIC.
-      I am currently doing research at the Electronic Visualization Research Lab.
-      Since it is a visualization research lab, I am taking a visualization and visual analytics course,
-      check out my  <%= link_to "progess with vtk over here", vtkprojects_path %>.
-      <br/>
-      <br/>
-      I am also very interested in developing video games. I have played them all my life, and I have
-      recently developed a few of my own video games. My passion for creating video games
-      started when I took a class called video game design held in the Electronics Visualization Lab.
-      This class taught me the basics of video game design with a tool called Processing. We created
-      2D games for a 52" touch table. 
-      <%= link_to "Check out my Processing games here", processingpage_path %>.
-      <br/>
-      <br/>
-      I moved on to create other video games using a 3d game engine called the Unity3D Game Engine as independent research.
-      It has been a tough but fun transition since I have to create my own 3D models and textures instead of
-      2D sprites. 
-      <%= link_to "Check out my Unity3d games here", unitydevelopment_path%>.
-      </p>
-      <p>
-      In short, after doing my independent research and taking the video game design course, I realized what I wanted
-      to do with my career, and that is develop vide games. I currently spend all my free time, and often my school
-      time developing video games. I also have the privelege of being the tech support for this years video game design
-      class since they are learning Unity3D.
-      </p>
-    </div>
-    <div class="span-7 last">
-      <p>
-      Some of
-      my favorite video games come from Blizzard Entertainment, including the Starcraft series,
-      the Diablo series, and the Warcraft III series (excluding World Of Warcraft, however). Other similar games
-      include Titan Quest series and Torchlight. I am also a big fan of first 
-      person shooters such as the S.T.A.L.K.E.R. series and many of Valve's games, especially Left 4 Dead 2.
-      </p>
-      <p>
-      I also build my own computers. So far I am at two full computers, but over the years, as a video game
-      fanatic, I have had to swap out many parts to make sure my machine was always running perfectly.
-      This hardware has included graphics cards, as I always wanted the best graphics technology (which I sadly learned was not
-      always worth the money).  
-      </p>
-      <p>
-      Besides computers and all their excellence, I do have a few other interests, which would include, pool, 
-      Frisbee, soccer, kung-fu, snowboarding, hockey, and swimming.
-      </p>
-      <h2>Extras</h2>
-      <p><%= link_to "Check out my resume.", resume_path%></p>
-      <p>Email: Paul -dot- Grenning -at- gmail -dot- com</p>
-    </div>
-  </div>
+  <div style="clear: both;"></div>
 </div>

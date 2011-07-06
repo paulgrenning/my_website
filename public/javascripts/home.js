@@ -4,34 +4,21 @@
 var ProjectsCarousel = {};
 
 $(document).ready(function() {
+  $("#carousel-images").animate({left: '-=870'}, 1);
   ProjectsCarousel.originalThumb;
-  $(".thumb").live('mouseover',
-    function() {
-      currentThumbNail = $(this);
-      ProjectsCarousel.originalThumb = currentThumbNail.attr('src'); 
-      currentThumbNail.attr('src', currentThumbNail.attr('src2')); 
-    })
-  .live('mouseout',
-    function() {
-      currentThumbNail = $(this);
-      currentThumbNail.attr('src', ProjectsCarousel.originalThumb); 
-    }
-  );
-  /*
   ProjectsCarousel.isAnimating = false;
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
-  */
-//  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
-/*  function slideRight() {
+  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
+  function slideRight() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
         var carousel = $("#carousel-images");
-        carousel.animate({left: '-=294', queue: true});
+        carousel.animate({left: '-=870', queue: true});
         carousel.children("a").first().animate({queue: true}, function() { 
           $(this).remove();
           $(this).appendTo(carousel);
-          $(carousel).css({left: "-346"});
+          $(carousel).css({left: "-870"});
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
@@ -42,18 +29,17 @@ $(document).ready(function() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
         var carousel = $("#carousel-images");
-        carousel.animate({left: '+=294', queue: true});
+        carousel.animate({left: '+=870', queue: true}, 300);
         carousel.children("a").last().animate({queue: true}, function() { 
           $(this).remove();
           $(this).prependTo(carousel);
-          $(carousel).css({left: "-346"}) 
+          $(carousel).css({left: "-870"}) 
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
         });
       }
   }
-  
   $("#portfolio").live('mouseover',
     function() {
         ProjectsCarousel.isScrollingSet = false;
@@ -76,8 +62,6 @@ $(document).ready(function() {
         }
       }
       );
-      */
-  /*
   $("#left-arrow").mousedown( 
     function() {
       clearInterval(ProjectsCarousel.scrollInterval);
@@ -100,5 +84,4 @@ $(document).ready(function() {
       function() {
         $(this).attr("src", "http://paulgrenning.com/rightArrow.png");
     });
-    */
 });
