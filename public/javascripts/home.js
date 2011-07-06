@@ -40,6 +40,12 @@ $(document).ready(function() {
         });
       }
   }
+  $(".carousel-image").mouseover(function () {
+        $("#imageDescriptionHolder").stop(true, true).animate({"bottom": "0px"});
+  });
+  $(".carousel-image").mouseout(function () {
+        $("#imageDescriptionHolder").stop(true, true).animate({"bottom": "-70px"});
+  });
   $("#portfolio").live('mouseover',
     function() {
         ProjectsCarousel.isScrollingSet = false;

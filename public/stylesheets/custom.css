@@ -278,14 +278,30 @@ body {
   display: none;
 }
 
+#imageDescriptionHolder {
+  width: 870px;
+  background: #333;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -70px;
+}
+
 #carousel {
-  position: relative;
   overflow: hidden;
+}
+
+#images-inline {
+  white-space: nowrap;
+  position: relative;
+  margin-left: -8px;
+  z-index: 1;
 }
 
 #carousel-images {
   white-space: nowrap;
   position: relative;
+  z-index: 1;
 }
 
 .carousel-image {
