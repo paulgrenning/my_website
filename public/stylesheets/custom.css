@@ -279,16 +279,29 @@ body {
 }
 
 #imageDescriptionHolder {
-  width: 870px;
   background: #333;
-  height: 70px;
+  width: 870px;
+  height: 80px;
   position: absolute;
   z-index: 2;
-  bottom: -70px;
+  bottom: -80px;
+}
+
+#imageDescriptionHolder h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+#imageDescriptionHolder p {
+  margin-top: 5px;
+  margin-left: 20px;
 }
 
 #carousel {
+  height: 450px;
   overflow: hidden;
+  position: relative;
 }
 
 #images-inline {
@@ -299,13 +312,14 @@ body {
 }
 
 #carousel-images {
-  white-space: nowrap;
   position: relative;
+  white-space: nowrap;
   z-index: 1;
 }
 
 .carousel-image {
-  height: 425px;
+  position: relative;
+  height: 430px;
   width: 850px;
   border: 10px solid #fff;
 }
