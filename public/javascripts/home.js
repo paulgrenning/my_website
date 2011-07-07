@@ -3,13 +3,14 @@
 
 var ProjectsCarousel = {};
 
+
 $(document).ready(function() {
   ProjectsCarousel.originalThumb;
   ProjectsCarousel.isAnimating = false;
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
-  firstSlide(true);
-  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
+  firstSlide();
+  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 3500);
   function slideRight() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
@@ -88,9 +89,9 @@ $(document).ready(function() {
         $("#right-arrow").hide();
         if(ProjectsCarousel.isScrollingSet == false) {
           if(ProjectsCarousel.leftClicked == true) {
-            ProjectsCarousel.scrollInterval = setInterval(slideLeft, 4000);
+            ProjectsCarousel.scrollInterval = setInterval(slideLeft, 3500);
           } else { 
-            ProjectsCarousel.scrollInterval = setInterval(slideRight, 4000);
+            ProjectsCarousel.scrollInterval = setInterval(slideRight, 3500);
           }
           ProjectsCarousel.isScrollingSet = true;
         }
@@ -101,21 +102,21 @@ $(document).ready(function() {
       clearInterval(ProjectsCarousel.scrollInterval);
       ProjectsCarousel.leftClicked = true;
       slideLeft();
-      $(this).attr("src", "http://paulgrenning.com/leftArrowClicked.png");
+      $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/leftArrowClicked.png");
     });
     $("#left-arrow").mouseup(
       function() {
-        $(this).attr("src", "http://paulgrenning.com/leftArrow.png");
+        $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/leftArrow.png");
       });
   $("#right-arrow").mousedown( 
     function() {
       clearInterval(ProjectsCarousel.scrollInterval);
       ProjectsCarousel.leftClicked = false;
       slideRight();
-      $(this).attr("src", "http://paulgrenning.com/rightArrowClicked.png");
+      $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/rightArrowClicked.png");
     });
     $("#right-arrow").mouseup(
       function() {
-        $(this).attr("src", "http://paulgrenning.com/rightArrow.png");
+        $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/rightArrow.png");
     });
 });

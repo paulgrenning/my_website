@@ -22,7 +22,7 @@ h1 {
   Strength=5);
   padding-top: 50px;
   text-shadow: #424242 4px 4px 3px;
-  font: normal normal normal 4.8em/normal Georgia, Times, serif;
+  font: normal normal normal 2.8em/normal Georgia, Times, serif;
 }
 
 h2 {
@@ -33,7 +33,7 @@ h2 {
   text-shadow: #424242 3px 3px 3px;
   color: #e0e0b8;
   /*color: #2d5824; */
-  font: normal normal normal 2.3em/normal Georgia, Times, serif;
+  font: normal normal normal 1.9em/normal Georgia, Times, serif;
 /*  border-bottom: 1px solid #aaf6aa;*/
 }
 
@@ -44,7 +44,7 @@ h3 {
   Strength=5);
   text-shadow: #242424 5px 5px 5px;
   color: #e0e0b8;
-  font: normal normal normal 1.5em/normal Georgia, Times, serif;
+  font: normal normal normal 1.4em/normal Georgia, Times, serif;
 }
 
 div{
@@ -267,6 +267,11 @@ body {
   height: 500px;
 }
 
+.arrowHolder {
+  width: 40px;
+  height: 500px;
+}
+
 #left-arrow {
   margin-top: 150px;
   display: none;
@@ -274,12 +279,11 @@ body {
 
 #right-arrow {
   margin-top: 150px;
-  margin-left: -5px;
   display: none;
 }
 
 #imageDescriptionHolder {
-  background: #333;
+  background-image:url('/images/imageDescriptionBackground.png');
   width: 870px;
   height: 80px;
   position: absolute;
@@ -299,9 +303,10 @@ body {
 }
 
 #carousel {
-  height: 450px;
   overflow: hidden;
+  height: 450px;
   position: relative;
+  width: 870px;
 }
 
 #images-inline {
@@ -315,6 +320,17 @@ body {
   position: relative;
   white-space: nowrap;
   z-index: 1;
+  width: 7830px;
+  left: -870px;
+}
+
+#carousel-images a {
+  position: relative;
+  margin: 0px;
+  width: 870px;
+  height: 450px;
+  padding: 0px;
+  float: left;
 }
 
 .carousel-image {
@@ -322,6 +338,10 @@ body {
   height: 430px;
   width: 850px;
   border: 10px solid #fff;
+}
+
+.imageInline {
+  float: left;
 }
 
 .makeInline {
