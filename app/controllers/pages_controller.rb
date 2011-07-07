@@ -99,4 +99,13 @@ class PagesController < ApplicationController
   def tornadovisdata
     @page_header = { :name => "Tornado Visualization Data", :link => root_path}
   end
+
+  def spacebarrage
+    @page_header = { :name => "Space Barrage", :link => root_path}
+ 
+  def sewerblob
+    @page_header = { :name => "Sewer Blob", :link => root_path}
+  end
+ end
+
 end

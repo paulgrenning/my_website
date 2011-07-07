@@ -4,12 +4,12 @@ ActionController::Routing::Routes.draw do |map|
   map.projects'/projects', :controller => 'pages', :action => 'projects'
   map.downloadresume'/download-resume', :controller => 'pages', :action => 'downloadresume'
   map.darktide'/dark-tide', :controller => 'pages', :action => 'darktide'
-  map.riseotheurchins'/rise-o-the-urchins', :controller => 'pages', :action => 'riseotheurchins'
-  map.bugsplat'/bug-splat', :controller => 'pages', :action => 'bugsplat'
+  map.riseotheurchins'Processing-Development/rise-o-the-urchins', :controller => 'pages', :action => 'riseotheurchins'
+  map.bugsplat'Processing-Development/bug-splat', :controller => 'pages', :action => 'bugsplat'
   map.websitecreation'/website-creation', :controller => 'pages', :action => 'websitecreation'
-  map.ninja'/ninja-defense', :controller => 'pages', :action => 'ninja'
+  map.ninja'Processing-Development/ninja-defense', :controller => 'pages', :action => 'ninja'
   map.resume'/resume', :controller => 'pages', :action => 'resume'
-  map.processingpage'/processing-development', :controller => 'pages', :action => 'processingpage'
+  map.processingpage'/Processing-Development', :controller => 'pages', :action => 'processingpage'
   map.vtkprojects'/VTK-Projects', :controller => 'pages', :action => 'vtkprojects'
   map.unitydevelopment'/unity-development', :controller => 'pages', :action => 'unitydevelopment'
   map.earthquakeinfo'VTK-projects/earthquake-visualization-tool', :controller => 'pages', :action => 'earthquakeinfo'
@@ -26,6 +26,8 @@ ActionController::Routing::Routes.draw do |map|
   map.tornadovisdata'VTK-projects/tornado-visualization-data', :controller => 'pages', :action => 'tornadovisdata'
   map.ctavisinfo'VTK-projects/cta-visualization-tool', :controller => 'pages', :action => 'ctavisinfo'
   map.ctavisdata'VTK-projects/cta-visualization-data', :controller => 'pages', :action => 'ctavisdata'
+  map.spacebarrage'Unity-Projects/Space-Barrage', :controller => 'pages', :action => 'spacebarrage'
+  map.sewerblob'Unity-Projects/Sewer-Blob', :controller => 'pages', :action => 'sewerblob'
 
 
 
