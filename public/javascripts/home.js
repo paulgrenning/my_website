@@ -9,94 +9,52 @@ $(document).ready(function() {
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
   ProjectsCarousel.currentOffset = -870;
-  //firstSlide();
+  ProjectsCarousel.currentIndex = 1;
   ProjectsCarousel.scrollInterval = setInterval(slideRight, 3500);
+  setImageDescription();
   function slideRight() {
     if(ProjectsCarousel.isAnimating == false) {
       ProjectsCarousel.isAnimating = true;  
       ProjectsCarousel.currentOffset -= 870;
       var carousel = $("#carousel-images");
+      ProjectsCarousel.currentIndex++;
       if(ProjectsCarousel.currentOffset == -8700){
+          ProjectsCarousel.currentIndex = 2;
           carousel.css({left: 0});  
           ProjectsCarousel.currentOffset = -870;
       }
+      var title = carousel.children("a:nth-child("+ProjectsCarousel.currentIndex+")").children("img").first().attr("title")
+      var description = carousel.children("a:nth-child("+ProjectsCarousel.currentIndex+")").children("img").first().attr("alt")
+      $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
       carousel.animate({left: ProjectsCarousel.currentOffset, queue: true}, function(){
         ProjectsCarousel.isAnimating = false;  
       });
     }
-    /*if(ProjectsCarousel.isAnimating == false) {
-      ProjectsCarousel.isAnimating = true;
-      var carousel = $("#carousel-images");
-      carousel.animate({left: '-=870', queue: true});
-      var title = carousel.children("a:nth-child(3)").children("img").first().attr("title")
-      var description = carousel.children("a:nth-child(3)").children("img").first().attr("alt")
-      $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
-      carousel.children("a").first().animate({queue: true}, function() { 
-        $(this).remove();
-        $(this).appendTo(carousel);
-        if(navigator.appName != 'Microsoft Internet Explorer'){
-          $(carousel).css({left: "-870"});
-        }
-        $(this).animate({queue: true}, function() {
-          ProjectsCarousel.isAnimating = false;
-        });
-      });
-    }
-    */
   }
   function slideLeft() {
     if(ProjectsCarousel.isAnimating == false) {
       ProjectsCarousel.isAnimating = true;  
       ProjectsCarousel.currentOffset += 870;
       var carousel = $("#carousel-images");
+      ProjectsCarousel.currentIndex--;
       if(ProjectsCarousel.currentOffset == 0){
+          ProjectsCarousel.currentIndex = 10;
           carousel.css({left: -8700});  
           ProjectsCarousel.currentOffset = -7830; 
       }
+      var title = carousel.children("a:nth-child("+ProjectsCarousel.currentIndex+")").children("img").first().attr("title")
+      var description = carousel.children("a:nth-child("+ProjectsCarousel.currentIndex+")").children("img").first().attr("alt")
+      $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
       carousel.animate({left: ProjectsCarousel.currentOffset, queue: true}, function(){
         ProjectsCarousel.isAnimating = false;  
       });
     }
-    /*if(ProjectsCarousel.isAnimating == false) {
-      ProjectsCarousel.isAnimating = true;
-      var carousel = $("#carousel-images");
-      carousel.animate({left: '+=870', queue: true});
-      var title = carousel.children("a").first().children("img").first().attr("title")
-      var description = carousel.children("a").first().children("img").first().attr("alt")
-      $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
-      carousel.children("a").last().animate({queue: true}, function() { 
-        $(this).remove();
-        $(this).prependTo(carousel);
-        if(navigator.appName != 'Microsoft Internet Explorer'){
-          $(carousel).css({left: "-870"}) 
-        }
-        $(this).animate({queue: true}, function() {
-          ProjectsCarousel.isAnimating = false;
-        });
-      });
-    }
-    */
   }
-  function firstSlide(firstTime) {
-      if(ProjectsCarousel.isAnimating == false) {
-        ProjectsCarousel.isAnimating = true;
-        var carousel = $("#carousel-images");
-        carousel.animate({left: '+=870', queue: true}, 10);
-        var title = carousel.children("a").first().children("img").first().attr("title")
-        var description = carousel.children("a").first().children("img").first().attr("alt")
-        $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
-        carousel.children("a").last().animate({queue: true}, function() { 
-          $(this).remove();
-          $(this).prependTo(carousel);
-          $(carousel).css({left: "-870", queue: true}, 10) 
-          $(this).animate({queue: true}, 10, function() {
-            ProjectsCarousel.isAnimating = false;
-            if(firstTime == true){
-              firstSlide(false);
-            }
-          });
-        });
-      }
+  function setImageDescription() {
+      var carousel = $("#carousel-images");
+      var title = carousel.children("a:nth-child(2)").children("img").first().attr("title")
+      var description = carousel.children("a:nth-child(2)").children("img").first().attr("alt")
+      $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
   }
   $("#carousel-images").mouseenter( function (){
         $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "0"});
