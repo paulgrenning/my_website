@@ -33,7 +33,7 @@ $(document).ready(function() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
         var carousel = $("#carousel-images");
-        carousel.animate({left: '+=870', queue: true}, 300);
+        carousel.animate({left: '+=870', queue: true});
         var title = carousel.children("a").first().children("img").first().attr("title")
         var description = carousel.children("a").first().children("img").first().attr("alt")
         $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
@@ -58,7 +58,7 @@ $(document).ready(function() {
         carousel.children("a").last().animate({queue: true}, function() { 
           $(this).remove();
           $(this).prependTo(carousel);
-          $(carousel).css({left: "-870"}) 
+          $(carousel).css({left: "-870", queue: true}, 10) 
           $(this).animate({queue: true}, 10, function() {
             ProjectsCarousel.isAnimating = false;
             if(firstTime == true){
@@ -68,25 +68,36 @@ $(document).ready(function() {
         });
       }
   }
-  $("#carousel-images").mouseover( function (){
-        $("#imageDescriptionHolder").stop(true, true).animate({"bottom": "0"});
+  $("#carousel-images").mouseenter( function (){
+        $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "0"});
+        $("#left-arrow").stop(true, false).animate({"margin-left": 0});
+        $("#right-arrow").stop(true, false).animate({"margin-left": 790});
   });
   $("#carousel-images").mouseout( function (){
-        $("#imageDescriptionHolder").stop(true, true).animate({"bottom": "-80"});
+        $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "-80"});
+        $("#left-arrow").stop(true, false).animate({"margin-left": -80});
+        $("#right-arrow").stop(true, false).animate({"margin-left": 870});
   });
 
-  $("#portfolio").live('mouseover',
+  $(".arrowHolder").mouseenter(function (){
+        $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "0"});
+        $("#left-arrow").stop(true, false).animate({"margin-left": 0});
+        $("#right-arrow").stop(true, false).animate({"margin-left": 790});
+  });
+  $(".arrowHolder").mouseout(function (){
+        $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "-80"});
+        $("#left-arrow").stop(true, false).animate({"margin-left": -80});
+        $("#right-arrow").stop(true, false).animate({"margin-left": 870});
+  });
+
+  $("#portfolio").mouseover(
     function() {
         ProjectsCarousel.isScrollingSet = false;
         ProjectsCarousel.isAnimating = false;
         clearInterval(ProjectsCarousel.scrollInterval);
-        $("#left-arrow").show();
-        $("#right-arrow").show();
-      })
-  .live('mouseout',
+    });
+  $("#portfolio").mouseout(
     function() {
-        $("#left-arrow").hide();
-        $("#right-arrow").hide();
         if(ProjectsCarousel.isScrollingSet == false) {
           if(ProjectsCarousel.leftClicked == true) {
             ProjectsCarousel.scrollInterval = setInterval(slideLeft, 3500);
@@ -95,18 +106,18 @@ $(document).ready(function() {
           }
           ProjectsCarousel.isScrollingSet = true;
         }
-      }
-      );
+    }
+  );
   $("#left-arrow").mousedown( 
     function() {
       clearInterval(ProjectsCarousel.scrollInterval);
       ProjectsCarousel.leftClicked = true;
       slideLeft();
-      $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/leftArrowClicked.png");
+//      $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/leftArrowClicked.png");
     });
     $("#left-arrow").mouseup(
       function() {
-        $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/leftArrow.png");
+ //       $(this).attr("src", "http://renaissancesoftware.net/paulgrenning/leftArrow.png");
       });
   $("#right-arrow").mousedown( 
     function() {

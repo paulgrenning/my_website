@@ -1,12 +1,15 @@
 <div class='page-info span-24'>
   <div  id="portfolio" class="span-24">
     <div class="span-23 prepend-1">
-      <h2>Portfolio</h2>
-    </div>
-    <div class="arrowHolder imageInline">
-      <%= image_tag("leftArrow.png", :id => "left-arrow") %>
+      <h2 class="span-3">Portfolio</h2><p class="span-19 shortPhraseAfterHeader">- Check out some of my past projects, work, and free time.</p>
     </div>
     <div id="carousel" class="imageInline">
+    <div class="arrowHolder" id="left-arrow">
+      <%= image_tag("http://renaissancesoftware.net/paulgrenning/prevArrow.png") %>
+    </div>
+    <div id="right-arrow" class="arrowHolder">
+      <%= image_tag("http://renaissancesoftware.net/paulgrenning/nextArrow.png") %>
+    </div>
       <div id="carousel-images">
         <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/CTAMainPage.jpg", :class => "carousel-image", :title => "Crazy Train", :alt => "Visualization project showing the CTA Blue Line from Forest Park to UIC Halsted. Data was collected using iPhones and Android Phones."), vtkprojects_path%>
         <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/SpaceBarrage2MainPage.jpg", :class => "carousel-image", :title => "Space Barrage", :alt => "My second Unity3d project. Inspiration came from Asteroids. It supports 3 players and has campaign and survival mode to play through."), spacebarrage_path %>
@@ -20,14 +23,17 @@
       </div>
       <div id="imageDescriptionHolder"></div>
     </div>
-    <div class="arrowHolder imageInline">
-      <%= image_tag("rightArrow.png", :id => "right-arrow") %>
-    </div>
   </div>
   <div style="clear: both;"></div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
   <div class="prepend-1 span-22 append-1 last">
-    <h2>About</h2> 
-    <p>I am currently going to school at UIC to obtain my master's degree. I enjoy just about anything that has to do with computers, whether that be playing video games, 
+    <div class="span-22">
+      <h2 class="span-3">Myself</h2><p class="span-19 last shortPhraseAfterHeader">- A little about me.</p>
+    </div>
+    <p>I am currently going to school at UIC to obtain my master's degree. I live in Chicago. I enjoy just about anything that has to do with computers, whether that be playing video games, 
     creating video games, programming, or assembling my own custom rigs.</p>
+    <p>Currently, I am very much interested in game development, especially with Unity3d.</p>
   </div>
 </div>

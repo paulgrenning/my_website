@@ -12,7 +12,7 @@ $(document).ready(function() {
   }
 
   $(".header-navigation-button").hover(function() {
-    $(this).stop().animate({top: 89});
+    $(this).stop().animate({top: 66});
   });
 
   $(".header-navigation-button").mouseout(function() {

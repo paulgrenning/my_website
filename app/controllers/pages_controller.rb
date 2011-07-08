@@ -102,10 +102,10 @@ class PagesController < ApplicationController
 
   def spacebarrage
     @page_header = { :name => "Space Barrage", :link => root_path}
+  end
  
   def sewerblob
     @page_header = { :name => "Sewer Blob", :link => root_path}
   end
- end
 
 end
