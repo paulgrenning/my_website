@@ -22,6 +22,10 @@ a:visited {
   margin-right: 25px;
 }
 
+.vtkProjectArea {
+  overflow: hidden;
+}
+
 h1 {
   font: normal normal normal 2.8em/normal Georgia, Times, serif;
   /*filter: Shadow(Color=#424242,   
