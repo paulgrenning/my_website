@@ -1,5 +1,5 @@
 <div class='page-info span-24'>
-  <div class="span-22 append-1 prepend-1" id="Urchin-Page">
+  <div normalHeight="381" class="collapsableArea span-22 append-1 prepend-1" id="Urchin-Page">
     <h2>About The Game</h2>
     <div class="span-11">
       <p>
@@ -50,7 +50,7 @@
     <%= image_tag("horizontal-divider.png") %>
     <p></p>
   </div>
-  <div class="span-22 append-1 prepend-1">
+  <div normalHeight="339" class="collapsableArea span-22 append-1 prepend-1">
     <h2>Gameplay Videos</h2>
     <div class="span-7">
         <%= link_to image_tag("physical-touch.jpg", :class => 'video', :id => "video_1"),
@@ -81,84 +81,86 @@
     <%= image_tag("horizontal-divider.png") %>
     <p></p>
   </div>
-  <div class="span-22 append-1 prepend-1 last">
-    <h2>Image Gallery</h2>
-    <p>
-      The images in the gallery were either drawn by Dark Tide
-      Software's artist, Michael Davis, or they are actual screen shots
-      from the game. There are two views, polaroid view or poster view,
-      click the appropriate icon below to switch between views.  
-    </p>
-    <p>
-      The polaroids can be dragged around, clicked, or shuffled up by clicking
-      on the polaroid icon.
-      The posters can be clicked and also have mouse over descriptions.
-    <div id="view-selection" class="span-22 append-1 prepend-1">
-      <div class="span-2 prepend-4">
-        <p></p>
-        <%= image_tag("portrait-button.png", :id => "portrait-view") %>
-      </div>
-      <div class="span-7"><p></p></div>
-      <div class="span-3">
-        <p></p>
-        <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
+  <div normalHeight="725" class="span-24 collapsableArea">
+    <div class="span-22 append-1 prepend-1 last">
+      <h2>Image Gallery</h2>
+      <p>
+        The images in the gallery were either drawn by Dark Tide
+        Software's artist, Michael Davis, or they are actual screen shots
+        from the game. There are two views, polaroid view or poster view,
+        click the appropriate icon below to switch between views.  
+      </p>
+      <p>
+        The polaroids can be dragged around, clicked, or shuffled up by clicking
+        on the polaroid icon.
+        The posters can be clicked and also have mouse over descriptions.
+      <div id="view-selection" class="span-22 append-1 prepend-1">
+        <div class="span-2 prepend-4">
+          <p></p>
+          <%= image_tag("portrait-button.png", :id => "portrait-view") %>
+        </div>
+        <div class="span-7"><p></p></div>
+        <div class="span-3">
+          <p></p>
+          <%= image_tag("polaroid-button.png", :id => "polaroid-view") %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="span-24" id="above-gallery">
-    <%= image_tag("horizontal-divider.png") %>
-  </div>
-  <div id="polaroid_gallery" class="span-24">
-    <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
-    <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
-    <p id="mouseover-text"></p>
-    <%= image_tag("transparentLine.png") %>
-    <% URCHIN_IMAGES_TO_SHOW.each_with_index do |image, index| %>
-      <%= link_to image_tag("urchins/"+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
-        "images/urchins/"+image[:name], :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "urchin-pop-out-"+index.to_s, :rel => "prettyPhoto[polaroids]"%>
-      <%= image_tag("urchins/"+image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
-    <% end %>
+    <div class="span-24" id="above-gallery">
+      <%= image_tag("horizontal-divider.png") %>
+    </div>
+    <div id="polaroid_gallery" class="span-24">
+      <%= image_tag("top-rounded.png", :id => "mouseover-top") %>
+      <%= image_tag("bottom-rounded.png", :id => "mouseover-bottom") %>
+      <p id="mouseover-text"></p>
+      <%= image_tag("transparentLine.png") %>
+      <% URCHIN_IMAGES_TO_SHOW.each_with_index do |image, index| %>
+        <%= link_to image_tag("urchins/"+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'the_polaroids', :id => "polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+          "images/urchins/"+image[:name], :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "urchin-pop-out-"+index.to_s, :rel => "prettyPhoto[polaroids]"%>
+        <%= image_tag("urchins/"+image[:name], :class => "portrait", :id => "portrait_"+index.to_s, :alt => image[:description]) %>
+      <% end %>
+    </div>
   </div>
   <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
   </div>
-  <h2 class="prepend-1 span-23">Game Engine</h2>
-  <div class="span-10 append-1 prepend-1">
-      <p>
-        The game was built using Processing, an open source langauage for developing animations, images, and interactions.
-        Since the game is in 2D, the game objects are all sprites. The animation for each sprite is done by quickly switching
-        through different images. Depending on the importance of the sprite, the animation may have 6 separate images up to 24 separate images.
-        The animation class was a custom built class allowing animations to pause on specified frames, how fast frames should switch, and switching
-        between different sets of images. Michael Davis, the artist drew over 600 images for this 3 minute game.  
-      </p>
-      <p>
-        The game has a number of special effects which include custom physics and particle emitters created by Paul Grenning and Mike Salata.
-        The physics engine is threaded off from the main
-        game loop and is capable of being split into numerous threads if there are to many game objects checking for collisions. The physics engine
-        uses basic billiard physics and elliptical physics. Additional physics components included in each sprite may include vectors for buoyancy,
-        gravity, drag and force. The particle emitters are very diverse, they allow you to choose the number of particles, initial velocity, gravity,
-        drag, duration, fade time, and max distance. If desired, a special derivation of the particle emitter allows for animations and their duration
-        and speed.
-      </p>
+  <div normalHeight="500" class="collapsableArea span-24">
+    <h2 class="prepend-1 span-23">Game Engine</h2>
+    <div class="span-10 append-1 prepend-1">
+        <p>
+          The game was built using Processing, an open source langauage for developing animations, images, and interactions.
+          Since the game is in 2D, the game objects are all sprites. The animation for each sprite is done by quickly switching
+          through different images. Depending on the importance of the sprite, the animation may have 6 separate images up to 24 separate images.
+          The animation class was a custom built class allowing animations to pause on specified frames, how fast frames should switch, and switching
+          between different sets of images. Michael Davis, the artist drew over 600 images for this 3 minute game.  
+        </p>
+        <p>
+          The game has a number of special effects which include custom physics and particle emitters created by Paul Grenning and Mike Salata.
+          The physics engine is threaded off from the main
+          game loop and is capable of being split into numerous threads if there are to many game objects checking for collisions. The physics engine
+          uses basic billiard physics and elliptical physics. Additional physics components included in each sprite may include vectors for buoyancy,
+          gravity, drag and force. The particle emitters are very diverse, they allow you to choose the number of particles, initial velocity, gravity,
+          drag, duration, fade time, and max distance. If desired, a special derivation of the particle emitter allows for animations and their duration
+          and speed.
+        </p>
+      </div>
+      <div class="span-11 last" >
+        <p>
+          On top of all of the visual effects, the Dark Tide Team spent a tremendous amount of time on the sound effects and music. Keaton Robinson, a programmer
+          with a background in music wrote the introduction and gameplay music. All of the soundeffects were foleyed or created with our voices with the help
+          of a few extra voice actors. This excludes water splashes since microphones were destroyed trying to create those sound effects. The game contains a 
+          sound manager due to the extensive amount of soundeffects capable of playing at one time. This makes sure sounds fade out, don't play if other sounds
+          are already playing and get cut out if a higher priority sound is to be played. In total, the Dark Tide team created over 200 some sound effects for 
+          this 3 minute game.
+        </p>
+        <h2>Game Rules</h2>
+        <p>
+          1. Two teams, red versus yellow. Preferred team size 1-2.<br />
+          2. Urchins must attach to ships and sink them to obtain gold.<br />
+          3. No penalty for messing with opponents urchins.<br />
+          4. Knock enemy urchins off boats to take the boat over.<br /> 
+          5. The team with the most gold at the end is the victor.<br />
+        </p>
+      </div>
     </div>
-    <div class="span-11 last" >
-      <p>
-        On top of all of the visual effects, the Dark Tide Team spent a tremendous amount of time on the sound effects and music. Keaton Robinson, a programmer
-        with a background in music wrote the introduction and gameplay music. All of the soundeffects were foleyed or created with our voices with the help
-        of a few extra voice actors. This excludes water splashes since microphones were destroyed trying to create those sound effects. The game contains a 
-        sound manager due to the extensive amount of soundeffects capable of playing at one time. This makes sure sounds fade out, don't play if other sounds
-        are already playing and get cut out if a higher priority sound is to be played. In total, the Dark Tide team created over 200 some sound effects for 
-        this 3 minute game.
-      </p>
-      <h2>Game Rules</h2>
-      <p>
-        1. Two teams, red versus yellow. Preferred team size 1-2.<br />
-        2. Urchins must attach to ships and sink them to obtain gold.<br />
-        3. No penalty for messing with opponents urchins.<br />
-        4. Knock enemy urchins off boats to take the boat over.<br /> 
-        5. The team with the most gold at the end is the victor.<br />
-      </p>
-    </div>
-  <!--  http://www.youtube.com/watch?v=GgoHnb_SzRk
- http://www.youtube.com/watch?v=Ys4L3LpYapc -->
 </div>

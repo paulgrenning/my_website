@@ -56,7 +56,8 @@ $(document).ready(function() {
   });
 
   $(".the_polaroids").draggable({
-    containment: [$("#main-content").position().left, $("#main-content").position().top+1120, $("#main-content").position().left + 800, $("#main-content").position().top + 1475],
+    //containment: [$("#main-content").position().left, $("#main-content").position().top+1120, $("#main-content").position().left + 800, $("#main-content").position().top + 1475],
+    containment: $("#polaroid_gallery"),
     start: function(e,ui){
       urchinMaxZ++;
       $(this).css({zIndex: urchinMaxZ});

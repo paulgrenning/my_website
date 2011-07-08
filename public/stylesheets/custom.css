@@ -21,7 +21,8 @@ a:visited {
   margin-right: 25px;
 }
 
-.vtkProjectArea {
+.collapsableArea {
+  height: 35px;
   overflow: hidden;
 }
 
@@ -506,11 +507,9 @@ body {
 }
 
 #portrait-view {
-  position: absolute;
 }
 
 #polaroid-view {
-  position: absolute;
 }
 
 #mouseover-top {
