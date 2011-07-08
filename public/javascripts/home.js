@@ -5,51 +5,77 @@ var ProjectsCarousel = {};
 
 
 $(document).ready(function() {
-  ProjectsCarousel.originalThumb;
   ProjectsCarousel.isAnimating = false;
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
-  firstSlide();
+  ProjectsCarousel.currentOffset = -870;
+  //firstSlide();
   ProjectsCarousel.scrollInterval = setInterval(slideRight, 3500);
   function slideRight() {
-      if(ProjectsCarousel.isAnimating == false) {
-        ProjectsCarousel.isAnimating = true;
-        var carousel = $("#carousel-images");
-        carousel.animate({left: '-=870', queue: true});
-        var title = carousel.children("a:nth-child(3)").children("img").first().attr("title")
-        var description = carousel.children("a:nth-child(3)").children("img").first().attr("alt")
-        $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
-        carousel.children("a").first().animate({queue: true}, function() { 
-          $(this).remove();
-          $(this).appendTo(carousel);
-          if(navigator.appName != 'Microsoft Internet Explorer'){
-            $(carousel).css({left: "-870"});
-          }
-          $(this).animate({queue: true}, function() {
-            ProjectsCarousel.isAnimating = false;
-          });
-        });
+    if(ProjectsCarousel.isAnimating == false) {
+      ProjectsCarousel.isAnimating = true;  
+      ProjectsCarousel.currentOffset -= 870;
+      var carousel = $("#carousel-images");
+      if(ProjectsCarousel.currentOffset == -8700){
+          carousel.css({left: 0});  
+          ProjectsCarousel.currentOffset = -870;
       }
+      carousel.animate({left: ProjectsCarousel.currentOffset, queue: true}, function(){
+        ProjectsCarousel.isAnimating = false;  
+      });
+    }
+    /*if(ProjectsCarousel.isAnimating == false) {
+      ProjectsCarousel.isAnimating = true;
+      var carousel = $("#carousel-images");
+      carousel.animate({left: '-=870', queue: true});
+      var title = carousel.children("a:nth-child(3)").children("img").first().attr("title")
+      var description = carousel.children("a:nth-child(3)").children("img").first().attr("alt")
+      $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
+      carousel.children("a").first().animate({queue: true}, function() { 
+        $(this).remove();
+        $(this).appendTo(carousel);
+        if(navigator.appName != 'Microsoft Internet Explorer'){
+          $(carousel).css({left: "-870"});
+        }
+        $(this).animate({queue: true}, function() {
+          ProjectsCarousel.isAnimating = false;
+        });
+      });
+    }
+    */
   }
   function slideLeft() {
-      if(ProjectsCarousel.isAnimating == false) {
-        ProjectsCarousel.isAnimating = true;
-        var carousel = $("#carousel-images");
-        carousel.animate({left: '+=870', queue: true});
-        var title = carousel.children("a").first().children("img").first().attr("title")
-        var description = carousel.children("a").first().children("img").first().attr("alt")
-        $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
-        carousel.children("a").last().animate({queue: true}, function() { 
-          $(this).remove();
-          $(this).prependTo(carousel);
-          if(navigator.appName != 'Microsoft Internet Explorer'){
-            $(carousel).css({left: "-870"}) 
-          }
-          $(this).animate({queue: true}, function() {
-            ProjectsCarousel.isAnimating = false;
-          });
-        });
+    if(ProjectsCarousel.isAnimating == false) {
+      ProjectsCarousel.isAnimating = true;  
+      ProjectsCarousel.currentOffset += 870;
+      var carousel = $("#carousel-images");
+      if(ProjectsCarousel.currentOffset == 0){
+          carousel.css({left: -8700});  
+          ProjectsCarousel.currentOffset = -7830; 
       }
+      carousel.animate({left: ProjectsCarousel.currentOffset, queue: true}, function(){
+        ProjectsCarousel.isAnimating = false;  
+      });
+    }
+    /*if(ProjectsCarousel.isAnimating == false) {
+      ProjectsCarousel.isAnimating = true;
+      var carousel = $("#carousel-images");
+      carousel.animate({left: '+=870', queue: true});
+      var title = carousel.children("a").first().children("img").first().attr("title")
+      var description = carousel.children("a").first().children("img").first().attr("alt")
+      $("#imageDescriptionHolder").html("<h3>"+title+"</h3><p>"+description+"</p>");
+      carousel.children("a").last().animate({queue: true}, function() { 
+        $(this).remove();
+        $(this).prependTo(carousel);
+        if(navigator.appName != 'Microsoft Internet Explorer'){
+          $(carousel).css({left: "-870"}) 
+        }
+        $(this).animate({queue: true}, function() {
+          ProjectsCarousel.isAnimating = false;
+        });
+      });
+    }
+    */
   }
   function firstSlide(firstTime) {
       if(ProjectsCarousel.isAnimating == false) {
