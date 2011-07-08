@@ -10,7 +10,7 @@ $(document).ready(function() {
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
   firstSlide();
-  ProjectsCarousel.scrollInterval = setInterval(slideLeft, 3500);
+  ProjectsCarousel.scrollInterval = setInterval(slideRight, 3500);
   function slideRight() {
       if(ProjectsCarousel.isAnimating == false) {
         ProjectsCarousel.isAnimating = true;
