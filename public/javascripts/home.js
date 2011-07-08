@@ -22,7 +22,9 @@ $(document).ready(function() {
         carousel.children("a").first().animate({queue: true}, function() { 
           $(this).remove();
           $(this).appendTo(carousel);
-          $(carousel).css({left: "-870"});
+          if(navigator.appName != 'Microsoft Internet Explorer'){
+            $(carousel).css({left: "-870"});
+          }
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
@@ -40,7 +42,9 @@ $(document).ready(function() {
         carousel.children("a").last().animate({queue: true}, function() { 
           $(this).remove();
           $(this).prependTo(carousel);
-          $(carousel).css({left: "-870"}) 
+          if(navigator.appName != 'Microsoft Internet Explorer'){
+            $(carousel).css({left: "-870"}) 
+          }
           $(this).animate({queue: true}, function() {
             ProjectsCarousel.isAnimating = false;
           });
