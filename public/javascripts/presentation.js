@@ -2,15 +2,15 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-var ProjectsCarousel = {};
+var PresentationSlider = {};
 var numberOfSlides;
 var currentSlideNumber;
 
 $(document).ready(function() {
-  ProjectsCarousel.originalThumb;
-  ProjectsCarousel.isAnimating = false;
-  ProjectsCarousel.isScrollingSet = true;
-  ProjectsCarousel.leftClicked = true;
+  PresentationSlider.originalThumb;
+  PresentationSlider.isAnimating = false;
+  PresentationSlider.isScrollingSet = true;
+  PresentationSlider.leftClicked = true;
   numberOfSlides = $(".presentation").attr("value");
   currentSlideNumber = 1; 
   for(i = 2; i <= numberOfSlides; i++){
@@ -18,8 +18,8 @@ $(document).ready(function() {
     $(".content"+(i)).animate({height: '310'});;  
   }
   function slideRight() {
-    if(ProjectsCarousel.isAnimating == false) {
-      ProjectsCarousel.isAnimating = true;
+    if(PresentationSlider.isAnimating == false) {
+      PresentationSlider.isAnimating = true;
       currentSlideNumber--;
       var carousel = $(".presentation");
       $(".slide"+(currentSlideNumber)).animate({height: '568', top: '-=84'});;  
@@ -29,7 +29,7 @@ $(document).ready(function() {
       carousel.animate({left: '+=883', queue: true}, 700, function() {
         carousel.animate({left: '-=65', queue: true}, function(){
           carousel.animate({left: '+=10', queue: true}, function() { carousel.animate({queue: true}, function() {
-            ProjectsCarousel.isAnimating = false;
+            PresentationSlider.isAnimating = false;
           });
         });
       });
@@ -37,8 +37,8 @@ $(document).ready(function() {
   }
 }
   function slideLeft() {
-    if(ProjectsCarousel.isAnimating == false) {
-      ProjectsCarousel.isAnimating = true;
+    if(PresentationSlider.isAnimating == false) {
+      PresentationSlider.isAnimating = true;
       currentSlideNumber++;
       var carousel = $(".presentation");
       $(".slide"+(currentSlideNumber-1)).animate({height: '400', top: '+=84'});;  
@@ -48,7 +48,7 @@ $(document).ready(function() {
       carousel.animate({left: '-=883', queue: true}, 700, function() {
         carousel.animate({left: '+=65', queue: true}, function(){
           carousel.animate({left: '-=10', queue: true}, function() { carousel.animate({queue: true}, function() {
-            ProjectsCarousel.isAnimating = false;
+            PresentationSlider.isAnimating = false;
           });
         });
       });
@@ -57,14 +57,14 @@ $(document).ready(function() {
     }
 
   function easeRight() {
-      if(ProjectsCarousel.isAnimating == false) {
-        ProjectsCarousel.isAnimating = true;
+      if(PresentationSlider.isAnimating == false) {
+        PresentationSlider.isAnimating = true;
         var carousel = $(".presentation");
         carousel.animate({left: '+=83', queue: true}, 300, function() {
           carousel.animate({left: '-=98', queue: true}, 450, function(){
             carousel.animate({left: '+=15', queue: true}, 500, function() {
               carousel.animate({queue: true}, function() {
-                ProjectsCarousel.isAnimating = false;
+                PresentationSlider.isAnimating = false;
               });
             });
           });
@@ -73,14 +73,14 @@ $(document).ready(function() {
   }
 
   function easeLeft() {
-      if(ProjectsCarousel.isAnimating == false) {
-        ProjectsCarousel.isAnimating = true;
+      if(PresentationSlider.isAnimating == false) {
+        PresentationSlider.isAnimating = true;
         var carousel = $(".presentation");
         carousel.animate({left: '-=83', queue: true}, 300, function() {
           carousel.animate({left: '+=98', queue: true}, 450, function(){
             carousel.animate({left: '-=15', queue: true}, 500, function() {
               carousel.animate({queue: true}, function() {
-                ProjectsCarousel.isAnimating = false;
+                PresentationSlider.isAnimating = false;
               });
             });
           });
@@ -117,7 +117,7 @@ $(document).ready(function() {
         slider.animate({left: '+=65', queue: true}, function(){
           slider.animate({left: '-=10', queue: true}, function() {
             slider.animate({queue: true}, function() {
-            ProjectsCarousel.isAnimating = false;
+            PresentationSlider.isAnimating = false;
           });
         });
       });
@@ -132,8 +132,8 @@ $(document).ready(function() {
         intValue = parseInt(textBoxValue);
         if(intValue > 0 && intValue <= numberOfSlides){
           if(intValue != currentSlideNumber){
-            if(ProjectsCarousel.isAnimating == false) {
-              ProjectsCarousel.isAnimating = true;
+            if(PresentationSlider.isAnimating == false) {
+              PresentationSlider.isAnimating = true;
               transitionToSlide(intValue);
             }
           }
