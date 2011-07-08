@@ -1,15 +1,14 @@
 a {
-  /*color: #90ffad;*/
-  color: #fff;
+  color: #90ffad;
   text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
+  color: #90ffad;
 }
 
 a:visited {
-  color: #fff;
+  color: #90ffad;
 }
 
 .italicFont {
@@ -588,6 +587,10 @@ body {
 #header-navigation-list {
   float: right;
   position: relative;
+}
+
+#header-navigation-list a{
+  color: #fff;
 }
 
 #header-navigation-list li {
