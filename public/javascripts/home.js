@@ -59,22 +59,22 @@ $(document).ready(function() {
   $("#carousel-images").mouseenter( function (){
         $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "0"});
         $("#left-arrow").stop(true, false).animate({"margin-left": 0});
-        $("#right-arrow").stop(true, false).animate({"margin-left": 790});
+        $("#right-arrow").stop(true, false).animate({"margin-left": 830});
   });
   $("#carousel-images").mouseout( function (){
         $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "-80"});
-        $("#left-arrow").stop(true, false).animate({"margin-left": -80});
+        $("#left-arrow").stop(true, false).animate({"margin-left": -40});
         $("#right-arrow").stop(true, false).animate({"margin-left": 870});
   });
 
   $(".arrowHolder").mouseenter(function (){
         $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "0"});
         $("#left-arrow").stop(true, false).animate({"margin-left": 0});
-        $("#right-arrow").stop(true, false).animate({"margin-left": 790});
+        $("#right-arrow").stop(true, false).animate({"margin-left": 830});
   });
   $(".arrowHolder").mouseout(function (){
         $("#imageDescriptionHolder").stop(true, false).animate({"bottom": "-80"});
-        $("#left-arrow").stop(true, false).animate({"margin-left": -80});
+        $("#left-arrow").stop(true, false).animate({"margin-left": -40});
         $("#right-arrow").stop(true, false).animate({"margin-left": 870});
   });
 

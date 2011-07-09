@@ -280,11 +280,15 @@ body {
 .arrowHolder {
   position: absolute;
   z-index: 3;
-  margin-top: 200px;
+  margin-top: 160px;
 }
 
 #left-arrow{
-  margin-left: -80px;
+  margin-left: -60px;
+}
+
+.arrowHolder img{
+  height: 90px;
 }
 
 #right-arrow {
