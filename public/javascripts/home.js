@@ -9,7 +9,7 @@ $(document).ready(function() {
   ProjectsCarousel.isScrollingSet = true;
   ProjectsCarousel.leftClicked = true;
   ProjectsCarousel.currentOffset = -870;
-  ProjectsCarousel.currentIndex = 1;
+  ProjectsCarousel.currentIndex = 2;
   ProjectsCarousel.scrollInterval = setInterval(slideRight, 3500);
   setImageDescription();
   function slideRight() {
