@@ -1,6 +1,9 @@
 <div class='page-info span-24'>
   <div normalHeight="381" class="collapsableArea span-22 append-1 prepend-1" id="Urchin-Page">
-    <h2>About The Game</h2>
+    <div class="span-22">
+      <h2 class="span-20">About The Game</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow") %></div>
+    </div>
     <div class="span-11">
       <p>
         Rise O' The Urchins was developed by <%= link_to "Dark Tide Software", darktide_path %>
@@ -46,12 +49,14 @@
       </p>
     </div>
   </div>
-  <div class="span-24" id="above-gallery">
+  <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
-    <p></p>
   </div>
   <div normalHeight="339" class="collapsableArea span-22 append-1 prepend-1">
-    <h2>Gameplay Videos</h2>
+    <div class="span-22">
+      <h2 class="span-20">Gameplay Videos</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
     <div class="span-7">
         <%= link_to image_tag("physical-touch.jpg", :class => 'video', :id => "video_1"),
            'http://www.youtube.com/watch?v=Ys4L3LpYapc', :rel => "prettyPhoto[videos]"%>
@@ -77,13 +82,15 @@
            </p>
     </div>
   </div> 
-  <div class="span-24" id="above-gallery">
+  <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
-    <p></p>
   </div>
   <div normalHeight="725" class="span-24 collapsableArea">
     <div class="span-22 append-1 prepend-1 last">
-      <h2>Image Gallery</h2>
+      <h2 class="span-20">Image Gallery</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
+    <div class="span-22 append-1 prepend-1 last">
       <p>
         The images in the gallery were either drawn by Dark Tide
         Software's artist, Michael Davis, or they are actual screen shots
@@ -106,7 +113,7 @@
         </div>
       </div>
     </div>
-    <div class="span-24" id="above-gallery">
+    <div class="span-24" id="below-gallery">
       <%= image_tag("horizontal-divider.png") %>
     </div>
     <div id="polaroid_gallery" class="span-24">
@@ -125,7 +132,10 @@
     <%= image_tag("horizontal-divider.png") %>
   </div>
   <div normalHeight="500" class="collapsableArea span-24">
-    <h2 class="prepend-1 span-23">Game Engine</h2>
+    <div class="span-22 prepend-1 append-1">
+      <h2 class="span-20">Game Engine</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
     <div class="span-10 append-1 prepend-1">
         <p>
           The game was built using Processing, an open source langauage for developing animations, images, and interactions.

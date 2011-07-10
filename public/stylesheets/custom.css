@@ -277,6 +277,10 @@ body {
   margin-bottom: 20px;
 }
 
+.expandArrow{
+  height: 28px;
+}
+
 .arrowHolder {
   position: absolute;
   z-index: 3;

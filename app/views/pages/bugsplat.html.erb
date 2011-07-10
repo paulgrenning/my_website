@@ -1,7 +1,8 @@
 <div class='page-info span-24'>
   <div normalHeight="183" class="collapsableArea span-22 append-1 prepend-1" id="Bug-Page">
     <div class="span-22">
-      <h2>About The Game</h2>
+      <h2 class="span-20">About The Game</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow") %></div>
     </div>
     <div class="span-11">
       <p>
@@ -25,7 +26,8 @@
   </div>
   <div normalHeight="419" class="collapsableArea span-22 append-1 prepend-1">
     <div class="span-22">
-      <h2>Gameplay Videos</h2>
+      <h2 class="span-20">Gameplay Videos</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
     </div>
     <div class="span-11">
       <%= link_to image_tag("http://renaissancesoftware.net/paulgrenning/bugsplat/bugsplatvid1.jpg", :class => 'video', :id => "video_1"),
@@ -47,7 +49,8 @@
   </div>
   <div normalHeight="700" class="span-24 collapsableArea">
     <div class="span-22 prepend-1 append-1">
-      <h2>Image Gallery</h2>
+      <h2 class="span-20">Image Gallery</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
     </div>
     <div class="span-22 append-1 prepend-1 last">
       <p>
@@ -82,7 +85,10 @@
     <%= image_tag("horizontal-divider.png") %>
   </div>
   <div normalHeight="200" class="span-24 collapsableArea">
-    <h2 class="prepend-1 span-23">Game Details</h2>
+    <div class="span-24">
+      <h2 class="prepend-1 span-20">Game Details</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
     <div class="span-10 append-1 prepend-1">
       <p>
         Bug Splat is a very simple game when it comes to the engine. Being my first game I was unsure how well processing would handle complete animations
