@@ -3,14 +3,6 @@
 
 $(document).ready(function() {
 
-  /*$(".collapsableArea").mouseover(function() {
-    var wantedHeight = $(this).attr("normalHeight");
-    $(this).stop(true, false).animate({height: wantedHeight}, 600);
-  });
-  $(".collapsableArea").mouseout(function() {
-    $(this).stop(true, false).animate({height: 35}, 600);
-  });
-  */
   $(".expandArrow").click(function() {
     if($(this).attr("state") == "closed"){
       $(this).attr("state", "open");

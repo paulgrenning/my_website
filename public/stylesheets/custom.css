@@ -201,7 +201,6 @@ body {
   background-position-y: initial;
   background-origin: initial;
   background-clip: initial;
-  min-height: 700;
 }
 
 .code {
@@ -577,7 +576,7 @@ body {
 }
 
 #copyright {
-  margin-top: -40px;
+  margin-top: -30px;
 }
 
 #navigation-glass {
