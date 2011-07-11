@@ -558,6 +558,11 @@ body {
   z-index: 0;
 }
 
+.video:hover {
+  cursor:pointer;
+  cursor:hand
+}
+
 #darktide-logo {
   margin-left: -10px;
 }
