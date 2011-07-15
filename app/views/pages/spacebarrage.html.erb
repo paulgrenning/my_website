@@ -1,5 +1,53 @@
 <div class='page-info span-24'>
-  <div class="span-22 append-1 prepend-1">
-    <h2>Under Construction</h2>
+  <div normalHeight="165" class="collapsableArea span-22 append-1 prepend-1" id="Urchin-Page">
+    <div class="span-22">
+      <h2 class="span-20">About The Game</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
+    <div class="span-22">
+      This was the second Unity game I created. After familiarizing myself
+      with Unity and 3d modeling, this project was much more 
+      fun to create. The inspiration for this game came from the
+      original arcade game, "Asteroids" by Atari Inc. 
+      The game has a complete campaign or an endless survival mode.
+      <br/>
+      <br/>
+      My goal for this game was to make a 3d version of Asteroids with a few enhancements.
+      The most obvious enhancement was a graphics upgrade. All of the
+      art models and textures were created by myself using 3ds Max and Photoshop.
+      Other enhancements include weapon upgrades, the ability to shield yourself, 
+      different types of asteroids, a new type of alien ship, and multiplayer.
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div normalHeight="592" class="collapsableArea span-22 append-1 prepend-1" id="Urchin-Page">
+    <div class="span-22">
+      <h2 class="span-20">Gameplay Video</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
+    <div class="span-22">
+      <iframe width="870" height="542" src="http://www.youtube.com/embed/yaQts_dSWo8" hd="1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div normalHeight="1000" class="collapsableArea span-22 append-1 prepend-1" id="Urchin-Page">
+    <div class="span-22">
+      <h2 class="span-20">Image Gallery</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
+    <div id="polaroid_gallery" class="span-22">
+      <% SPACE_BARRAGE_IMAGES.each_with_index do |image, index| %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/'+image[:name].split('.').first+"Thumb"+"."+image[:name].split('.').last, :class => 'space_polaroids', :id => "space_polaroid_"+index.to_s, :description => image[:description], :alt => image[:title]),
+          'http://renaissancesoftware.net/paulgrenning/'+image[:name],  :backuptitle => image[:description], :title => image[:description], :class => "pop-out", :id => "pop-out-"+index.to_s, :rel => "prettyPhoto[space_polaroids]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/'+image[:name], :class => "space_portrait", :id => "space_portrait_"+index.to_s, :alt => image[:description]) %>
+      <% end %>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
   </div>
 </div>

@@ -416,6 +416,19 @@ body {
   -moz-transform: rotate(-9deg);
 }
 
+.space_polaroids {
+  width: 105px;
+  height: 105px;
+  border-bottom: 25px solid #eee;
+  border-left: 8px solid #eee;
+  border-top: 8px solid #eee;
+  border-right: 8px solid #eee;
+}
+
+.space_portrait {
+  display: none;
+}
+
 .bug_portrait {
   -webkit-transform: rotate(-9deg);
   -moz-transform: rotate(-9deg);
@@ -581,7 +594,7 @@ body {
 }
 
 #copyright {
-  margin-top: -30px;
+  margin-top: -10px;
 }
 
 #navigation-glass {
