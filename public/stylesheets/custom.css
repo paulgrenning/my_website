@@ -635,3 +635,14 @@ body {
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   color: #fff;
 }
+
+.flightsimThumbs
+{
+  width: 270px;
+  height: 150px;
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-top: 5px solid #fff;
+  border-bottom: 15px solid #fff;
+  margin-left: 5px;
+}

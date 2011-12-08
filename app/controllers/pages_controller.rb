@@ -108,4 +108,8 @@ class PagesController < ApplicationController
     @page_header = { :name => "Sewer Blob", :link => root_path}
   end
 
+  def flightsimulator
+    @page_header = { :name => "Virtual Reality Flight Simulator", :link => root_path}
+  end
+
 end

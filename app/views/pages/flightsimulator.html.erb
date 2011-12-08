@@ -1,0 +1,77 @@
+<div class='page-info span-24'>
+  <div class="span-22 prepend-1 append-1">
+    <h2 class="span-22">About</h2>
+    <p>My flight simulator was created using the Unity game engine. The objective was to create an immersive environment so the user felt like they were flying an actual aircraft.
+    In this projects case, the flight simulator was modeled after the P-51 Mustang, a commonly flown aircraft from WWII.
+    To create an immersive environemt, the project took advantage of the new 3D televisions. I made use of a camera interlacing script
+    to create my world in a 3d environment. Instead of using keyboard and mouse as input, the input for the flight simulator used tracked objects. Tracking was done 
+    using the Vicon tracking system at EVL. Objects that were tracked were your head so you always had the correct viewer center perspective, a throttle object
+    to control your speed, and a stick to control your pitch, roll, and yaw of the aircraft.
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1">
+    <h2 class="span-22">Project Difficulties</h2>
+    <p>The hardest part of this project was researching and implementing the physics of flight. My goal was to use the actual specifications of a P-51 Mustang
+    in my flight equations. Even after figuring out one step, it was still hard to tell
+    if the aircraft flight was correct. It seemed hard to tell until every last physics equation for flight was implemented for the it to look realistic. 
+    Much of my time included going over physics equations in my code and verifying that they were valid. Upsettingly enough, I still needed to tweak the 
+    parameters of flight to make it feel realistic. In the end not all of the real world accuracies are embedded in my code.  
+    </p>
+    <p>
+    Other problems included obtaining tracking data and mapping that to rotation of the stick. Since I wanted the user to actually move the stick and not just rotate
+    it to the correct position, I had to map the movement of one object to the rotation of a second.  
+    </p>
+    <p>
+    Once the physics and interaction were completed, I was able to work on the terrain and environment. I spent much time creating a massive environemnt for
+    a user to fly around in. If I had more time I would liked to have made it more diverse. 
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1">
+    <h2 class="span-22">Improvements</h2>
+    <p class="prepend-1 span-21">
+      <li>Use haptics devices for the stick and throttle to provide realistic feedback.</li>
+      <li>Create an artificailly intelligent aircraft to fly around the environment and give the user something to chase.</li>
+      <li>Design a larger more diverse environment.</li>
+      <li>Detail the aircraft internal instrumet panel to match that of a P-51</li>
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1">
+    <h2 class="span-22">Image Gallery</h2>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim1Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim1.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim1.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim2Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim2.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim2.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim3Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim3.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim3.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim4Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim4.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim4.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim5Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim5.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim5.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim6Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim6.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim6.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim7Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim7.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim7.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim8Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim8.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim8.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim9Thumb.jpg', :class => 'flightsimThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/FlightSim9.jpg',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/FlightSim9.jpg', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+  </div>
+</div>
