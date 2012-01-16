@@ -29,6 +29,7 @@ ActionController::Routing::Routes.draw do |map|
   map.spacebarrage'Unity-Projects/Space-Barrage', :controller => 'pages', :action => 'spacebarrage'
   map.sewerblob'Unity-Projects/Sewer-Blob', :controller => 'pages', :action => 'sewerblob'
   map.flightsimulator'Unity-Projects/Flight-Simulator', :controller => 'pages', :action => 'flightsimulator'
+  map.microwavedesign'Microwave-Designs', :controller => 'pages', :action => 'microwavedesign'
 
 
 

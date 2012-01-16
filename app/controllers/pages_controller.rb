@@ -112,4 +112,8 @@ class PagesController < ApplicationController
     @page_header = { :name => "Virtual Reality Flight Simulator", :link => root_path}
   end
 
+  def microwavedesign
+    @page_header = { :name => "Microwave Interface Design", :link => root_path}
+  end
+
 end

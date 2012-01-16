@@ -550,6 +550,11 @@ body {
   height: 300px;
 }
 
+.microwave-image{
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
 .video {
   border: 5px solid #fff;
   z-index: 0;
@@ -573,7 +578,15 @@ body {
   margin-top: 10px;
 }
 
+.above-gallery {
+  margin-top: 10px;
+}
+
 #below-gallery {
+  margin-bottom: 15px;
+}
+
+.below-gallery {
   margin-bottom: 15px;
 }
 
