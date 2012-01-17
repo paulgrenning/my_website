@@ -116,4 +116,8 @@ class PagesController < ApplicationController
     @page_header = { :name => "Microwave Interface Design", :link => root_path}
   end
 
+  def microwavegroupdesign
+    @page_header = { :name => "Microwave Design - Group 8", :link => root_path}
+  end
+
 end

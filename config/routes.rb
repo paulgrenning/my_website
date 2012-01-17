@@ -30,6 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   map.sewerblob'Unity-Projects/Sewer-Blob', :controller => 'pages', :action => 'sewerblob'
   map.flightsimulator'Unity-Projects/Flight-Simulator', :controller => 'pages', :action => 'flightsimulator'
   map.microwavedesign'Microwave-Designs', :controller => 'pages', :action => 'microwavedesign'
+  map.microwavegroupdesign'Microwave-Design-Group-8', :controller => 'pages', :action => 'microwavegroupdesign'
 
 
 
