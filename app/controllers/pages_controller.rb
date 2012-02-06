@@ -120,4 +120,9 @@ class PagesController < ApplicationController
     @page_header = { :name => "Microwave Design - Group 8", :link => root_path}
   end
 
+  def vending
+    @page_header = { :name => "Vending Machine Application", :link => root_path}
+  end
+
+
 end
