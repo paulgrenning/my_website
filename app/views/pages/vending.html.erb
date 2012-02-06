@@ -1,7 +1,15 @@
 <div class='page-info span-24'>
   <div class="span-22 append-1 prepend-1">
     <div class="span-22">
-      <h2 class="span-20">Vending Video</h2>
+      <h2 class="span-22">Vending Video</h2>
+      <p>If the video doesn't scale correctly, right click it and choose "Show All".</p>
+      <div style="width: 880px; height: 640px; margin-bottom: 40px; border: 1px sold #fff;">
+        <object scale="exactfit" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="880" height="640">
+        <PARAM name="scale" VALUE="exactfit">
+        <param name="movie" value="http://renaissancesoftware.net/paulgrenning/vendingImages/VendingVideo.swf" />
+        <embed src="http://renaissancesoftware.net/paulgrenning/vendingImages/VendingVideo.swf" quality="high" type="application/x-shockwave-flash" width="880" height="640" scale="exactfit" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+        </object>
+      </div>
     </div>
   </div>
   <div class="span-24" id="below-gallery">
@@ -58,5 +66,31 @@
   </div>
   <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 append-1 prepend-1" style="margin-bottom: 40px;">
+    <div class="span-22">
+      <h2 class="span-22">Image Gallery</h2>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/HomePageThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/vendingImages/HomePage.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/HomePage.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/preferencesPageThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/vendingImages/preferencesPage.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/preferencesPage.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/categoryPageThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/vendingImages/categoryPage.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/categoryPage.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/SnackSelectionThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/vendingImages/SnackSelection.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/SnackSelection.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/SpecifciItemPageThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/vendingImages/SpecifciItemPage.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/SpecifciItemPage.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/allergyNotificationsThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/vendingImages/allergyNotifications.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/allergyNotifications.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/confirmationPageThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/vendingImages/confirmationPage.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/vendingImages/confirmationPage.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
   </div>
 </div>
