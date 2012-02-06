@@ -649,6 +649,22 @@ body {
   color: #fff;
 }
 
+#vendVideo {
+  width: 864px;
+  height: 480px;
+}
+
+.vendingThumbs
+{
+  width: 260px;
+  height: 177px;
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-top: 5px solid #fff;
+  border-bottom: 15px solid #fff;
+  margin-left: 5px;
+}
+
 .flightsimThumbs
 {
   width: 270px;
