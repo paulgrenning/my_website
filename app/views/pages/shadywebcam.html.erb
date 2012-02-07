@@ -9,6 +9,21 @@
     <%= image_tag("horizontal-divider.png") %>
   </div>
   <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Source and Application</h2>
+    <div class="span-22">
+    <p>
+      The Mac OS X application can be downloaded <%= link_to "here.", "http://renaissancesoftware.net/paulgrenning/ShadyWebcam.app.zip"%> To run it double click on ShadyWebcam.app.
+      <br/>
+      The Source code for my application can be downloaded <%= link_to "here.", "http://renaissancesoftware.net/paulgrenning/WebCamProjectSource.zip"%>
+      <br/>
+      To compile from source you will also need my QT Graphics Library. It can be downloaded <%= link_to "here.", "http://renaissancesoftware.net/paulgrenning/GraphicsLib.zip"%>
+    </p>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
     <h2 class="span-22">Lite Brite Shader</h2>
     <div class="span-14">
       <p>The lite brite shader was the first one I worked on. It helped me learn the basics of the fragment
@@ -95,6 +110,51 @@
       <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/FunMirrorThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
         'http://renaissancesoftware.net/paulgrenning/ShaderProject/FunMirror.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
       <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/FunMirror.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Waving Flag</h2>
+    <div class="span-14">
+      <p>The waving flag effect was created inside the vertex shader. The main thing thing that allowed for this to work was dividing the single quad into lots of little quads or triangles. Then the vertices
+      z values were changed based on the magnitude of the vertex over time using a sin wave. After completing the flag effect I had to make it maximize correctly. Calls to glTranslate and glScale no longer worked so
+      I passed the scale and translation values to the vertex shader and did the calculations in there.
+      This affect also used the pass through geometry shader.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/WavesThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/Waves.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/Waves.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Water Ripples</h2>
+    <div class="span-14">
+      <p>The water rippling effect was done inside the fragment shader. It is very similar to the fun mirror effect which changes using a sin wave over time. Except the equation for the distortion is based on the distance from the mouse point. That way you can make the
+      ripple appear where ever you move the mouse. 
+      This affect also used the pass through geometry shader.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/rippleThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/ripple.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/ripple.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Geometry Triangle Shader</h2>
+    <div class="span-14">
+      <p>
+        The final shader was done solely in the geometry shader. The code from the CS525 site was adapted to fit my QT program. I had to split my quads into triangles since the geometry
+        shader does not accept GL_QUADS. After that I had to make sure it also passed through values that didn't need not be distorted. Finally I used the expanding triangle geometry shader. The main thing I changed
+        was the boom factor and the shrink factor. The boom factor was constant so it filled up the entire bottom right portion of the screen and maximized correctly. The shrink factor changed so it went inside out until
+        the edges touched. All in all simple yet very cool. The biggest problem was getting the opengl code correct.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/GeomThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/Geom.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/Geom.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
     </div>
   </div>
 </div>
