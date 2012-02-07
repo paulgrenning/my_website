@@ -124,5 +124,9 @@ class PagesController < ApplicationController
     @page_header = { :name => "Vending Machine Application", :link => root_path}
   end
 
+  def shadywebcam
+    @page_header = { :name => "Shady Webcam Application", :link => root_path}
+  end
+
 
 end
