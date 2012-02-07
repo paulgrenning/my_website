@@ -1,0 +1,101 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <div class="span-22" style="margin-bottom: 20px;">
+      <h2 class="span-22">Shady Webcam Video</h2>
+      <iframe width="880" height="660" src="http://www.youtube.com/embed/2RfN0mM7HxY" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Lite Brite Shader</h2>
+    <div class="span-14">
+      <p>The lite brite shader was the first one I worked on. It helped me learn the basics of the fragment
+      shader and how to access different pixel values across the texture. After locating the correct fragment to 
+      use as the current lites color, the next part was to make it into a circle instead of a square. This was not
+      too bad except when making every other line offset from the on above it. Once that was figured out the final
+      touch was to make the light radially shade outwards so it looked like it was dimmer at the edges.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/LiteBriteThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/LiteBrite.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/LiteBrite.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Horror Film Shader</h2>
+    <div class="span-14">
+      <p>The Horror Film Shader is a fragment shader. To do this shader I had to take into acount pixel locations relative to the center of the screen. That way they could be darkened based on how far away they
+      were from the center. They changed darkness using a sin wave over time so the dark blur would encroach and recede from the center. The distance didn't change very frame to make it look more realistic. After that,
+      a noise filter was placed over the entire screen and change every couple of frames as well. 
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/HorrorFilmThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/HorrorFilm.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/HorrorFilm.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Toon Shading</h2>
+    <div class="span-14">
+      <p>The Toon Shading was done in three steps. The first one was to blur the current pixel. Originally I used a gaussian blur and after realizing I needed a normalized blur across all the pixels instead of weighted to reduce
+      the high amount of noise from the camera. The blur could have been even better if multiple passes were made over it. After the even blur across the entire screen, a second and third blur were done to the pixel left
+      of the current and below the current. Then all the pixels were averaged to their respective toon coloring. If the current pixel was a different color then the left or bottom pixel that meant there was an edge so we
+      needed to make the current pixel black. That was how the blur and edges were created. Finally if the pixels were all the same we used to average color pixel.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/ToonShaderThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/ToonShader.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/ToonShader.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Lens Distortion</h2>
+    <div class="span-14">
+      <p>The lens distortion was created fo my own algorithm inside the fragment shader. Since all of the textures were known to be 800x600 pixels. I knew the center was 400, 300. Based on the pixels distance away from the center
+      we replaced its value with a pixel further away from the center. The second step was to implement chromatic abberation. It isn't so much as chromatic abberation as it is a slight shadow of the current
+      image. With more time it could have been ironed out to have deeper colors.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/LensThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/Lens.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/Lens.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Normal Mapping</h2>
+    <div class="span-14">
+      <p>The normal mapped shader uses the vertex and fragment shader. We need to calculate the eye direction to the vertex and the light direction to the vertex inside the vertex shader so once those values are passed to
+      the fragment shader it can calculate the normal at that position. When it does that, we use the webcam source image as the normal mapping and a base yellow color for the canvas. To have the image change over time,
+      we are sendin values from the opengl application about where the light position is, which changes over time.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/NormalMappingThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/NormalMapping.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/NormalMapping.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Mirror Distortion</h2>
+    <div class="span-14">
+      <p>The crazy mirror effect is done inside of the fragment shader. It is quite a simple shader, it is just tweaking the size of the pixel offsets to get a decent effect. The distorted image changes
+      over time using a sin wave. Other than that, the values are multiplied or divied by an arbitrary value I decided that made the shader look "cool".
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/FunMirrorThumb.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/ShaderProject/FunMirror.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/ShaderProject/FunMirror.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+</div>
+
