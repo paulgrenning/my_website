@@ -128,5 +128,9 @@ class PagesController < ApplicationController
     @page_header = { :name => "Shady Webcam Application", :link => root_path}
   end
 
+  def uiproject2
+    @page_header = { :name => "Mirror Appliaction", :link => root_path}
+  end
+
 
 end

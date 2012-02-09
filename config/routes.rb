@@ -33,6 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   map.microwavegroupdesign'Microwave-Design-Group-8', :controller => 'pages', :action => 'microwavegroupdesign'
   map.vending'Vending-Application', :controller => 'pages', :action => 'vending'
   map.shadywebcam'Shady-Webcam', :controller => 'pages', :action => 'shadywebcam'
+  map.uiproject2'Mirror-In-The-Bathroom', :controller => 'pages', :action => 'uiproject2'
 
 
 
