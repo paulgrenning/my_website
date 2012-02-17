@@ -129,7 +129,7 @@ class PagesController < ApplicationController
   end
 
   def uiproject2
-    @page_header = { :name => "Mirror Appliaction", :link => root_path}
+    @page_header = { :name => "Mirror Application", :link => root_path}
   end
 
 

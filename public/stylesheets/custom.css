@@ -26,6 +26,10 @@ a:visited {
   overflow: hidden;
 }
 
+.collapsableAreaStartOpen {
+  height: 100%;
+}
+
 h1 {
   font: normal normal normal 2.8em/normal Georgia, Times, serif;
   /*filter: Shadow(Color=#424242,   
