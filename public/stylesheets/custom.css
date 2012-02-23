@@ -281,7 +281,13 @@ body {
 }
 
 .expandArrow{
-  height: 22px;
+  height: 20px;
+  border: 2px solid #E0FFB8;
+  padding: 3px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+  background-color: #444;
 }
 
 .expandArrow:hover {
