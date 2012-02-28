@@ -252,7 +252,7 @@
   <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
   </div>
-  <div normalHeight="1560" class="collapsableArea span-22 append-1 prepend-1" id="Bug-Page">
+  <div normalHeight="2150" class="collapsableArea span-22 append-1 prepend-1" id="Bug-Page">
     <div class="span-22">
       <h2 class="span-20">Ron's Sketch Up</h2>
       <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
@@ -263,10 +263,10 @@
           <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/uip2/ron/thumbs/'+image[:thumb], :class => 'mirrorThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
             'http://renaissancesoftware.net/paulgrenning/uip2/ron/'+image[:big],  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
           <%= image_tag('http://renaissancesoftware.net/paulgrenning/uip2/ron/'+image[:big], :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+          <p><%= image[:description] %></p> 
         </div>
         <% if (index+1) % 3 == 0 %>
           <div style="clear:both"></div>
-          <p></p> 
         <% end %>
       <% end %>
     </div>
