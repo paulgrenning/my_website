@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   map.vending'Vending-Application', :controller => 'pages', :action => 'vending'
   map.shadywebcam'Shady-Webcam', :controller => 'pages', :action => 'shadywebcam'
   map.uiproject2'Mirror-Project', :controller => 'pages', :action => 'uiproject2'
+  map.aliensattackdc'Aliens-Attack-DC', :controller => 'pages', :action => 'aliensattackdc'
 
 
 

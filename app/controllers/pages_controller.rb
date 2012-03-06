@@ -132,5 +132,9 @@ class PagesController < ApplicationController
     @page_header = { :name => "Mirror Application", :link => root_path}
   end
 
+  def aliensattackdc
+    @page_header = { :name => "Aliens Attack DC OpenCL Project", :link => root_path}
+  end
+
 
 end

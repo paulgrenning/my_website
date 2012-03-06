@@ -1,0 +1,166 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <div class="span-22" style="margin-bottom: 20px;">
+      <h2 class="span-22">Alien Attack Simulation Video</h2>
+      <iframe width="880" height="660" src="http://www.youtube.com/embed/OG7r88qbhDI" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Source and Application</h2>
+    <div class="span-22">
+    <p>
+      The Source code for my application can be downloaded <%= link_to "here.", "http://renaissancesoftware.net/paulgrenning/alienDC/AlienAttackDC-Paul.zip"%>
+      <br/>
+      To run the application open the .xcode file with xCode. Then hit the play button.
+    </p>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Controls and Information</h2>
+    <div class="span-22">
+    <ul>
+      <li>The keys 'w', 'a', 's', 'd' allow the camera to pan just like many modern video games.</li>
+      <li>The camera can be zoomed in with 'z' and zoomed out with 'x'.</li>
+      <li>The simulation speed can be increased with the up arrow and decreased with the down arrow.</li>
+      <li>The number of aliens can be increased with 'u' and decreased with 'U' (shift + u).</li>
+      <li>There are a maximum of 6 aliens and a minimum of 0.</li>
+      <li>The minimum speed is x1 and the maximum speed is x10.</li>
+    </ul>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Boid Rules</h2>
+    <div class="span-22">
+      <h3>Green Human Boids</h3>
+      <ul>
+      <li>Flock to each other.</li>
+      <li>Aren't allowed to close to green boids.</li>
+      <li>Average each others velocities with their own.</li>
+      <li>Avoid the red alien circles like the plauge.</li>
+      <li>Avoid the edge of the map.</li>
+      <li>Pass over red and blue boids.</li>
+      </ul>
+      <h3>Red Alien Boids</h3>
+      <ul>
+      <li>Chase the green human boids around.</li>
+      <li>If touched by a blue helicopter boid, they run off the map and eventually come back.</li>
+      <li>Move in the z direction when running away, unfortunately they are a point instead of polygons so their size doesn't change in the z direction.</li>
+      <li>Stay on the map when pursuing green boids.</li>
+      <li>Allowed to pass over red and green boids.</li>
+      </ul>
+      <h3>Blue Helicopter Boids</h3>
+      <ul>
+      <li>Aren't allowed to close to blue boids.</li>
+      <li>Allowed to pass over green and red boids.</li>
+      <li>Chase down the nearest red boid.</li>
+      <li>After touching a red boid, finds the next closest.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Optimizations (and attempts)</h2>
+    <div class="span-22">
+    <ul>
+      <li>I unrolled for loops to increase performance.</li>
+      <li>Copy some basic data like velocity to local memory.</li>
+      <li>Copying all the positions to local memory was not working correctly for me so that kept my bottle neck to about 3000 boids</li>
+      <li>For some strange reason having a multiple of 3 made my simulation run infintely better. If the number of humans was not a multiple of 3, the simulation was almost unresponsive.</li>
+    </ul>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <div class="span-14">
+      <p>
+        This is the default view. The user starts entirely zoomed out. There are 3000 human boids shown in green, 30 army helicopter boids shown in blue, and a range of 0-6 aliens based on the users preference shown as red circles.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/thumbs/Alien1.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien1.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien1.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <div class="span-14">
+      <p>
+        It can be seen inside the grey box in the top left that there are 6 aliens being shown. The user has the control to change the number of aliens.
+        The 3000 green human boids are trying to run away from the red flying saucers.
+      </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/thumbs/Alien2.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien2.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien2.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <div class="span-14">
+    <p>
+    The blue boids, which are army helicopters, are chasing the red alien flying saucers away. If they touch the red circles, then the red circles fly off the screen and eventually fly back.
+    </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/thumbs/Alien3.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien3.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien3.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <div class="span-14">
+    <p>
+      We can zoom into the map up to 6 times. When we do this the boids sizes changes so they can easily be distinguished.
+    </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/thumbs/Alien4.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien4.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien4.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <div class="span-14">
+    <p>
+     The zoom level can be changed between 1-6x. Eventually the human boids flock closely together when there are no red aliens about.
+    </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/thumbs/Alien5.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien5.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien5.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <div class="span-14">
+    <p>
+      The speed of the simulation can be changed. Eventually the blue boids flock up together since at times they all have a single goal. 
+    </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/thumbs/Alien6.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien6.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien6.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <div class="span-14">
+    <p>
+      If the aliens are close enough they can trap the humans into large groups.
+    </p>
+    </div>
+    <div class="span-8 last">
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/thumbs/Alien7.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien7.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/alienDC/full/Alien7.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+</div>
+
