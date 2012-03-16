@@ -1,5 +1,5 @@
 <div class='page-info span-24'>
-  <div normalHeight="310" class="collapsableArea collapsableAreaStartOpen span-22 append-1 prepend-1" id="Bug-Page">
+  <div normalHeight="560" class="collapsableArea collapsableAreaStartOpen span-22 append-1 prepend-1" id="Bug-Page">
     <div class="span-22">
       <h2 class="span-20">Weekly Updates</h2>
       <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/contractArrow.png", :class => "expandArrow", :state => "open") %></div>
@@ -23,6 +23,23 @@
         For our third week updates we primarily worked on the group design. We all discussed in detail the design and functionality of specific widgets such as the calendar,
         weather, health, etc... We also discussed other group designs pros and cons and how we could modify our design
         to fit the needs of the general user. Images were primarily drawn by Ty and Paulo and feedback was given from Paul and Ron. Paul put together the website. 
+      </p>
+    </div>
+    <div class="span-22">
+      <h3 class="span-22">3/9 Update</h2>
+      <p>
+        For our fourth week we spent time discussing the changes we need to make. We started to make mock ups of the revisions in photoshop. We took into account much of the feedback
+        from our presentationa and are trying to make the user interface more intuitive.
+      </p>
+    </div>
+    <div class="span-22">
+      <h3 class="span-22">3/16 Update</h2>
+      <p>
+        For this past week, we have been busily finalizing our designs and sketching images in photoshop. Most of the changes dealt with making the user interface more familiar looking. Using 
+        tabbed widgets instead of highlighted boxes for selection. Adding more setup instructions so the user doesn't need to figure out how to configure their mirror on their own. We modified
+        some of the widgets to include as many feeds as the user wants. For example news feed don't have to come from a set that the manufacturer decides. User's can now add as many as they
+        want and view them all in one list. Same goes for the social feed. The basic opacity and light sliders have been modified to make them look simpler. Lastly the options to change the 
+        color scheme has been added incase of color blindness or the bathroom coloring.
       </p>
     </div>
   </div>
@@ -293,6 +310,28 @@
           <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/uip2/revision1/thumbs/'+image[:thumb], :class => 'mirrorThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
             'http://renaissancesoftware.net/paulgrenning/uip2/revision1/'+image[:big],  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
           <%= image_tag('http://renaissancesoftware.net/paulgrenning/uip2/revision1/'+image[:big], :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+          <p><%= image[:description] %></p>
+        </div>
+        <% if (index+1) % 3 == 0 %>
+          <div style="clear:both"></div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div normalHeight="1940" class="collapsableArea span-22 append-1 prepend-1" id="Bug-Page">
+    <div class="span-22">
+      <h2 class="span-20">March 16, Revision 2</h2>
+      <div class="span-2 last"><%= image_tag("http://renaissancesoftware.net/paulgrenning/expandArrow.png", :class => "expandArrow", :state => "closed") %></div>
+    </div>
+    <div class="span-22">
+      <% REV2_IMAGES.each_with_index do |image, index| %>
+        <div class="mirrorThumbWidth">
+          <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/uip2/revision2/thumbs/'+image[:thumb], :class => 'mirrorThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+            'http://renaissancesoftware.net/paulgrenning/uip2/revision2/'+image[:big],  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+          <%= image_tag('http://renaissancesoftware.net/paulgrenning/uip2/revision2/'+image[:big], :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
           <p><%= image[:description] %></p>
         </div>
         <% if (index+1) % 3 == 0 %>
