@@ -1,0 +1,50 @@
+<div class='page-info span-24'>
+  <div class="span-22 append-1 prepend-1">
+    <div class="span-22" style="margin-bottom: 20px;">
+      <h2 class="span-22">Project Proposals</h2>
+      <p>
+        For my third project I would like to create a 2d elastic blob simulation. Since blobs are made of many particles
+        and springs, I would like to see how many blobs I could simulate as well as the resolution of springs and particles per blob on the GPU. 
+        <br/>
+        <br/>
+        The project will be created using OpenCL. This project will be similar to the second project. Based on what I learned from my
+        own experience and listening to the other students presentations, I feel I could create a high resolution simulation.
+        <br/>
+        <br/>
+        Interaction with the simulation could include the ability to move blobs with the mouse, tilting the platform on which the blobs are located so gravity
+        isn't always in the down direction of the screen, give the ability to spawn more blobs, and controls for the camera.
+      </p>
+      <h3>Project Layout</h3>
+      <ul>
+        <li>Work out the mass spring system of a single entity</li>
+        <li>Add collision detection between blobs</li>
+        <li>The first two parts will be mocked up in processing and ported to OpenCL</li>
+        <li>Add controls for basic interaction with the simulation</li>
+        <li>View as many blobs while still allowing realtime interaction</li>
+        <li>Optimize by unrolling loops in the OpenCL code</li>
+        <li>Optimize by moving data into local memory</li>
+      </ul>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Video and Resources</h2>
+    <p>Here is a video that might be similar to my simulation. I expect to have many more blobs than 
+    this video shows.</p>
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/aAIvrLjNiHI" frameborder="0" allowfullscreen></iframe>
+    <br/>
+    <br/>
+    <p>Here is a resource about<%= link_to " blob physics ", "http://cowboyprogramming.com/2007/01/05/blob-physics/" %>that looks to be very helpful. </p>
+    <p><%= link_to "This resource", "http://www.cs.ubc.ca/~dilevin/projects/EulerianSolidswithContact/EulerianSolids.pdf" %> is for collisions with eulerian solids. It may be more advanced than I need for a 2d blob simulation but I maybe able to pull some helpful data from it.
+    <p>This last video is more of a fluid like blob simulation. If time permits I would like to allows blobs to collide and break apart if the force acting on the blob is to great. I also like the prospects of the blobs merging with
+    other blobs.
+    </p>
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/0JuMg9fG6Bc" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+</div>
+

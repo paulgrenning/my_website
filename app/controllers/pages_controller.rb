@@ -136,5 +136,8 @@ class PagesController < ApplicationController
     @page_header = { :name => "Aliens Attack DC OpenCL Project", :link => root_path}
   end
 
+  def gpublob
+    @page_header = { :name => "Blob Collisions On The GPU", :link => root_path}
+  end
 
 end
