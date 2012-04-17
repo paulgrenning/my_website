@@ -15,6 +15,11 @@ a:visited {
   font-style: italic;
 }
 
+.massSpringImage {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
 .shortPhraseAfterHeader {
   margin-top:6px; 
   margin-left: -25px;

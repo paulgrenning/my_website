@@ -47,5 +47,147 @@
   <div class="span-24" id="below-gallery">
     <%= image_tag("horizontal-divider.png") %>
   </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2>My Implementation</h2>
+    <h3 class="span-22">Main Blob Simulation</h3>
+    <p>Basic overview of the blob simulation. Read below for details</p>
+    <div>
+      <iframe width="880" height="660" src="http://www.youtube.com/embed/oa_SOYThezo" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1">
+    <h3>Two short videos with different amounts of blobs</h3>
+    <div class="span-11">
+      <iframe width="420" height="315" src="http://www.youtube.com/embed/geojpK8xqqQ" frameborder="0" allowfullscreen></iframe>
+      <p style="margin-left: 20px">
+      Simulation Details:
+      <br/>
+      Frames Per Second: 32.49
+      <br/>
+      Number Of Blobs: 500
+      <br/>
+      Vertices Per Blob: 61
+      <br/>
+      Total Vertices: 30500
+      <br/>
+      </p>
+    </div>
+    <div class="span-11 last">
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/CqfLDUfLbAs" frameborder="0" allowfullscreen></iframe>
+      <p style="margin-left: 20px">
+      Simulation Details:
+      <br/>
+      Frames Per Second: 142.23
+      <br/>
+      Number Of Blobs: 200
+      <br/>
+      Vertices Per Blob: 61
+      <br/>
+      Total Vertices: 12200
+      </p>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1">
+    <h2>Download/User Instructions</h2>  
+    <p>The application can be downloaded from <%= link_to "here", "http://renaissancesoftware.net/paulgrenning/blobSim/BlobSimulation.zip" %>.
+    <br/> 
+    <br/> 
+    The application runs on mac os x inside of xCode.
+    <br/>
+    <br/>
+    Once the application is running the user can interact by clicking on the screen. A force vector is calculated based on the center of the screen minus the mouse position. This vector is added
+    to every blob causing them to all move in one direction.
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1">
+    <h2>Design Phases</h2>
+    <p>The first part of my project dealt with figuring out the physics of a blob. The way I designed my blob was very similar to <%= link_to "this sites", "http://cowboyprogramming.com/2007/01/05/blob-physics/" %> explanation. The first
+    thing I did was create a mass spring system out of two points in processing. After I completed that, I added a third point to create a triangle that represented this figure</p>
+    <p>The equation I used for my mass spring system was Force = K * (DistanceFromConnectedNeighbor - RelaxedDistance). K is the mass spring system constant. The relaxed distance is exactly what it sounds like, the distance
+    in which there is no force acting on either end of the spring. The spring will be at rest if DistanceFromConnectedNeighbor and RelaxDistance are the same. If not the spring either pulls the points together or pushes them
+    apart.</p>
+    <%= image_tag("http://renaissancesoftware.net/paulgrenning/blobSim/massSpring.png", :class => "massSpringImage") %>
+    <p>The second phase was to create a mass spring system that had a center and every other vertex was connected to the center and its two surrounding neighbors. This proved to take longer than it should have in processing.
+    Once that was completed I moved over to OpenCL. The OpenCL implementation only took a few hours compared to the few days I took to learn and complete it in processing. Mocking the project up in processing first was very
+    helpful. The next step was to add user interaction. This quickly made me realize I needed blobs that were much more stable. 
+    </p>
+    <%= image_tag("http://renaissancesoftware.net/paulgrenning/blobSim/massSpring2.png", :class => "massSpringImage") %>
+    <p>
+      So I proceeded to follow the example from the site mentioned above. I created a blob that had two layers of "skin". It looked like the image below. This implementation needs a lot of tweaking of the constant K variable,
+      and the relax distances of all the vertices from each other. In the end I dropped this implementation because I couldn't get it to keep a circular shape even with the slightest amount of force added.
+    </p>
+    <%= image_tag("http://renaissancesoftware.net/paulgrenning/blobSim/massSpring3.png", :class => "massSpringImage") %>
+    <p>
+      The final attempt was very similar to the simple circular blob. The only difference was that each vertex on the outside of the blob was also connected to the vertex directly across from it in the circle. The image below shows a red line that shows the fourth connection for the outer vertices. This implementation allowed the blob to stay stable or at least restabilize no matter what shape it deformed itself into over time.
+    </p>
+    <%= image_tag("http://renaissancesoftware.net/paulgrenning/blobSim/massSpring4.png", :class => "massSpringImage") %>
+    <p>
+      The next step was to implement multiple blobs being handle in the OpenCL kernel. This meant pushing all of the blobs into one giant single dimensional array. Once that was complete the next step was to
+      make sure blobs would collide with each other. This was by far the most computationally expensive portion. I implemented this portion of the code twice.
+      <br/>
+      <br/>
+      The first implementation checked each vertex of a blob with every segment in the outer ring of all the other blobs. This meant using a circle to line/segment physics equation to check if a point would pass through a line or in my case through the outer layer of another blob. The first reason I dropped this was the computation time was incredible long. Having 40 blobs with 40 vertices ran at about 15 frames per second. The second problem was that blobs
+      would still pass through each other at high speeds. This would cause vertices of one blob to get stuck inside of another very easily. So I dropped this implementation.
+      <br/>
+      <br/>
+      The second implementation used a much simpler circle to circle physics equation. The blobs more or less act like billiard balls knocking each others center points around. This in turns gives the look that the blobs are wobbling still but dont have exact particle collisions being computed. The downside is it doesn't look as nice but the simulation can have a much higher amount of blobs. The most I tested was 500 blobs with 61 vertices each and still
+      achieved 32 frames per second.
+      <br/>
+      <br/>
+      The final step was to try and improve performance using local memory. The biggest computation portion is the collision detection. So I attempted to copy the blobs center points into local memory. This by itself took a few 
+      2-3 milliseconds or more based on the number of blobs. I can only assume because I am not copying sequential data. I would copy 1 vertex every 40-50 vertices based on the number of vertices in a blob. Even after copying the data, the kernel still had to do the computations and write back out to global memory. So in the end it wasn't worth using the local memory and that portion was taken out of the kernel.
+    </p>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1">
+    <h2>Image Gallery</h2>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs1.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs1.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs1.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs2.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs2.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs2.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs3.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs3.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs3.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs4.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs4.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs4.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs5.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs5.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs4.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs6.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs6.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs6.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs7.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs7.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs7.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs8.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs8.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs8.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs9.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs9.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs9.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/thumbs/blobs10.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs10.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/blobSim/large/blobs10.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
 </div>
 
