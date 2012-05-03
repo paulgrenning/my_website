@@ -669,6 +669,36 @@ body {
   height: 480px;
 }
 
+.convolutionWidth {
+  width: 214px;
+  float: left;
+}
+
+.chartArea {
+  margin-top: 10px;
+}
+
+.centerHeader{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.convolutionWidth p {
+  text-align: center;
+  height: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.convolutionThumbs {
+  width: 199px;
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-top: 5px solid #fff;
+  border-bottom: 15px solid #fff;
+  margin-left: 5px;
+}
+
 .vendingThumbs
 {
   width: 260px;

@@ -36,6 +36,7 @@ ActionController::Routing::Routes.draw do |map|
   map.uiproject2'Mirror-Project', :controller => 'pages', :action => 'uiproject2'
   map.aliensattackdc'Aliens-Attack-DC', :controller => 'pages', :action => 'aliensattackdc'
   map.gpublob'GPU-Blob-Simulation', :controller => 'pages', :action => 'gpublob'
+  map.imageconvolution'Image-Convolution', :controller => 'pages', :action => 'imageconvolution'
 
 
 

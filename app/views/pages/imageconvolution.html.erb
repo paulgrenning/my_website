@@ -1,0 +1,271 @@
+<div class='page-info span-24'>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">GPU Specifications</h2>
+    The GPU I tested my Image Convolutions Kernels on is a ATI Radeon HD 6770m.
+    <br/>
+    Global Memory: 134217728 Bytes
+    <br/>
+    Local Memory: 32768 Bytes
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Kernel Differences</h2>
+    <div class="span-22">
+    <h3>Kernel 1</h3>
+    <p>
+    This is the most naive kernel. It reads everything from global memory and does not use a local variable to store computation data. This kernel does not use vectorized data. Everything is accessed in a single dimensional array
+    using floats. It is by far the worst run time even with a 3x3 filter.
+    </p>
+    <h3>Kernel 2</h3>
+    <p>
+    This kernel is similar to the first with the exception that the data in the global array is accessed using float4 vectors. The performance increase is around 10 times faster. The filter is still 3x3.
+    </p>
+    <h3>Kernel 3</h3>
+    <p>
+    This kernel uses local variables to store the new value of the pixel. This halves the run time from of its predecessor. The filter is still 3x3.
+    </p>
+    <h3>Kernel 4</h3>
+    <p>
+    This kernel is the same as kernel 3 except we are now doing a filter of 5x5. There are no for loops, everything is unrolled.
+    </p>
+    <h3>Kernel 5</h3>
+    <p>
+    This kernel is the same as kernel 4 except we are now doing a filter of 15x15. There are no for loops, everything is unrolled which makes this kernel extraordinarily long.
+    </p>
+    <h3>Kernel 6/7/8</h3>
+    <p>
+    These three kernels are the same as 3/4/5 except all of the data is passed in as unsigned characters instead of floats. In the 3x3 filter (kernel 6), the performance is increased. In the 5x5 (kernel 7) and 15x15 (kernel 8) the performance
+    slightly degrades. This is most likely due to the fact that every value read from global memory must be converted from a vector size of 4 of unsigned characters to a vector size 4 of floats. All of the conversions are slowing
+    the kernel down. A second thing to note is that the copy times to and from the GPU memory should be lower since we have to copy less data. This is true for images greater than 512x512.
+    </p>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Image Convolution Results</h2>
+    <h3 class="span-22 centerHeader">512 x 512 Images</h3>
+    <div class="convolutionWidth">
+      <p>Original Image</p>
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Small.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/cs525final/Small.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Small.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>3x3 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Small3.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Small3.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Small3.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>5x5 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Small5.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Small5.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Small5.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>15x15 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Small15.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Small15.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Small15.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <h3 class="span-22 centerHeader">1024 x 1024 Images</h3>
+    <div class="convolutionWidth">
+      <p>Original Image</p>
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Medium.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/cs525final/Medium.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Medium.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>3x3 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Medium3.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Medium3.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Medium3.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>5x5 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Medium5.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Medium5.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Medium5.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>15x15 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Medium15.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Medium15.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Medium15.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <h3 class="span-22 centerHeader">1920 x 1200 Images</h3>
+    <div class="convolutionWidth">
+      <p>Original Image</p>
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Large.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/cs525final/Large.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Large.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>3x3 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Large3.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Large3.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Large3.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>5x5 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Large5.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Large5.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Large5.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>15x15 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/Large15.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/Large15.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/Large15.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <h3 class="span-22 centerHeader">2048 x 2048 Images</h3>
+    <div class="convolutionWidth">
+      <p>Original Image</p>
+      <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/XLarge.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+        'http://renaissancesoftware.net/paulgrenning/cs525final/XLarge.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+      <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/XLarge.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>3x3 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/XLarge3.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/XLarge3.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/XLarge3.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>5x5 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/XLarge5.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/XLarge5.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/XLarge5.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+    <div class="convolutionWidth">
+      <p>15x15 Filter</p>
+    <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/XLarge15.png', :class => 'convolutionThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+      'http://renaissancesoftware.net/paulgrenning/cs525final/XLarge15.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+    <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/XLarge15.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+    </div>
+  </div>
+  <div class="span-24" id="below-gallery">
+    <%= image_tag("horizontal-divider.png") %>
+  </div>
+  <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Performance Charts</h2>
+    <p>All Performance Measurements are in milliseconds.</p>
+    <div class="chartArea">
+      <div class="span-14">
+        <h3>512 x 512 Performance</h3>
+        <p>
+          The blue bar is the time it took to copy the image to the GPU. The green bar is the kernel execution speed. The orange bar is copying from GPU memory to main memory. As it can be seen, the first filter although it
+          is only a 3x3 filter has a terrible run time. It is almost as slow as Kernel 5 and Kernel 8 which use a 15x15 image convolution filter. The naive kernel took 51.74 ms while the 15x15 optimized filter took 55.08 ms. There is a large anomaly for copying the image to GPU memory on kernel 5. 
+        </p>
+      </div>
+      <div class="span-8 last">
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/512.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/cs525final/512.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/512.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="chartArea">
+      <div class="span-14">
+        <h3>1024 x 1024 Performance</h3>
+        <p>
+        The bar colors are the same for the previous 512x512 example. The performance scale between the different filters is what we should expect. The first kernel's run time is terrible. The 15x15 filters take a much longer time 
+        due to the high number of global memory accesses. The optimized filters for 3x3 and 5x5 seem to run decently. The best 3x3 performance was 5.71 ms using the unsigned character version which is kernel 6. The best performance
+        for the 5x5 filter is the floating point version which is kernel 4, which ran at 23.77 ms. The unsigned character version of the 5x5 filter was almost twice the run time at 42.52 ms. Similarly, the floating point 15x15 filter
+        ran faster than the unsigned character version. Its best run time was 226.94 ms while the longest was only about 1.5 times at 330.92 ms.
+        </p>
+      </div>
+      <div class="span-8 last">
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/1024.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/cs525final/1024.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/1024.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="chartArea">
+      <div class="span-14">
+        <h3>1920 x 1200 Performance</h3>
+        <p>
+        The bar colors are the same for the previous 2 examples. The naive kernel for a 3x3 filter took 413.12 ms. The best 5x5 filter took 52.68 ms. The best 15x15 filter took 489.15 ms while the worst was 721.69 ms.
+        <br/>
+        <br/>
+        An overlooked statistic might be the copy times to and from the GPU. Kernels 3/4/5 are identical to 6/7/8 except the amount of memory is lower due to the change from floats to unsigned characters. It can be
+        seen that the copy times are lower the in the last three kernels. The most notable value is kernel 5 went from 148.89 ms down to 33.56 ms. Similar values can be seen in the 1024x1024 chart but not in the 512x512 chart.
+        </p>
+      </div>
+      <div class="span-8 last">
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/1920.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/cs525final/1920.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/1920.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="chartArea">
+      <div class="span-14">
+        <h3>2048 x 2048 Performance</h3>
+        <p>
+        The 2048 x 2048 image could only be run on kernels 6, 7, and 8. The amount of global memory used with floating point values in kernels 1-5 was too large for a single array. The unsigned character version 6-8 take
+        a quarter of the memory which allowed me to run the image convolution filters on this size image. As it can be seen, the 15x15 filter took well over a second. The incredible amount of global accesses takes it toll
+        on such a large filter. Copying to the GPU was roughly 20 ms for all three kernels and writing back to main memory was around 12 ms for all three.
+        <br/>
+        The 3x3 filter run time was 12.17 ms.
+        <br/>
+        The 5x5 filter run time was 139.60 ms.
+        <br/>
+        The 15x15 filter run time was 1321.97 ms.
+        </p>
+      </div>
+      <div class="span-8 last">
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/2048.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/cs525final/2048.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/2048.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="chartArea">
+      <div class="span-14">
+        <h3>3 x 3 Image Convolution Filter</h3>
+        <p>
+        The biggest thing to notice in this chart is that the 4 types of optimizations are consitently better. The naive kernel is very slow. The final step was to convert from using float4 vectors to uchar4 vectors which approximately halves the kernel computation time.
+        </p>
+      </div>
+      <div class="span-8 last">
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/3x3.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/cs525final/3x3.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/3x3.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="chartArea">
+      <div class="span-14">
+        <h3>5 x 5 Image Convolution Filter</h3>
+        <p>
+        The 5x5 filter has no initial kernels. There is no naive or slightly improved kernel. The float and unsigned character versions of the 3x3 filter were converted to a 5x5 filter. The main thing to notice is the
+        performance decrease in the unsinged character version. This is because of the performance hit on converting 25 values from uchar4 to float4 and back again.
+        </p>
+      </div>
+      <div class="span-8 last">
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/5x5.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/cs525final/5x5.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/5x5.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="chartArea">
+      <div class="span-14">
+        <h3>15 x 15 Image Convolution Filter</h3>
+        <p>
+        The 15x15 filter has no initial kernels. There is no naive or slightly improved kernel. The float and unsigned character versions of the 3x3 filter were converted to a 15x15 filter. Just like the 5x5 filter, this 15x15
+        filter takes a performance hit on the unsigned character version due to the large amount of conversion from uchar4 to float4.
+        </p>
+      </div>
+      <div class="span-8 last">
+        <%= link_to image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/thumbs/15x15.png', :class => 'vendingThumbs', :id => "space_polaroid_", :description => "", :alt => ""),
+          'http://renaissancesoftware.net/paulgrenning/cs525final/15x15.png',  :backuptitle => "", :title => "", :class => "pop-out", :id => "pop-out-", :rel => "prettyPhoto[flightsimThumbs]"%>
+        <%= image_tag('http://renaissancesoftware.net/paulgrenning/cs525final/15x15.png', :class => "space_portrait", :id => "space_portrait_", :alt => "") %>
+      </div>
+    </div>
+  </div>
+</div>
+

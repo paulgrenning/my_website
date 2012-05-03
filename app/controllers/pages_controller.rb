@@ -140,4 +140,8 @@ class PagesController < ApplicationController
     @page_header = { :name => "Blob Collisions On The GPU", :link => root_path}
   end
 
+  def imageconvolution
+    @page_header = { :name => "OpenCL Image Convolution Kernels", :link => root_path}
+  end
+
 end
