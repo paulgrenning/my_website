@@ -9,10 +9,16 @@
       Local Memory: 32768 Bytes
       <br/>
       <br/>
-      The project can be downloaded and run using XCode on Mac OS X. The code can be found <%= link_to "here", "http://renaissancesoftware.net/paulgrenning/ShaderProject/ImageConvoluter.zip" %>
+      The project can be downloaded and run using XCode on Mac OS X. The code can be found <%= link_to "here", "http://renaissancesoftware.net/paulgrenning/cs525final/ImageConvoluter.zip" %>.
+      <br/>
+      The project uses OpenCL framework and a png library that is already included in the project.
     </p>
   </div>
   <div class="span-22 prepend-1 append-1 below-gallery">
+    <h2 class="span-22">Main Optimizations</h2>
+    <p>Each kernel's specific optimizations can be read below. The overall optimizations include changing from single valued data to vectorized data, using local variables to store basic data instead of constantly reading from
+    global memory, unrolling all the loops in the code which makes some kernels rather long, and depending on the filter size, using smaller data values such as unsigned characters instead of floats. In other instances,
+    using the necessary type is better than constantly converting from one data type to another.
     <h2 class="span-22">Kernel Differences</h2>
     <div class="span-22">
     <h3>Kernel 1</h3>
@@ -48,7 +54,7 @@
     <%= image_tag("horizontal-divider.png") %>
   </div>
   <div class="span-22 prepend-1 append-1 below-gallery">
-    <h2 class="span-22">Image Convolution Results</h2>
+    <h2 class="span-22">Image Convolution Results - click the thumbnails to view larger versions</h2>
     <h3 class="span-22 centerHeader">512 x 512 Images</h3>
     <div class="convolutionWidth">
       <p>Original Image</p>
